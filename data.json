@@ -6,5 +6,13 @@
             "displayName": "Ba Nguyễn",
             "password": "123456"
         }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "title": "Sản phẩm 1",
+            "thumbnail": "/images/1.jpeg",
+            "price": 1000000
+        }
     ]
 }
