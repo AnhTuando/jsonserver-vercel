@@ -7,3 +7,12 @@ subNavClose.onclick = function () {
 subNavMoblieBtn.onclick = function () {
   subNav.classList.remove("d-none");
 };
+
+let item = document.querySelectorAll(
+  ".navigation-2 .container .row .col-8 .item"
+);
+
+let navigationElements = document.querySelectorAll(
+  ".navigation-2 .container .row .col-8 .item"
+);
+console.log(navigationElements);
