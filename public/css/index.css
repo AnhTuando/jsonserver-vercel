@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "dosis";
+}
+
+:root {
+  --font-green-color: #008b57;
+  --background-color: #22ac78;
+}
+
+.green-bg {
+  background: var(--background-color);
+}
+.light-green-bg {
+  color: var(--background-color);
+}
+.text-gr {
+  color: var(--font-green-color);
+}
+.h-60px {
+  height: 80px;
+}
+.lh-60px {
+  line-height: 80px;
+}
+.wd-250px {
+  width: 250px;
+}
+.sub-nav-bg {
+  background: #008452;
+}
+.fs-14px {
+  font-size: 14px;
+}
