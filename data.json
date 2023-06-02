@@ -1,18 +1,34 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "username": "banx9x",
-            "displayName": "Ba Nguyễn",
-            "password": "123456"
-        }
-    ],
-    "products": [
-        {
-            "id": 1,
-            "title": "Sản phẩm 1",
-            "thumbnail": "/images/1.jpeg",
-            "price": 1000000
-        }
-    ]
+  "cats": [
+    {
+      "id": 1,
+      "name": "Abyssinian",
+      "thumbnail": "./cats/Abyssinian.png",
+      "price": 4000000
+    },
+    {
+      "id": 2,
+      "name": "Anh Lông Dài",
+      "thumbnail": "./cats/Anh Lông Dài.png",
+      "price": 4500000
+    },
+    {
+      "id": 3,
+      "name": "Anh Lông Ngắn",
+      "thumbnail": "./cats/Anh Lông Ngắn.png",
+      "price": 5500000
+    },
+    {
+      "id": 4,
+      "name": "Ba Tư",
+      "thumbnail": "./cats/Ba Tư.png",
+      "price": 4500000
+    },
+    {
+      "id": 5,
+      "name": "Bengal",
+      "thumbnail": "./cats/Bengal.png",
+      "price": 4500000
+    }
+  ]
 }
