@@ -5,7 +5,7 @@ subNavClose.onclick = function () {
   subNav.classList.add("d-none");
 };
 subNavMoblieBtn.onclick = function () {
-  subNav.classList.remove("d-none");
+  subNav.classList.toggle("d-none");
 };
 
 let item = document.querySelectorAll(

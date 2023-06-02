@@ -62,6 +62,26 @@
   color: #06f299;
 }
 .special-bg {
-  background-color: #DAFBFA;
+  background-color: #dafbfa;
+}
+.slider {
+  position: relative;
+}
+.sl-left-btn,
+.sl-right-btn {
+  position: absolute;
+  top: 42%;
+}
+.sl-left-btn {
+  left: 30px;
+}
+.sl-right-btn {
+  right: 30px;
+}
+.slider-moving-mb .wrap-dot {
+  position: absolute;
+  bottom: 10px;
+  font-size: 6px;
+  left: 46%;
 }
 /* Event */
