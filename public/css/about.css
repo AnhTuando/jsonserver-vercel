@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "dosis";
+  font-family: "Dosis";
 }
 :root {
   --font-green-color: #008b57;
@@ -89,8 +89,18 @@ input[type="range"]::-webkit-slider-thumb {
   background-color: #00613c;
   cursor: pointer;
 }
-.price-color {
-  color: #b6900b;
+.name-value {
+  color: #424242;
+}
+.name-value .filter-btn-color:hover,
+.filter-btn-fur:hover,
+.filter-btn-size:hover,
+.filter-btn-fur-loss:hover,
+.filter-btn-price:hover {
+  cursor: pointer;
+}
+.price-value {
+  font-family: "Roboto";
 }
 /* hover product items */
 .col-9 .product-item img {

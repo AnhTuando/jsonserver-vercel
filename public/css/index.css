@@ -87,6 +87,10 @@
 .sl-right-btn {
   right: 30px;
 }
+.sl-left-btn:hover,
+.sl-right-btn:hover {
+  cursor: pointer;
+}
 .slider-moving-mb .wrap-dot {
   position: absolute;
   bottom: 10px;
