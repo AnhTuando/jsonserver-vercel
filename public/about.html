@@ -222,7 +222,8 @@
       </section>
       <!--END NAVIGATION 2 -->
       <!-- CONTENT  -->
-      <section class="content my-3">
+      <!-- mobile content -->
+      <section class="content my-3 d-lg-none">
         <div class="container">
           <!-- wrap product and filter -->
           <div class="row wrap-product-filter d-lg-none">
@@ -246,16 +247,25 @@
           <!--dnd wrap product and filter -->
 
           <!-- filter box -->
-          <div class="row filter-mb z-1 d-none d-lg-none">
+          <div class="row filter-mb d-lg-none z-1 position-fixed">
             <div class="col-12">
               <div
-                class="filter-box p-3 rounded-2 border border-success-subtle my-3"
+                class="filter-box p-3 rounded-2 border border-success-subtle my-3 bg-light"
+                style="width: 535px"
               >
+                <div class="row">
+                  <div class="col-12">
+                    <div
+                      class="filter-mb-close-btn p-2 fs-3 text-gr"
+                      style="width: fit-content"
+                    >
+                      <i class="bi bi-x-lg"></i>
+                    </div>
+                  </div>
+                </div>
                 <!-- color filter -->
                 <div class="row g-3 my-3">
-                  <div class="color text-gr fw-bold fs-4 fw-bold">
-                    Chọn Màu Sắc
-                  </div>
+                  <div class="text-gr fw-bold fs-4 fw-bold">Chọn Màu Sắc</div>
                   <div class="color d-flex gap-5">
                     <div class="color-choose d-flex gap-2 align-items-center">
                       <input
@@ -264,7 +274,7 @@
                         id=""
                         style="width: 20px; height: 20px"
                       />
-                      <div class="color-info fw-bold fs-5">Đơn Sắc</div>
+                      <div class="color-style fw-bold fs-5">Đơn Sắc</div>
                     </div>
                     <div class="color-choose d-flex gap-2 align-items-center">
                       <input
@@ -273,7 +283,7 @@
                         id=""
                         style="width: 20px; height: 20px"
                       />
-                      <div class="color-info fw-bold fs-5">Nhiều Màu</div>
+                      <div class="color-style fw-bold fs-5">Nhiều Màu</div>
                     </div>
                   </div>
                   <div
@@ -286,40 +296,38 @@
                 <!--end color filter -->
                 <!-- fur filter -->
                 <div class="row g-3 my-3">
-                  <div class="color text-gr fw-bold fs-4 fw-bold">
-                    Kiểu Lông
-                  </div>
+                  <div class="text-gr fw-bold fs-4 fw-bold">Kiểu Lông</div>
                   <div class="color d-flex gap-5">
-                    <div class="color-choose d-flex gap-2 align-items-center">
+                    <div class="fur-choose d-flex gap-2 align-items-center">
                       <input
                         type="radio"
                         name=""
                         id=""
                         style="width: 20px; height: 20px"
                       />
-                      <div class="color-info fw-bold fs-5">Ngắn</div>
+                      <div class="fur-style fw-bold fs-5">Ngắn</div>
                     </div>
-                    <div class="color-choose d-flex gap-2 align-items-center">
+                    <div class="fur-choose d-flex gap-2 align-items-center">
                       <input
                         type="radio"
                         name=""
                         id=""
                         style="width: 20px; height: 20px"
                       />
-                      <div class="color-info fw-bold fs-5">Dài</div>
+                      <div class="color-style fw-bold fs-5">Dài</div>
                     </div>
-                    <div class="color-choose d-flex gap-2 align-items-center">
+                    <div class="fur-choose d-flex gap-2 align-items-center">
                       <input
                         type="radio"
                         name=""
                         id=""
                         style="width: 20px; height: 20px"
                       />
-                      <div class="color-info fw-bold fs-5">Ít</div>
+                      <div class="fur-style fw-bold fs-5">Ít</div>
                     </div>
                   </div>
                   <div
-                    class="filter-btn-color fw-bold fs-5 filter-bg d-inline-block rounded-2 text-light py-1 px-3"
+                    class="filter-btn-fur fw-bold fs-5 filter-bg d-inline-block rounded-2 text-light py-1 px-3"
                     style="width: fit-content"
                   >
                     Lọc
@@ -328,38 +336,38 @@
                 <!--end fur filter -->
                 <!-- size filter -->
                 <div class="row g-3 my-3">
-                  <div class="color text-gr fw-bold fs-4 fw-bold">Kích Cỡ</div>
-                  <div class="color d-flex gap-5">
-                    <div class="color-choose d-flex gap-2 align-items-center">
+                  <div class="text-gr fw-bold fs-4 fw-bold">Kích Cỡ</div>
+                  <div class="size d-flex gap-5">
+                    <div class="size-choose d-flex gap-2 align-items-center">
                       <input
                         type="radio"
                         name=""
                         id=""
                         style="width: 20px; height: 20px"
                       />
-                      <div class="color-info fw-bold fs-5">Nhỏ</div>
+                      <div class="size-style fw-bold fs-5">Nhỏ</div>
                     </div>
-                    <div class="color-choose d-flex gap-2 align-items-center">
+                    <div class="size-choose d-flex gap-2 align-items-center">
                       <input
                         type="radio"
                         name=""
                         id=""
                         style="width: 20px; height: 20px"
                       />
-                      <div class="color-info fw-bold fs-5">Trung Bình</div>
+                      <div class="size-style fw-bold fs-5">Trung Bình</div>
                     </div>
-                    <div class="color-choose d-flex gap-2 align-items-center">
+                    <div class="size-choose d-flex gap-2 align-items-center">
                       <input
                         type="radio"
                         name=""
                         id=""
                         style="width: 20px; height: 20px"
                       />
-                      <div class="color-info fw-bold fs-5">To</div>
+                      <div class="size-style fw-bold fs-5">To</div>
                     </div>
                   </div>
                   <div
-                    class="filter-btn-color fw-bold fs-5 filter-bg d-inline-block rounded-2 text-light py-1 px-3"
+                    class="filter-btn-size fw-bold fs-5 filter-bg d-inline-block rounded-2 text-light py-1 px-3"
                     style="width: fit-content"
                   >
                     Lọc
@@ -368,31 +376,33 @@
                 <!--end size filter -->
                 <!-- fur loss filter -->
                 <div class="row g-3 my-3">
-                  <div class="color text-gr fw-bold fs-4 fw-bold">
-                    Rụng Lông
-                  </div>
+                  <div class="text-gr fw-bold fs-4 fw-bold">Rụng Lông</div>
                   <div class="color d-flex gap-5">
-                    <div class="color-choose d-flex gap-2 align-items-center">
+                    <div
+                      class="fur-loss-choose d-flex gap-2 align-items-center"
+                    >
                       <input
                         type="radio"
                         name=""
                         id=""
                         style="width: 20px; height: 20px"
                       />
-                      <div class="color-info fw-bold fs-5">Ít</div>
+                      <div class="fur-loss-style fw-bold fs-5">Ít</div>
                     </div>
-                    <div class="color-choose d-flex gap-2 align-items-center">
+                    <div
+                      class="fur-loss-choose d-flex gap-2 align-items-center"
+                    >
                       <input
                         type="radio"
                         name=""
                         id=""
                         style="width: 20px; height: 20px"
                       />
-                      <div class="color-info fw-bold fs-5">Nhiều</div>
+                      <div class="fur-loss-style fw-bold fs-5">Nhiều</div>
                     </div>
                   </div>
                   <div
-                    class="filter-btn-color fw-bold fs-5 filter-bg d-inline-block rounded-2 text-light py-1 px-3"
+                    class="filter-btn-fur-lose fw-bold fs-5 filter-bg d-inline-block rounded-2 text-light py-1 px-3"
                     style="width: fit-content"
                   >
                     Lọc
@@ -401,7 +411,7 @@
                 <!--end fur loss  filter -->
                 <!-- price filter -->
                 <div class="row g-3 my-3">
-                  <div class="color text-gr fw-bold fs-4 fw-bold">Giá</div>
+                  <div class="text-gr fw-bold fs-4 fw-bold">Giá</div>
                   <div
                     class="price-filter-box position-relative"
                     style="height: 50px"
@@ -425,7 +435,7 @@
                     />
                   </div>
                   <div
-                    class="filter-btn-color fw-bold fs-5 filter-bg d-inline-block rounded-2 text-light py-1 px-3"
+                    class="filter-btn-price fw-bold fs-5 filter-bg d-inline-block rounded-2 text-light py-1 px-3"
                     style="width: fit-content"
                   >
                     Lọc
@@ -437,7 +447,7 @@
           </div>
           <!-- end filter box -->
           <!-- product-list -->
-          <div class="row products-list my-3">
+          <div class="row products-list my-5">
             <div class="col-6">
               <div
                 class="product-item fs-4 fw-bold text-center rounded-2 custom-shadow d-flex flex-column gap-2 p-3"
@@ -571,12 +581,507 @@
                   <span class="price-value">5000000</span>
                   <span>VND</span>
                 </div>
+              </div>
+            </div>
+            <div
+              class="col-12 d-flex justify-content-center align-items-center mt-4"
+            >
+              <div
+                class="show-more-btn green-bg text-light fs-4 fw-bold p-2 rounded-2"
+                style="width: fit-content"
+              >
+                Xem Thêm
               </div>
             </div>
           </div>
           <!-- product-list-end -->
         </div>
       </section>
+      <!--end mobile content -->
+      <!-- pc content -->
+      <section class="pc-content d-none d-lg-block">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-3 my-3 p-3 border border-success-subtle filter-scroll bg-light"
+            >
+              <div class="filter-pc-box">
+                <!-- color filter -->
+                <div class="row g-3 mb-2">
+                  <div class="text-gr fw-bold fs-4 fw-bold">Chọn Màu Sắc</div>
+                  <div class="color gap-5">
+                    <div class="color-choose d-flex gap-2 align-items-center">
+                      <input
+                        type="radio"
+                        name=""
+                        id=""
+                        style="width: 20px; height: 20px"
+                      />
+                      <div class="color-style fw-bold fs-5">Đơn Sắc</div>
+                    </div>
+                    <div class="color-choose d-flex gap-2 align-items-center">
+                      <input
+                        type="radio"
+                        name=""
+                        id=""
+                        style="width: 20px; height: 20px"
+                      />
+                      <div class="color-style fw-bold fs-5">Nhiều Màu</div>
+                    </div>
+                  </div>
+                  <div
+                    class="filter-btn-color fw-bold fs-5 filter-bg d-inline-block rounded-2 text-light py-1 px-3"
+                    style="width: fit-content"
+                  >
+                    Lọc
+                  </div>
+                </div>
+                <!--end color filter -->
+                <!-- size filter -->
+                <div class="row g-3 mb-2">
+                  <div class="text-gr fw-bold fs-4 fw-bold">Kích Cỡ</div>
+                  <div class="size gap-5">
+                    <div class="size-choose d-flex gap-2 align-items-center">
+                      <input
+                        type="radio"
+                        name=""
+                        id=""
+                        style="width: 20px; height: 20px"
+                      />
+                      <div class="size-style fw-bold fs-5">Nhỏ</div>
+                    </div>
+                    <div class="size-choose d-flex gap-2 align-items-center">
+                      <input
+                        type="radio"
+                        name=""
+                        id=""
+                        style="width: 20px; height: 20px"
+                      />
+                      <div class="size-style fw-bold fs-5">Trung Bình</div>
+                    </div>
+                    <div class="size-choose d-flex gap-2 align-items-center">
+                      <input
+                        type="radio"
+                        name=""
+                        id=""
+                        style="width: 20px; height: 20px"
+                      />
+                      <div class="size-style fw-bold fs-5">To</div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="filter-btn-size fw-bold fs-5 filter-bg d-inline-block rounded-2 text-light py-1 px-3"
+                    style="width: fit-content"
+                  >
+                    Lọc
+                  </div>
+                </div>
+                <!--end size filter -->
+                <!-- size filter -->
+                <div class="row g-3 mb-2">
+                  <div class="text-gr fw-bold fs-4 fw-bold">Kiểu Lông</div>
+                  <div class="fur gap-5">
+                    <div class="fur-choose d-flex gap-2 align-items-center">
+                      <input
+                        type="radio"
+                        name=""
+                        id=""
+                        style="width: 20px; height: 20px"
+                      />
+                      <div class="fur-style fw-bold fs-5">Ngắn</div>
+                    </div>
+                    <div class="fur-choose d-flex gap-2 align-items-center">
+                      <input
+                        type="radio"
+                        name=""
+                        id=""
+                        style="width: 20px; height: 20px"
+                      />
+                      <div class="fur-style fw-bold fs-5">Dài</div>
+                    </div>
+                    <div class="fur-choose d-flex gap-2 align-items-center">
+                      <input
+                        type="radio"
+                        name=""
+                        id=""
+                        style="width: 20px; height: 20px"
+                      />
+                      <div class="fur-style fw-bold fs-5">Ít</div>
+                    </div>
+                  </div>
+                  <div
+                    class="filter-btn-fur fw-bold fs-5 filter-bg d-inline-block rounded-2 text-light py-1 px-3"
+                    style="width: fit-content"
+                  >
+                    Lọc
+                  </div>
+                </div>
+                <!--end size filter -->
+                <!-- fur loss filter -->
+                <div class="row g-3 mb-2">
+                  <div class="text-gr fw-bold fs-4 fw-bold">Rụng Lông</div>
+                  <div class="size gap-5">
+                    <div
+                      class="fur-loss-choose d-flex gap-2 align-items-center"
+                    >
+                      <input
+                        type="radio"
+                        name=""
+                        id=""
+                        style="width: 20px; height: 20px"
+                      />
+                      <div class="fur-loss-style fw-bold fs-5">Nhiều</div>
+                    </div>
+                    <div
+                      class="fur-loss-choose d-flex gap-2 align-items-center"
+                    >
+                      <input
+                        type="radio"
+                        name=""
+                        id=""
+                        style="width: 20px; height: 20px"
+                      />
+                      <div class="fur-loss-style fw-bold fs-5">Ít</div>
+                    </div>
+                  </div>
+                  <div
+                    class="filter-btn-fur-loss fw-bold fs-5 filter-bg d-inline-block rounded-2 text-light py-1 px-3"
+                    style="width: fit-content"
+                  >
+                    Lọc
+                  </div>
+                </div>
+                <!--end fur loss filter -->
+                <!-- price filter -->
+                <div class="row g-3 mb-2">
+                  <div class="text-gr fw-bold fs-4 fw-bold">Giá</div>
+                  <div
+                    class="price-filter-box position-relative"
+                    style="height: 50px"
+                  >
+                    <div
+                      class="start-price position-absolute start-0 bottom-0 fw-bold"
+                    >
+                      1 Triệu
+                    </div>
+                    <div
+                      class="start-price position-absolute end-0 bottom-0 fw-bold"
+                    >
+                      10 Triệu
+                    </div>
+                    <input
+                      type="range"
+                      class="price-filter-input w-100"
+                      value="3"
+                      min="1"
+                      max="10"
+                    />
+                  </div>
+                  <div
+                    class="filter-btn-price fw-bold fs-5 filter-bg d-inline-block rounded-2 text-light py-1 px-3"
+                    style="width: fit-content"
+                  >
+                    Lọc
+                  </div>
+                </div>
+                <!-- price filter -->
+              </div>
+            </div>
+            <div class="col-9 my-3">
+              <div class="row">
+                <div class="col-4">
+                  <a
+                    href=""
+                    class="product-item text-decoration-none fs-4 text-center rounded-2 custom-shadow d-flex flex-column p-3"
+                  >
+                    <div class="item">
+                      <div class="pr-img">
+                        <img src="./img/product-item.png" alt="" />
+                      </div>
+                      <div class="product-name fw-bold">
+                        <span class="name-value text-black"
+                          >Mèo Anh Lông Ngắn</span
+                        >
+                      </div>
+                      <div class="product-price text-warning fw-bold">
+                        <span class="price-value">5000000</span>
+                        <span>VND</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-4">
+                  <a
+                    href=""
+                    class="product-item text-decoration-none fs-4 text-center rounded-2 custom-shadow d-flex flex-column p-3"
+                  >
+                    <div class="item">
+                      <div class="pr-img">
+                        <img src="./img/product-item.png" alt="" />
+                      </div>
+                      <div class="product-name fw-bold">
+                        <span class="name-value text-black"
+                          >Mèo Anh Lông Ngắn</span
+                        >
+                      </div>
+                      <div class="product-price text-warning fw-bold">
+                        <span class="price-value">5000000</span>
+                        <span>VND</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-4">
+                  <a
+                    href=""
+                    class="product-item text-decoration-none fs-4 text-center rounded-2 custom-shadow d-flex flex-column p-3"
+                  >
+                    <div class="item">
+                      <div class="pr-img">
+                        <img src="./img/product-item.png" alt="" />
+                      </div>
+                      <div class="product-name fw-bold">
+                        <span class="name-value text-black"
+                          >Mèo Anh Lông Ngắn</span
+                        >
+                      </div>
+                      <div class="product-price text-warning fw-bold">
+                        <span class="price-value">5000000</span>
+                        <span>VND</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-4">
+                  <a
+                    href=""
+                    class="product-item text-decoration-none fs-4 text-center rounded-2 custom-shadow d-flex flex-column p-3"
+                  >
+                    <div class="item">
+                      <div class="pr-img">
+                        <img src="./img/product-item.png" alt="" />
+                      </div>
+                      <div class="product-name fw-bold">
+                        <span class="name-value text-black"
+                          >Mèo Anh Lông Ngắn</span
+                        >
+                      </div>
+                      <div class="product-price text-warning fw-bold">
+                        <span class="price-value">5000000</span>
+                        <span>VND</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-4">
+                  <a
+                    href=""
+                    class="product-item text-decoration-none fs-4 text-center rounded-2 custom-shadow d-flex flex-column p-3"
+                  >
+                    <div class="item">
+                      <div class="pr-img">
+                        <img src="./img/product-item.png" alt="" />
+                      </div>
+                      <div class="product-name fw-bold">
+                        <span class="name-value text-black"
+                          >Mèo Anh Lông Ngắn</span
+                        >
+                      </div>
+                      <div class="product-price text-warning fw-bold">
+                        <span class="price-value">5000000</span>
+                        <span>VND</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-4">
+                  <a
+                    href=""
+                    class="product-item text-decoration-none fs-4 text-center rounded-2 custom-shadow d-flex flex-column p-3"
+                  >
+                    <div class="item">
+                      <div class="pr-img">
+                        <img src="./img/product-item.png" alt="" />
+                      </div>
+                      <div class="product-name fw-bold">
+                        <span class="name-value text-black"
+                          >Mèo Anh Lông Ngắn</span
+                        >
+                      </div>
+                      <div class="product-price text-warning fw-bold">
+                        <span class="price-value">5000000</span>
+                        <span>VND</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-4">
+                  <a
+                    href=""
+                    class="product-item text-decoration-none fs-4 text-center rounded-2 custom-shadow d-flex flex-column p-3"
+                  >
+                    <div class="item">
+                      <div class="pr-img">
+                        <img src="./img/product-item.png" alt="" />
+                      </div>
+                      <div class="product-name fw-bold">
+                        <span class="name-value text-black"
+                          >Mèo Anh Lông Ngắn</span
+                        >
+                      </div>
+                      <div class="product-price text-warning fw-bold">
+                        <span class="price-value">5000000</span>
+                        <span>VND</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-4">
+                  <a
+                    href=""
+                    class="product-item text-decoration-none fs-4 text-center rounded-2 custom-shadow d-flex flex-column p-3"
+                  >
+                    <div class="item">
+                      <div class="pr-img">
+                        <img src="./img/product-item.png" alt="" />
+                      </div>
+                      <div class="product-name fw-bold">
+                        <span class="name-value text-black"
+                          >Mèo Anh Lông Ngắn</span
+                        >
+                      </div>
+                      <div class="product-price text-warning fw-bold">
+                        <span class="price-value">5000000</span>
+                        <span>VND</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-4">
+                  <a
+                    href=""
+                    class="product-item text-decoration-none fs-4 text-center rounded-2 custom-shadow d-flex flex-column p-3"
+                  >
+                    <div class="item">
+                      <div class="pr-img">
+                        <img src="./img/product-item.png" alt="" />
+                      </div>
+                      <div class="product-name fw-bold">
+                        <span class="name-value text-black"
+                          >Mèo Anh Lông Ngắn</span
+                        >
+                      </div>
+                      <div class="product-price text-warning fw-bold">
+                        <span class="price-value">5000000</span>
+                        <span>VND</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-4">
+                  <a
+                    href=""
+                    class="product-item text-decoration-none fs-4 text-center rounded-2 custom-shadow d-flex flex-column p-3"
+                  >
+                    <div class="item">
+                      <div class="pr-img">
+                        <img src="./img/product-item.png" alt="" />
+                      </div>
+                      <div class="product-name fw-bold">
+                        <span class="name-value text-black"
+                          >Mèo Anh Lông Ngắn</span
+                        >
+                      </div>
+                      <div class="product-price text-warning fw-bold">
+                        <span class="price-value">5000000</span>
+                        <span>VND</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-4">
+                  <a
+                    href=""
+                    class="product-item text-decoration-none fs-4 text-center rounded-2 custom-shadow d-flex flex-column p-3"
+                  >
+                    <div class="item">
+                      <div class="pr-img">
+                        <img src="./img/product-item.png" alt="" />
+                      </div>
+                      <div class="product-name fw-bold">
+                        <span class="name-value text-black"
+                          >Mèo Anh Lông Ngắn</span
+                        >
+                      </div>
+                      <div class="product-price text-warning fw-bold">
+                        <span class="price-value">5000000</span>
+                        <span>VND</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-4">
+                  <a
+                    href=""
+                    class="product-item text-decoration-none fs-4 text-center rounded-2 custom-shadow d-flex flex-column p-3"
+                  >
+                    <div class="item">
+                      <div class="pr-img">
+                        <img src="./img/product-item.png" alt="" />
+                      </div>
+                      <div class="product-name fw-bold">
+                        <span class="name-value text-black"
+                          >Mèo Anh Lông Ngắn</span
+                        >
+                      </div>
+                      <div class="product-price text-warning fw-bold">
+                        <span class="price-value">5000000</span>
+                        <span>VND</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-4">
+                  <a
+                    href=""
+                    class="product-item text-decoration-none fs-4 text-center rounded-2 custom-shadow d-flex flex-column p-3"
+                  >
+                    <div class="item">
+                      <div class="pr-img">
+                        <img src="./img/product-item.png" alt="" />
+                      </div>
+                      <div class="product-name fw-bold">
+                        <span class="name-value text-black"
+                          >Mèo Anh Lông Ngắn</span
+                        >
+                      </div>
+                      <div class="product-price text-warning fw-bold">
+                        <span class="price-value">5000000</span>
+                        <span>VND</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end pc content -->
+
       <!--END CONTENT  -->
       <!-- SPECIAL -->
       <section class="special my-5">

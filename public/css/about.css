@@ -44,6 +44,12 @@
 .text-special {
   color: #06f299;
 }
+.navigation-2 {
+  position: sticky;
+  top: 0;
+  position: -webkit-sticky;
+  z-index: 1;
+}
 /* End General */
 
 .price-filter-input::-webkit-slider-runnable-track {
@@ -56,4 +62,40 @@ input[type="range"]::-webkit-slider-thumb {
   height: 20px;
   background: #008452;
   border-radius: 50%;
+}
+.filter-scroll {
+  height: 800px;
+  overflow: scroll;
+  overflow-x: hidden;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 110px;
+  border-radius: 10px; /* Border radius cho "thanh nằm trong" thanh cuộn */
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #a3cfbb;
+  border-radius: 10px; /* Border radius cho thanh cuộn */
+}
+::-webkit-scrollbar-thumb {
+  background-color: #008452;
+
+  border-radius: 10px; /* Border radius cho "thanh nằm trong" thanh cuộn */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #00613c;
+  cursor: pointer;
+}
+.price-color {
+  color: #b6900b;
+}
+/* hover product items */
+.col-9 .product-item img {
+  transition: 0.75s;
+}
+.col-9 .product-item:hover img {
+  transform: scale(1.1);
 }

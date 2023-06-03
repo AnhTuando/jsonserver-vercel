@@ -17,7 +17,23 @@ let navigationElements = document.querySelectorAll(
 );
 let filterMobile = document.querySelector(".filter-mb");
 let filterMoblieBtn = document.querySelector(".filter-btn");
-console.log(filterMoblieBtn);
+let filterMoblieCloseBtn = document.querySelector(".filter-mb-close-btn");
 filterMoblieBtn.onclick = function () {
   filterMobile.classList.toggle("d-none");
 };
+filterMoblieCloseBtn.onclick = function () {
+  filterMobile.classList.add("d-none");
+};
+
+// scroll filter pc
+let contentBoxParent = document.querySelector(".pc-content");
+let filterBoxChild = document.querySelector(".filter-scroll");
+
+// product item when mouse not hover event:
+let productItems = document.querySelectorAll(".col-9 .product-item");
+let newProductItemsArr = Array.from(productItems);
+newProductItemsArr.map(function (item) {
+  item.addEventListener("mouseleave", function () {
+    item.style.transform = "scale(1)";
+  });
+});
