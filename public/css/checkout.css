@@ -58,3 +58,6 @@
   font-size: 16;
 }
 /* End General */
+.checkout .customer-info-box input:focus {
+  outline: 1px solid var(--font-green-color);
+}
