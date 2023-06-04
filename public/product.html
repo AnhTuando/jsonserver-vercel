@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TheCat</title>
+    <link rel="shortcut icon" href="./img/TheCatLogo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/product.css" />
+  </head>
+  <body>
+    <main class="main">
+      <!-- NAVIGATION 1 -->
+      <section class="navigation-1">
+        <!-- PC NAVIGATION -->
+        <div class="container d-none d-lg-block">
+          <div class="row lh-60px h-60px">
+            <div class="col-12 d-flex justify-content-around">
+              <div class="item">
+                <div class="title fw-bold text-uppercase text-gr fs-4">
+                  Your Cat's Paradise
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="phone">
+                  <i class="bi bi-telephone-fill text-gr mx-1"></i>
+                  <span class="light-green-bg fw-bold"
+                    >0987523525 - 0234533678</span
+                  >
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="mail">
+                  <i class="bi bi-envelope-fill text-gr mx-1"></i>
+                  <span class="light-green-bg fw-bold">thecat@gmail.com</span>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="location">
+                  <i class="bi bi-house-door-fill text-gr mx-1"></i>
+                  <span class="light-green-bg fw-bold">
+                    Số 150 Trần Duy Hưng, Trung Hòa, Cầu Giấy, HN</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END PC NAVIGATION -->
+        <!-- MOBLIE NAVIGATION -->
+        <div class="d-block d-lg-none green-bg position-relative">
+          <div class="container">
+            <div class="row">
+              <div
+                class="col-2 d-flex justify-content-center align-items-center"
+              >
+                <div class="list-mobile-btn fs-1 text-light fw-bold">
+                  <i class="bi bi-list"></i>
+                </div>
+              </div>
+              <div class="col-8">
+                <div
+                  class="mobile-logo d-flex justify-content-center align-items-center"
+                >
+                  <img src="./img/TheCatLogo.png" class="img-fluid" alt="" />
+                </div>
+              </div>
+              <div
+                class="col-2 float-end d-flex justify-content-center align-items-center"
+              >
+                <div class="cart-mobile-btn fs-1 text-light fw-bold">
+                  <i class="bi bi-cart4"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- subnav -->
+          <div
+            class="subnav-mobile wd-250px sub-nav-bg position-absolute d-none z-1"
+          >
+            <div class="row">
+              <div
+                class="sub-nav-close fs-2 fw-bold text-light text-uppercase ps-5 py-2"
+              >
+                <i class="bi bi-x-lg float-end pe-3"></i>
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="sub-nav-link fs-2 fw-bold text-light text-uppercase ps-5 py-2"
+              >
+                <span>Home</span>
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="sub-nav-link fs-2 fw-bold text-light text-uppercase ps-5 py-2"
+              >
+                <span>Mèo</span>
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="sub-nav-link fs-2 fw-bold text-light text-uppercase ps-5 py-2"
+              >
+                <span>Đồ ăn</span>
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="sub-nav-link fs-2 fw-bold text-light text-uppercase ps-5 py-2"
+              >
+                <span>Đồ chơi</span>
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="sub-nav-link fs-2 fw-bold text-light text-uppercase ps-5 py-2"
+              >
+                <span>Cát vệ sinh</span>
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="sub-nav-link fs-2 fw-bold text-light text-uppercase ps-5 py-2"
+              >
+                <span>Đồ trang trí</span>
+              </div>
+            </div>
+            <div class="row py-3 ps-4">
+              <div class="col-4">
+                <span class="mail-mobile-box fs-2 text-light">
+                  <i class="bi bi-envelope-fill"></i>
+                </span>
+              </div>
+              <div class="col-4">
+                <span class="cart-mobile-box fs-2 text-light">
+                  <i class="bi bi-cart4"></i>
+                </span>
+              </div>
+              <div class="col-4">
+                <span class="phone-mobile-box fs-2 text-light">
+                  <i class="bi bi-telephone-fill"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!--End subnav -->
+        </div>
+      </section>
+      <!--END NAVIGATION 2 -->
+      <!-- NAVIGATION 2 -->
+      <section class="navigation-2 d-none d-lg-block green-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-2">
+              <img class="logo" src="./img/TheCatLogo.png" alt="" />
+            </div>
+            <div
+              class="col-8 d-flex justify-content-between align-items-center"
+            >
+              <div class="item">
+                <a
+                  href="about.html"
+                  class="text-light text-decoration-none fw-bold fs-5 d-flex gap-2"
+                  ><i class="bi bi-android"></i> MÈO</a
+                >
+              </div>
+              <div class="item">
+                <a
+                  href="about.html"
+                  class="text-light text-decoration-none fw-bold fs-5 d-flex gap-2"
+                  ><i class="bi bi-box-fill"></i> ĐỒ ĂN</a
+                >
+              </div>
+              <div class="item">
+                <a
+                  href="about.html"
+                  class="text-light text-decoration-none fw-bold fs-5 d-flex gap-2"
+                >
+                  <i class="bi bi-balloon-fill"></i> ĐỒ CHƠI</a
+                >
+              </div>
+              <div class="item">
+                <a
+                  href="about.html"
+                  class="text-light text-decoration-none fw-bold fs-5 d-flex gap-2"
+                  ><i class="bi bi-archive-fill"></i> CÁT VỆ SINH</a
+                >
+              </div>
+              <div class="item">
+                <a
+                  href="about.html"
+                  class="text-light text-decoration-none fw-bold fs-5 d-flex gap-2"
+                >
+                  <i class="bi bi-piggy-bank-fill"></i> ĐỒ TRANG TRÍ</a
+                >
+              </div>
+            </div>
+            <div class="col-2 d-flex justify-content-around align-items-center">
+              <div class="search-box fs-4 text-light">
+                <i class="bi bi-search"></i>
+              </div>
+              <div class="cart-box fs-4 text-light">
+                <i class="bi bi-cart4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--END NAVIGATION 2 -->
+      <!--PRODUCT -->
+      <section class="product">
+        <div class="container d-lg-none my-3">
+          <div class="row gap-2">
+            <div class="col-12">
+              <div
+                class="img-wrap d-flex justify-content-center align-items-center"
+              >
+                <img src="./img/product-item.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="product-name text-gr fw-bold fs-3 text-center">
+                MÈO ANH LÔNG NGẮN
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="product-info text-soft-bl fw-bold fs-5">
+                <div class="info-1">Bảo hành trong 1 năm</div>
+                <div class="info-1">Cam kết tiêm chủng đầy đủ</div>
+                <div class="info-1">Miễn phí vận chuyển nội thành</div>
+                <div class="rate d-flex gap-2">
+                  <span> Đánh Giá:</span>
+                  <div class="star-box d-flex gap-3">
+                    <div class="star text-warning">
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <div class="star text-warning">
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <div class="star text-warning">
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <div class="star text-warning">
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="price-control fs-5 fw-bold text-soft-bl">
+                <div class="discount">
+                  <div class="title text-gr">
+                    Giảm giá <span class="discount-value">10</span> % giá phụ
+                    kiện khi mua kèm với sản phẩm
+                  </div>
+                  <div class="accessory-box d-flex">
+                    <div class="access-1" style="height: 80px; width: 80px">
+                      <img src="./img/accessory.png" class="img-fluid" />
+                    </div>
+                    <div class="access-1" style="height: 80px; width: 80px">
+                      <img src="./img/accessory.png" class="img-fluid" />
+                    </div>
+                    <div class="access-1" style="height: 80px; width: 80px">
+                      <img src="./img/accessory.png" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+                <div class="payment-box d-flex justify-content-between">
+                  <div
+                    class="quantity-box d-flex gap-4 border border-success-subtle p-2 rounded-5 text-gr"
+                    style="width: fit-content"
+                  >
+                    <div class="plus-btn"><i class="bi bi-plus-lg"></i></div>
+                    <div class="quantity-value">1</div>
+                    <div class="minus-btn"><i class="bi bi-dash"></i></div>
+                  </div>
+                  <div class="price d-flex">
+                    <div
+                      class="price ff-roboto text-gr d-flex justify-content-center align-items-center"
+                    >
+                      Giá:
+                      <span class="price-value ff-roboto">3.900.000</span>
+                      VND
+                    </div>
+                  </div>
+                  <div
+                    class="payment text-bg-success rounded-2 py-2 px-3"
+                    style="width: fit-content"
+                  >
+                    Mua Ngay
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="certification">
+                <div class="row">
+                  <div class="title fw-bold text-soft-bl fs-5">
+                    Giấy Tờ Đi Kèm
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="cert-item-1">
+                    <div
+                      class="img-wrap d-flex justify-content-center align-items-center"
+                    >
+                      <img src="./img/cert1.png" class="img-fluid" alt="" />
+                    </div>
+                    <div class="cert-name text-center fw-bold text-soft-bl">
+                      Sổ Tiêm Phòng Của Mèo
+                    </div>
+                  </div>
+                  <div class="cert-item-1">
+                    <div
+                      class="img-wrap d-flex justify-content-center align-items-center"
+                    >
+                      <img src="./img/cert2.png" class="img-fluid" alt="" />
+                    </div>
+                    <div class="cert-name text-center fw-bold text-soft-bl">
+                      Phiếu Bảo Hành
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container d-none d-lg-block my-3">
+          <div class="row my-3">
+            <div class="col-6 d-flex justify-content-center align-items-center">
+              <div class="img-wrap">
+                <img src="./img/product-item.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="product-wrap d-flex flex-column gap-2">
+                <div class="product-name text-gr fw-bold fs-3">
+                  MÈO ANH LÔNG NGẮN
+                </div>
+                <div class="product-info text-soft-bl fw-bold fs-5">
+                  <div class="info-1">Bảo hành trong 1 năm</div>
+                  <div class="info-1">Cam kết tiêm chủng đầy đủ</div>
+                  <div class="info-1">Miễn phí vận chuyển nội thành</div>
+                  <div class="rate d-flex gap-2">
+                    <span> Đánh Giá:</span>
+                    <div class="star-box d-flex gap-3">
+                      <div class="star text-warning">
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="star text-warning">
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="star text-warning">
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <div class="star text-warning">
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="discount fw-bold fs-5">
+                  <div class="title text-gr">
+                    Giảm giá <span class="discount-value">10</span> % giá phụ
+                    kiện khi mua kèm với sản phẩm
+                  </div>
+                  <div class="accessory-box d-flex">
+                    <div class="access-1" style="height: 80px; width: 80px">
+                      <img src="./img/accessory.png" class="img-fluid" />
+                    </div>
+                    <div class="access-1" style="height: 80px; width: 80px">
+                      <img src="./img/accessory.png" class="img-fluid" />
+                    </div>
+                    <div class="access-1" style="height: 80px; width: 80px">
+                      <img src="./img/accessory.png" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+                <div class="payment-box d-flex justify-content-between fw-bold">
+                  <div
+                    class="quantity-box d-flex gap-4 border border-success-subtle p-2 rounded-5 text-gr"
+                    style="width: fit-content"
+                  >
+                    <div class="plus-btn"><i class="bi bi-plus-lg"></i></div>
+                    <div class="quantity-value">1</div>
+                    <div class="minus-btn"><i class="bi bi-dash"></i></div>
+                  </div>
+                  <div class="price d-flex fs-5">
+                    <div class="price text-gr d-flex align-items-center">
+                      <span class="ff-roboto"
+                        >Giá:
+                        <span class="price-value ff-roboto">3.900.000</span>
+                        VND</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="payment text-bg-success rounded-2 py-2 px-3"
+                    style="width: fit-content"
+                  >
+                    Mua Ngay
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row my-3">
+            <div class="title text-gr fw-bold fs-3 text-center">
+              Giấy Tờ Đi Kèm
+            </div>
+            <div class="certification d-flex">
+              <div class="col-6">
+                <div
+                  class="img-wrap d-flex justify-content-center align-items-center"
+                >
+                  <img src="./img/cert1.png" class="img-fluid" alt="" />
+                </div>
+                <div class="cert-info text-center text-soft-bl fs-5 fw-bold">
+                  Sổ tiêm phòng của mèo
+                </div>
+              </div>
+              <div class="col-6">
+                <div
+                  class="img-wrap d-flex justify-content-center align-items-center"
+                >
+                  <img src="./img/cert2.png" class="img-fluid" alt="" />
+                </div>
+                <div class="cert-info text-center text-soft-bl fs-5 fw-bold">
+                  Phiếu Bảo Hành
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--END PRODUCT -->
+      <!-- SPECIAL -->
+      <section class="special my-5">
+        <div
+          class="title text-center fw-bold fs-4 text-gr my-2 d-block d-lg-none"
+        >
+          ƯU ĐÃI TẠI <span class="text text-special">THECAT</span>
+        </div>
+        <div
+          class="title text-center fw-bold fs-1 text-gr my-2 d-none d-lg-block"
+        >
+          ƯU ĐÃI TẠI <span class="text text-special">THECAT</span>
+        </div>
+        <div class="container d-block d-lg-none">
+          <div class="row my-4">
+            <div class="col-6">
+              <div class="special-item special-bg p-4 rounded-2">
+                <div
+                  class="sp-img d-flex justify-content-center"
+                  style="height: 100px"
+                >
+                  <img
+                    src="./img/delivery-truck.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="sp-info text-center fw-bold fs-6 text-gr my-2">
+                  MIỄN PHÍ VẬN CHUYỂN NỘI THÀNH
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="special-item special-bg p-4 rounded-2">
+                <div
+                  class="sp-img d-flex justify-content-center"
+                  style="height: 100px"
+                >
+                  <img src="./img/needle.png" class="img-fluid" alt="" />
+                </div>
+                <div class="sp-info text-center fw-bold fs-6 text-gr my-2">
+                  CHỨNG NHẬN TIÊM CHỦNG ĐẦY ĐỦ
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row my-4">
+            <div class="col-6">
+              <div class="special-item special-bg p-4 rounded-2">
+                <div
+                  class="sp-img d-flex justify-content-center"
+                  style="height: 100px"
+                >
+                  <img src="./img/confirm.png" class="img-fluid" alt="" />
+                </div>
+                <div class="sp-info text-center fw-bold fs-6 text-gr my-2">
+                  BẢO ĐẢM CHẤT LƯỢNG SẢN PHẨM
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="special-item special-bg p-4 rounded-2">
+                <div
+                  class="sp-img d-flex justify-content-center"
+                  style="height: 100px"
+                >
+                  <img src="./img/catHead.png" class="img-fluid" alt="" />
+                </div>
+                <div class="sp-info text-center fw-bold fs-6 text-gr my-2">
+                  HOÀN TIỀN, BẢO HÀNH TRONG 1 NĂM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container d-none d-lg-block">
+          <div class="row">
+            <div class="col-3">
+              <div class="special-item p-4 special-bg">
+                <div
+                  class="sp-img d-flex justify-content-center"
+                  style="height: 140px"
+                >
+                  <img
+                    src="./img/delivery-truck.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="sp-info text-center fw-bold fs-4 text-gr my-2 px-4">
+                  MIỄN PHÍ VẬN CHUYỂN NỘI THÀNH
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="special-item p-4 special-bg">
+                <div
+                  class="sp-img d-flex justify-content-center"
+                  style="height: 140px"
+                >
+                  <img src="./img/confirm.png" class="img-fluid" alt="" />
+                </div>
+                <div class="sp-info text-center fw-bold fs-4 text-gr my-2 px-4">
+                  BẢO ĐẢM CHẤT LƯỢNG SẢN PHẨM
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="special-item p-4 special-bg">
+                <div
+                  class="sp-img d-flex justify-content-center"
+                  style="height: 140px"
+                >
+                  <img src="./img/needle.png" class="img-fluid" alt="" />
+                </div>
+                <div class="sp-info text-center fw-bold fs-4 text-gr my-2 px-4">
+                  CHỨNG NHẬN TIÊM CHỦNG ĐẦY ĐỦ
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="special-item p-4 special-bg">
+                <div
+                  class="sp-img d-flex justify-content-center"
+                  style="height: 140px"
+                >
+                  <img src="./img/catHead.png" class="img-fluid" alt="" />
+                </div>
+                <div class="sp-info text-center fw-bold fs-4 text-gr my-2 px-4">
+                  HOÀN TIỀN, BẢO HÀNH TRONG 1 NĂM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--END SPECIAL -->
+      <!-- Pop-Up Product -->
+
+      <!-- End Pop-Up Product -->
+      <!-- FOOTER -->
+      <footer class="footer footer-bg py-3">
+        <div class="container d-block d-lg-none">
+          <div class="row">
+            <div class="col-6 py-3">
+              <div class="ft-logo">
+                <img src="./img/TheCatLogo.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+            <div class="col-6 d-flex justify-content-center align-items-center">
+              <div class="ft-mark">
+                <img
+                  src="./img/mark.png"
+                  style="width: 200px"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="title my-3 fs-4 text-special fw-bold">LIÊN HỆ</div>
+            <div class="contact text-light fs-5 fw-medium">
+              <div class="phone">
+                <i class="bi bi-telephone-fill"></i
+                ><span class="px-3">0987523525 - 0234533678</span>
+              </div>
+              <div class="email">
+                <i class="bi bi-envelope-fill"></i
+                ><span class="px-3">thecat@gmail.com</span>
+              </div>
+              <div class="location">
+                <i class="bi bi-envelope-fill"></i>
+                <span class="px-3"
+                  >Số 150 Trần Duy Hưng, Trung Hòa, Cầu Giấy, HN</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="title my-3 fs-4 text-special fw-bold">THANH TOÁN</div>
+            <div class="payment text-light d-flex justify-content-around my-3">
+              <div class="wrap-zalo">
+                <img src="./img/momo.png" alt="" />
+              </div>
+              <div class="wrap-momo">
+                <img src="./img/zalopay.png" alt="" />
+              </div>
+              <div class="wrap-atm">
+                <img src="./img/atm.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="follow-wrap d-flex gap-4 text-light my-3">
+              <div
+                class="span fs-4 fw-bold d-flex justify-content-center align-items-center"
+              >
+                <span>Follow Us:</span>
+              </div>
+              <div class="fb-box fs-2"><i class="bi bi-facebook"></i></div>
+              <div class="yt-box fs-2"><i class="bi bi-youtube"></i></div>
+              <div class="ig-box fs-2"><i class="bi bi-instagram"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="container d-none d-lg-block">
+          <div class="row">
+            <div class="col-4">
+              <div class="img-wrap">
+                <div class="ft-logo">
+                  <img src="./img/TheCatLogo.png" alt="" />
+                </div>
+                <div class="ft-logo" style="width: 200px">
+                  <img src="./img/mark.png " class="img-fluid" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="title my-3 fs-4 text-special fw-bold">LIÊN HỆ</div>
+              <div
+                class="contact d-flex flex-column gap-3 text-light fs-5 fw-medium"
+              >
+                <div class="phone">
+                  <i class="bi bi-telephone-fill"></i
+                  ><span class="px-3">0987523525 - 0234533678</span>
+                </div>
+                <div class="email">
+                  <i class="bi bi-envelope-fill"></i
+                  ><span class="px-3">thecat@gmail.com</span>
+                </div>
+                <div class="location">
+                  <i class="bi bi-envelope-fill"></i>
+                  <span class="px-3"
+                    >Số 150 Trần Duy Hưng, Trung Hòa, Cầu Giấy, HN</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4">
+              <div class="title my-3 fs-4 text-special fw-bold">THANH TOÁN</div>
+              <div class="payment text-light d-flex">
+                <div class="wrap-zalo me-3">
+                  <img src="./img/momo.png" alt="" />
+                </div>
+                <div class="wrap-momo me-3">
+                  <img src="./img/zalopay.png" alt="" />
+                </div>
+                <div class="wrap-atm me-3">
+                  <img src="./img/atm.png" alt="" />
+                </div>
+              </div>
+              <div class="follow-wrap d-flex gap-4 text-light">
+                <div
+                  class="span fs-4 fw-bold d-flex justify-content-center align-items-center"
+                >
+                  <span>Follow Us:</span>
+                </div>
+                <div class="fb-box fs-2"><i class="bi bi-facebook"></i></div>
+                <div class="yt-box fs-2"><i class="bi bi-youtube"></i></div>
+                <div class="ig-box fs-2"><i class="bi bi-instagram"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!--END FOOTER -->
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/product.js"></script>
+  </body>
+</html>

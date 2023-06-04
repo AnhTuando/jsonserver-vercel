@@ -11,6 +11,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "js-image-zoom": "^0.7.0",
         "json-server": "^0.17.3"
     }
 }

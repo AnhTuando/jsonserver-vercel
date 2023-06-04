@@ -37,3 +37,4 @@ newProductItemsArr.map(function (item) {
     item.style.transform = "scale(1)";
   });
 });
+// PaymentBox Zoom Lens

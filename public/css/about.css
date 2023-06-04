@@ -72,6 +72,7 @@ input[type="range"]::-webkit-slider-thumb {
   top: 110px;
   border-radius: 10px; /* Border radius cho "thanh nằm trong" thanh cuộn */
 }
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -92,6 +93,10 @@ input[type="range"]::-webkit-slider-thumb {
 .name-value {
   color: #424242;
 }
+.text-soft-bl {
+  color: #424242;
+}
+
 .name-value .filter-btn-color:hover,
 .filter-btn-fur:hover,
 .filter-btn-size:hover,
@@ -102,6 +107,7 @@ input[type="range"]::-webkit-slider-thumb {
 .price-value {
   font-family: "Roboto";
 }
+
 /* hover product items */
 .col-9 .product-item img {
   transition: 0.75s;
