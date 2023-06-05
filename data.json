@@ -200,5 +200,127 @@
       "furrLose": "Ít",
       "price": "5.000.000"
     }
+  ],
+  "foods": [
+    {
+      "id": 1,
+      "name": "Bánh Cho Mèo Jinny",
+      "thumbnail": "./cats/Bánh Cho Mèo Jinny.png",
+      "price": "100.000"
+    },
+    {
+      "id": 2,
+      "name": "Bánh Cho Mèo MINI BITES",
+      "thumbnail": "./cats/Bánh Cho Mèo MINI BITES.png",
+      "price": "120.000"
+    },
+    {
+      "id": 3,
+      "name": "Bánh Cho Mèo Vị Gà Jinny",
+      "thumbnail": "./cats/Bánh Cho Mèo Vị Gà Jinny.png",
+      "price": "130.000"
+    },
+    {
+      "id": 4,
+      "name": "Bánh Vị Tôm",
+      "thumbnail": "./cats/Bánh Vị Tôm.png",
+      "price": "115.000"
+    },
+    {
+      "id": 5,
+      "name": "Hạt Catidea",
+      "thumbnail": "./cats/Hạt Catidea.png",
+      "price": "200.000"
+    },
+    {
+      "id": 6,
+      "name": "Hạt ROYAL CANIN",
+      "thumbnail": "./cats/Hạt ROYAL CANIN.png",
+      "price": "170.000"
+    },
+    {
+      "id": 7,
+      "name": "Nước Sốt Pate CIAO",
+      "thumbnail": "./cats/Nước Sốt Pate CIAO.png",
+      "price": "120.000"
+    },
+    {
+      "id": 8,
+      "name": "Pate Cá Biển",
+      "thumbnail": "./cats/Pate Cá Biển.png",
+      "price": "260.000"
+    },
+    {
+      "id": 9,
+      "name": "Pate Cá Ngừ",
+      "thumbnail": "./cats/Pate Cá Ngừ.png",
+      "price": "300.000"
+    },
+    {
+      "id": 10,
+      "name": "Pate Sốt Gan",
+      "thumbnail": "./cats/Pate Sốt Gan.png",
+      "price": "350.000"
+    },
+    {
+      "id": 11,
+      "name": "Pate Thịt Gà",
+      "thumbnail": "./cats/Pate Thịt Gà.png",
+      "price": "320.000"
+    },
+    {
+      "id": 12,
+      "name": "Pate Trộn Thịt",
+      "thumbnail": "./cats/Pate Trộn Thịt.png",
+      "price": "310.000"
+    },
+    {
+      "id": 13,
+      "name": "Snack Cá Ngừ",
+      "thumbnail": "./cats/Snack Cá Ngừ.png",
+      "price": "220.000"
+    },
+    {
+      "id": 14,
+      "name": "Sữa Bột Kitten Milk",
+      "thumbnail": "./cats/Sữa Bột Kitten Milk.png",
+      "price": "550.000"
+    },
+    {
+      "id": 15,
+      "name": "Sữa Tươi Ít Béo",
+      "thumbnail": "./cats/Sữa Tươi Ít Béo.png",
+      "price": "650.000"
+    },
+    {
+      "id": 16,
+      "name": "Súp Cá Ngừ Hải Sản CIAO",
+      "thumbnail": "./cats/Súp Cá Ngừ Hải Sản CIAO.png",
+      "price": "450.000"
+    },
+    {
+      "id": 17,
+      "name": "Súp Cho Mèo CIAO",
+      "thumbnail": "./cats/Súp Cho Mèo CIAO.png",
+      "price": "400.000"
+    },
+    {
+      "id": 18,
+      "name": "Thịt Cá Chép",
+      "thumbnail": "./cats/Thịt Cá Chép.png",
+      "price": "50.000"
+    },
+    {
+      "id": 19,
+      "name": "Thịt Ức Gà",
+      "thumbnail": "./cats/Thịt Ức Gà.png",
+      "price": "40.000"
+    },
+    {
+      "id": 20,
+      "name": "Xúc Xích Cho Mèo",
+      "thumbnail": "./cats/Xúc Xích Cho Mèo.png",
+      "price": "30.000"
+    }
   ]
 }

@@ -15,15 +15,27 @@ let item = document.querySelectorAll(
 let navigationElements = document.querySelectorAll(
   ".navigation-2 .container .row .col-8 .item"
 );
-
+// Call Cats API
 async function getCats() {
   let res = await fetch("http://localhost:3000/cats");
   let data = await res.json();
   return data;
 }
 
-async function render() {
+async function renderCats() {
   let cats = await getCats();
   console.log(cats);
 }
-render();
+renderCats();
+
+// Call Foods API
+async function getFoods() {
+  let res = await fetch("http://localhost:3000/foods");
+  let data = await res.json();
+  return data;
+}
+async function renderFoods() {
+  let foods = await getFoods();
+  console.log(foods);
+}
+renderFoods();
