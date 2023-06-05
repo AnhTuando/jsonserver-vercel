@@ -4,31 +4,201 @@
       "id": 1,
       "name": "Abyssinian",
       "thumbnail": "./cats/Abyssinian.png",
-      "price": 4000000
+      "color": "Đơn sắc",
+      "size": "Nhỏ",
+      "furr": "Ngắn",
+      "furrLose": "Ít",
+      "price": "4.000.000"
     },
     {
       "id": 2,
       "name": "Anh Lông Dài",
       "thumbnail": "./cats/Anh Lông Dài.png",
-      "price": 4500000
+      "color": "Nhiều màu",
+      "size": "To",
+      "furr": "Dài",
+      "furrLose": "Nhiều",
+      "price": "4.500.000"
     },
     {
       "id": 3,
       "name": "Anh Lông Ngắn",
       "thumbnail": "./cats/Anh Lông Ngắn.png",
-      "price": 5500000
+      "color": "Đơn sắc",
+      "size": "Trung bình",
+      "furr": "Ngắn",
+      "furrLose": "Nhiều",
+      "price": "5.500.000"
     },
     {
       "id": 4,
       "name": "Ba Tư",
       "thumbnail": "./cats/Ba Tư.png",
-      "price": 4500000
+      "color": "Đơn sắc",
+      "size": "Trung bình",
+      "furr": "Ngắn",
+      "furrLose": "Nhiều",
+      "price": "5.000.000"
     },
     {
       "id": 5,
       "name": "Bengal",
       "thumbnail": "./cats/Bengal.png",
-      "price": 4500000
+      "color": "Nhiều màu",
+      "size": "Nhỏ",
+      "furr": "Ngắn",
+      "furrLose": "Nhiều",
+      "price": "6.000.000"
+    },
+    {
+      "id": 6,
+      "name": "Birman",
+      "thumbnail": "./cats/Birman.png",
+      "color": "Nhiều màu",
+      "size": "Nhỏ",
+      "furr": "Ngắn",
+      "furrLose": "Nhiều",
+      "price": "6.000.000"
+    },
+    {
+      "id": 7,
+      "name": "Fold",
+      "thumbnail": "./cats/Fold.png",
+      "color": "Nhiều màu",
+      "size": "Nhỏ",
+      "furr": "Ngắn",
+      "furrLose": "Nhiều",
+      "price": "5.000.000"
+    },
+    {
+      "id": 8,
+      "name": "Khao Manee",
+      "thumbnail": "./cats/Khao Manee.png",
+      "color": "Đơn sắc",
+      "size": "Nhỏ",
+      "furr": "Ngắn",
+      "furrLose": "Nhiều",
+      "price": "7.000.000"
+    },
+    {
+      "id": 9,
+      "name": "Maine Coon",
+      "thumbnail": "./cats/Maine Coon.png",
+      "color": "Nhiều màu",
+      "size": "Nhỏ",
+      "furr": "Dài",
+      "furrLose": "Nhiều",
+      "price": "7.000.000"
+    },
+    {
+      "id": 10,
+      "name": "Munchkin",
+      "thumbnail": "./cats/Munchkin.png",
+      "color": "Nhiều màu",
+      "size": "Nhỏ",
+      "furr": "Ngắn",
+      "furrLose": "Nhiều",
+      "price": "10.000.000"
+    },
+    {
+      "id": 11,
+      "name": "Mỹ Lông Ngắn",
+      "thumbnail": "./cats/Mỹ Lông Ngắn.png",
+      "color": "Nhiều màu",
+      "size": "Trung Bình",
+      "furr": "Ngắn",
+      "furrLose": "Nhiều",
+      "price": "9.500.000"
+    },
+    {
+      "id": 12,
+      "name": "Ragdoll",
+      "thumbnail": "./cats/Ragdoll.png",
+      "color": "Đơn sắc",
+      "size": "Trung Bình",
+      "furr": "Dài",
+      "furrLose": "Nhiều",
+      "price": "7.500.000"
+    },
+    {
+      "id": 13,
+      "name": "Rừng Na Uy",
+      "thumbnail": "./cats/Rừng Na Uy.png",
+      "color": "Nhiều màu",
+      "size": "To",
+      "furr": "Dài",
+      "furrLose": "Nhiều",
+      "price": "7.500.000"
+    },
+    {
+      "id": 14,
+      "name": "Russian Blue",
+      "thumbnail": "./cats/Russian Blue.png",
+      "color": "Đơn sắc",
+      "size": "Nhỏ",
+      "furr": "Ngắn",
+      "furrLose": "Ít",
+      "price": "9.000.000"
+    },
+    {
+      "id": 15,
+      "name": "Savannah",
+      "thumbnail": "./cats/Savannah.png",
+      "color": "Nhiều màu",
+      "size": "Nhỏ",
+      "furr": "Ngắn",
+      "furrLose": "Ít",
+      "price": "4.000.000"
+    },
+    {
+      "id": 16,
+      "name": "Siberian",
+      "thumbnail": "./cats/Siberian.png",
+      "color": "Nhiều màu",
+      "size": "To",
+      "furr": "Dài",
+      "furrLose": "Nhiều",
+      "price": "10.000.000"
+    },
+    {
+      "id": 17,
+      "name": "Somanli",
+      "thumbnail": "./cats/Somanli.png",
+      "color": "Đơn sắc",
+      "size": "Trung Bình",
+      "furr": "Ngắn",
+      "furrLose": "Ít",
+      "price": "8.000.000"
+    },
+    {
+      "id": 18,
+      "name": "Sphynx",
+      "thumbnail": "./cats/Sphynx.png",
+      "color": "Đơn sắc",
+      "size": "Trung Bình",
+      "furr": "Dài",
+      "furrLose": "Nhiều",
+      "price": "7.000.000"
+    },
+    {
+      "id": 19,
+      "name": "Turkish",
+      "thumbnail": "./cats/Turkish.png",
+      "color": "Đơn sắc",
+      "size": "Nhỏ",
+      "furr": "Ít",
+      "furrLose": "Ít",
+      "price": "8.000.000"
+    },
+    {
+      "id": 20,
+      "name": "Tuxedo",
+      "thumbnail": "./cats/Tuxedo.png",
+      "color": "Nhiều màu",
+      "size": "Trung bình",
+      "furr": "Ngắn",
+      "furrLose": "Ít",
+      "price": "5.000.000"
     }
   ]
 }

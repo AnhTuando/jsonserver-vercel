@@ -24,6 +24,6 @@ async function getCats() {
 
 async function render() {
   let cats = await getCats();
-  console.log(cats[1].name);
+  console.log(cats);
 }
 render();
