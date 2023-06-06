@@ -205,122 +205,488 @@
     {
       "id": 1,
       "name": "Bánh Cho Mèo Jinny",
-      "thumbnail": "./cats/Bánh Cho Mèo Jinny.png",
+      "thumbnail": "./foods/Bánh Cho Mèo Jinny.png",
       "price": "100.000"
     },
     {
       "id": 2,
       "name": "Bánh Cho Mèo MINI BITES",
-      "thumbnail": "./cats/Bánh Cho Mèo MINI BITES.png",
+      "thumbnail": "./foods/Bánh Cho Mèo MINI BITES.png",
       "price": "120.000"
     },
     {
       "id": 3,
       "name": "Bánh Cho Mèo Vị Gà Jinny",
-      "thumbnail": "./cats/Bánh Cho Mèo Vị Gà Jinny.png",
+      "thumbnail": "./foods/Bánh Cho Mèo Vị Gà Jinny.png",
       "price": "130.000"
     },
     {
       "id": 4,
       "name": "Bánh Vị Tôm",
-      "thumbnail": "./cats/Bánh Vị Tôm.png",
+      "thumbnail": "./foods/Bánh Vị Tôm.png",
       "price": "115.000"
     },
     {
       "id": 5,
       "name": "Hạt Catidea",
-      "thumbnail": "./cats/Hạt Catidea.png",
+      "thumbnail": "./foods/Hạt Catidea.png",
       "price": "200.000"
     },
     {
       "id": 6,
       "name": "Hạt ROYAL CANIN",
-      "thumbnail": "./cats/Hạt ROYAL CANIN.png",
+      "thumbnail": "./foods/Hạt ROYAL CANIN.png",
       "price": "170.000"
     },
     {
       "id": 7,
       "name": "Nước Sốt Pate CIAO",
-      "thumbnail": "./cats/Nước Sốt Pate CIAO.png",
+      "thumbnail": "./foods/Nước Sốt Pate CIAO.png",
       "price": "120.000"
     },
     {
       "id": 8,
       "name": "Pate Cá Biển",
-      "thumbnail": "./cats/Pate Cá Biển.png",
+      "thumbnail": "./foods/Pate Cá Biển.png",
       "price": "260.000"
     },
     {
       "id": 9,
       "name": "Pate Cá Ngừ",
-      "thumbnail": "./cats/Pate Cá Ngừ.png",
+      "thumbnail": "./foods/Pate Cá Ngừ.png",
       "price": "300.000"
     },
     {
       "id": 10,
       "name": "Pate Sốt Gan",
-      "thumbnail": "./cats/Pate Sốt Gan.png",
+      "thumbnail": "./foods/Pate Sốt Gan.png",
       "price": "350.000"
     },
     {
       "id": 11,
       "name": "Pate Thịt Gà",
-      "thumbnail": "./cats/Pate Thịt Gà.png",
+      "thumbnail": "./foods/Pate Thịt Gà.png",
       "price": "320.000"
     },
     {
       "id": 12,
       "name": "Pate Trộn Thịt",
-      "thumbnail": "./cats/Pate Trộn Thịt.png",
+      "thumbnail": "./foods/Pate Trộn Thịt.png",
       "price": "310.000"
     },
     {
       "id": 13,
       "name": "Snack Cá Ngừ",
-      "thumbnail": "./cats/Snack Cá Ngừ.png",
+      "thumbnail": "./foods/Snack Cá Ngừ.png",
       "price": "220.000"
     },
     {
       "id": 14,
       "name": "Sữa Bột Kitten Milk",
-      "thumbnail": "./cats/Sữa Bột Kitten Milk.png",
+      "thumbnail": "./foods/Sữa Bột Kitten Milk.png",
       "price": "550.000"
     },
     {
       "id": 15,
       "name": "Sữa Tươi Ít Béo",
-      "thumbnail": "./cats/Sữa Tươi Ít Béo.png",
+      "thumbnail": "./foods/Sữa Tươi Ít Béo.png",
       "price": "650.000"
     },
     {
       "id": 16,
       "name": "Súp Cá Ngừ Hải Sản CIAO",
-      "thumbnail": "./cats/Súp Cá Ngừ Hải Sản CIAO.png",
+      "thumbnail": "./foods/Súp Cá Ngừ Hải Sản CIAO.png",
       "price": "450.000"
     },
     {
       "id": 17,
       "name": "Súp Cho Mèo CIAO",
-      "thumbnail": "./cats/Súp Cho Mèo CIAO.png",
+      "thumbnail": "./foods/Súp Cho Mèo CIAO.png",
       "price": "400.000"
     },
     {
       "id": 18,
       "name": "Thịt Cá Chép",
-      "thumbnail": "./cats/Thịt Cá Chép.png",
+      "thumbnail": "./foods/Thịt Cá Chép.png",
       "price": "50.000"
     },
     {
       "id": 19,
       "name": "Thịt Ức Gà",
-      "thumbnail": "./cats/Thịt Ức Gà.png",
+      "thumbnail": "./foods/Thịt Ức Gà.png",
       "price": "40.000"
     },
     {
       "id": 20,
       "name": "Xúc Xích Cho Mèo",
-      "thumbnail": "./cats/Xúc Xích Cho Mèo.png",
+      "thumbnail": "./foods/Xúc Xích Cho Mèo.png",
       "price": "30.000"
+    }
+  ],
+  "toys": [
+    {
+      "id": 1,
+      "name": "Bàn Cào Móng",
+      "thumbnail": "./toys/Bàn Cào Móng.png",
+      "price": "120.000"
+    },
+    {
+      "id": 2,
+      "name": "Bóng Len",
+      "thumbnail": "./toys/Bóng Len.png",
+      "price": "80.000"
+    },
+    {
+      "id": 3,
+      "name": "Bóng Nhựa",
+      "thumbnail": "./toys/Bóng Nhựa.png",
+      "price": "60.000"
+    },
+    {
+      "id": 4,
+      "name": "Cần Câu",
+      "thumbnail": "./toys/Cần Câu.png",
+      "price": "40.000"
+    },
+    {
+      "id": 5,
+      "name": "Chó Bông",
+      "thumbnail": "./toys/Chó Bông.png",
+      "price": "60.000"
+    },
+    {
+      "id": 6,
+      "name": "Chuột Cói",
+      "thumbnail": "./toys/Chuột Cói.png",
+      "price": "40.000"
+    },
+    {
+      "id": 7,
+      "name": "Cỏ Mèo BIOLINE",
+      "thumbnail": "./toys/Cỏ Mèo BIOLINE.png",
+      "price": "200.000"
+    },
+    {
+      "id": 8,
+      "name": "Cỏ Mèo Dạng Que",
+      "thumbnail": "./toys/Cỏ Mèo Dạng Que.png",
+      "price": "100.000"
+    },
+    {
+      "id": 9,
+      "name": "Cỏ Mèo Mint",
+      "thumbnail": "./toys/Cỏ Mèo Mint.png",
+      "price": "140.000"
+    },
+    {
+      "id": 10,
+      "name": "Cuộn Bóng Len",
+      "thumbnail": "./toys/Cuộn Bóng Len.png",
+      "price": "100.000"
+    },
+    {
+      "id": 11,
+      "name": "Dây Thừng",
+      "thumbnail": "./toys/Dây Thừng.png",
+      "price": "30.000"
+    },
+    {
+      "id": 12,
+      "name": "Đồ Cào Móng PAWS",
+      "thumbnail": "./toys/Đồ Cào Móng PAWS.png",
+      "price": "150.000"
+    },
+    {
+      "id": 13,
+      "name": "Đồ Chơi Cho Mèo Circle",
+      "thumbnail": "./toys/Đồ Chơi Cho Mèo Circle.png",
+      "price": "160.000"
+    },
+    {
+      "id": 14,
+      "name": "Gà Nhựa",
+      "thumbnail": "./toys/Gà Nhựa.png",
+      "price": "30.000"
+    },
+    {
+      "id": 15,
+      "name": "Gấu Len Hồng",
+      "thumbnail": "./toys/Gấu Len Hồng.png",
+      "price": "50.000"
+    },
+    {
+      "id": 16,
+      "name": "Hạt Giống Cỏ BIOLINE",
+      "thumbnail": "./toys/Hạt Giống Cỏ BIOLINE.png",
+      "price": "90.000"
+    },
+    {
+      "id": 17,
+      "name": "Kì Lân Bông",
+      "thumbnail": "./toys/Kì Lân Bông.png",
+      "price": "60.000"
+    },
+    {
+      "id": 18,
+      "name": "Koala Bông",
+      "thumbnail": "./toys/Koala Bông.png",
+      "price": "40.000"
+    },
+    {
+      "id": 19,
+      "name": "Ốc Sên Bông",
+      "thumbnail": "./toys/Ốc Sên Bông.png",
+      "price": "40.000"
+    },
+    {
+      "id": 20,
+      "name": "Ông Già Noel",
+      "thumbnail": "./toys/Ông Già Noel.png",
+      "price": "40.000"
+    }
+  ],
+  "clothes": [
+    {
+      "id": 1,
+      "name": "Áo Dài Cho Mèo",
+      "thumbnail": "./toys/Áo Dài Cho Mèo.png",
+      "price": "150.000"
+    },
+    {
+      "id": 2,
+      "name": "Áo Dài Xanh",
+      "thumbnail": "./toys/Áo Dài Xanh.png",
+      "price": "160.000"
+    },
+    {
+      "id": 3,
+      "name": "Áo Hình Cún",
+      "thumbnail": "./toys/Áo Hình Cún.png",
+      "price": "190.000"
+    },
+    {
+      "id": 4,
+      "name": "Áo Họa Tiết",
+      "thumbnail": "./toys/Áo Họa Tiết.png",
+      "price": "170.000"
+    },
+    {
+      "id": 5,
+      "name": "Áo Kèm Dây Trắng",
+      "thumbnail": "./toys/Áo Kèm Dây Trắng.png",
+      "price": "150.000"
+    },
+    {
+      "id": 6,
+      "name": "Áo Mũ Cho Mèo",
+      "thumbnail": "./toys/Áo Mũ Cho Mèo.png",
+      "price": "200.000"
+    },
+    {
+      "id": 7,
+      "name": "Áo Yếm Đen",
+      "thumbnail": "./toys/Áo Yếm Đen.png",
+      "price": "220.000"
+    },
+    {
+      "id": 8,
+      "name": "Áo Yếm Vàng",
+      "thumbnail": "./toys/Áo Yếm Vàng.png",
+      "price": "210.000"
+    },
+    {
+      "id": 9,
+      "name": "Mũ Cá",
+      "thumbnail": "./toys/Mũ Cá.png",
+      "price": "120.000"
+    },
+    {
+      "id": 10,
+      "name": "Mũ Hoa",
+      "thumbnail": "./toys/Mũ Hoa.png",
+      "price": "100.000"
+    },
+    {
+      "id": 11,
+      "name": "Mũ Hồng",
+      "thumbnail": "./toys/Mũ Hồng.png",
+      "price": "140.000"
+    },
+    {
+      "id": 12,
+      "name": "Mũ Icon",
+      "thumbnail": "./toys/Mũ Icon.png",
+      "price": "140.000"
+    },
+    {
+      "id": 13,
+      "name": "Mũ Sừng",
+      "thumbnail": "./toys/Mũ Sừng.png",
+      "price": "140.000"
+    },
+    {
+      "id": 14,
+      "name": "Váy Smile",
+      "thumbnail": "./toys/Váy Smile.png",
+      "price": "170.000"
+    },
+    {
+      "id": 15,
+      "name": "Váy Vàng",
+      "thumbnail": "./toys/Váy Vàng.png",
+      "price": "160.000"
+    },
+    {
+      "id": 16,
+      "name": "Vòng Cổ Caro",
+      "thumbnail": "./toys/Vòng Cổ Caro.png",
+      "price": "100.000"
+    },
+    {
+      "id": 17,
+      "name": "Vòng Cổ Có Dây Dắt",
+      "thumbnail": "./toys/Vòng Cổ Có Dây Dắt.png",
+      "price": "100.000"
+    },
+    {
+      "id": 18,
+      "name": "Vòng Cổ Dây Xám",
+      "thumbnail": "./toys/Vòng Cổ Dây Xám.png",
+      "price": "100.000"
+    },
+    {
+      "id": 19,
+      "name": "Yếm Có Dây Dắt Vàng",
+      "thumbnail": "./toys/Yếm Có Dây Dắt Vàng.png",
+      "price": "110.000"
+    },
+    {
+      "id": 20,
+      "name": "Yếm Có Dây Dắt Xám",
+      "thumbnail": "./toys/Yếm Có Dây Dắt Xám.png",
+      "price": "110.000"
+    }
+  ],
+  "litter": [
+    {
+      "id": 1,
+      "name": "Bột Khử Mùi Bioline",
+      "thumbnail": "./toys/Bột Khử Mùi Bioline.png",
+      "price": "70.000"
+    },
+    {
+      "id": 2,
+      "name": "Bột Khử Mùi Trixie",
+      "thumbnail": "./toys/Bột Khử Mùi Trixie.png",
+      "price": "70.000"
+    },
+    {
+      "id": 3,
+      "name": "Cát Vệ Sinh 4 in 1",
+      "thumbnail": "./toys/Cát Vệ Sinh 4 in 1.png",
+      "price": "150.000"
+    },
+    {
+      "id": 4,
+      "name": "Cát Vệ Sinh Đất Sét",
+      "thumbnail": "./toys/Cát Vệ Sinh Đất Sét.png",
+      "price": "110.000"
+    },
+    {
+      "id": 5,
+      "name": "Cát Vệ Sinh Đậu Nành MIAO",
+      "thumbnail": "./toys/Cát Vệ Sinh Đậu Nành MIAO.png",
+      "price": "120.000"
+    },
+    {
+      "id": 6,
+      "name": "Cát Vệ Sinh FELINE",
+      "thumbnail": "./toys/Cát Vệ Sinh FELINE.png",
+      "price": "120.000"
+    },
+    {
+      "id": 7,
+      "name": "Cát Vệ Sinh Gỗ Thông",
+      "thumbnail": "./toys/Cát Vệ Sinh Gỗ Thông.png",
+      "price": "140.000"
+    },
+    {
+      "id": 8,
+      "name": "Cát Vệ Sinh Hồng IRIS",
+      "thumbnail": "./toys/Cát Vệ Sinh Hồng IRIS.png",
+      "price": "170.000"
+    },
+    {
+      "id": 9,
+      "name": "Cát Vệ Sinh Hữu Cơ Betonnit",
+      "thumbnail": "./toys/Cát Vệ Sinh Hữu Cơ Betonnit.png",
+      "price": "140.000"
+    },
+    {
+      "id": 10,
+      "name": "Cát Vệ Sinh Hữu Cơ CATBESTS",
+      "thumbnail": "./toys/Cát Vệ Sinh Hữu Cơ CATBESTS.png",
+      "price": "160.000"
+    },
+    {
+      "id": 11,
+      "name": "Cát Vệ Sinh KATZ",
+      "thumbnail": "./toys/Cát Vệ Sinh KATZ.png",
+      "price": "180.000"
+    },
+    {
+      "id": 12,
+      "name": "Cát Vệ Sinh KFAG",
+      "thumbnail": "./toys/Cát Vệ Sinh KFAG.png",
+      "price": "170.000"
+    },
+    {
+      "id": 13,
+      "name": "Cát Vệ Sinh ME-O",
+      "thumbnail": "./toys/Cát Vệ Sinh ME-O.png",
+      "price": "170.000"
+    },
+    {
+      "id": 14,
+      "name": "Cát Vệ Sinh Thấm Hút Khử Mùi",
+      "thumbnail": "./toys/Cát Vệ Sinh Thấm Hút Khử Mùi.png",
+      "price": "190.000"
+    },
+    {
+      "id": 15,
+      "name": "Cát Vệ Sinh Than Hoạt TÍnh",
+      "thumbnail": "./toys/Cát Vệ Sinh Than Hoạt Tính.png",
+      "price": "220.000"
+    },
+    {
+      "id": 16,
+      "name": "Cát Vệ Sinh Thủy Tinh",
+      "thumbnail": "./toys/Cát Vệ Sinh Thủy Tinh.png",
+      "price": "200.000"
+    },
+    {
+      "id": 17,
+      "name": "Cát Vệ Sinh Trà Xanh",
+      "thumbnail": "./toys/Cát Vệ Sinh Trà Xanh.png",
+      "price": "190.000"
+    },
+    {
+      "id": 18,
+      "name": "Cát Vệ Sinh Vàng IRIS",
+      "thumbnail": "./toys/Cát Vệ Sinh Vàng IRIS.png",
+      "price": "190.000"
+    },
+    {
+      "id": 19,
+      "name": "Cát Vệ Sinh Xanh IRIS",
+      "thumbnail": "./toys/Cát Vệ Sinh Xanh IRIS.png",
+      "price": "190.000"
+    },
+    {
+      "id": 20,
+      "name": "Xịt Vệ Sinh",
+      "thumbnail": "./toys/Xịt Vệ Sinh.png",
+      "price": "100.000"
     }
   ]
 }

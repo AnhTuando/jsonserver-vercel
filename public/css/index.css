@@ -26,8 +26,8 @@
 .lh-60px {
   line-height: 80px;
 }
-.wd-250px {
-  width: 250px;
+.wd-200px {
+  width: 200px;
 }
 .sub-nav-bg,
 .footer-bg {
@@ -77,36 +77,19 @@
 .special-bg {
   background-color: #dafbfa;
 }
-.slider {
-  position: relative;
-}
-.sl-left-btn,
-.sl-right-btn {
-  position: absolute;
-  top: 42%;
-  height: 60px;
-  width: 60px;
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
   border-radius: 50%;
-  opacity: 0.8;
+  opacity: 0.7;
+
   transition: 0.25s;
 }
-.sl-left-btn {
-  left: 30px;
-}
-.sl-right-btn {
-  right: 30px;
-}
-.sl-left-btn:hover,
-.sl-right-btn:hover {
+
+.carousel-control-next-icon:hover,
+.carousel-control-prev-icon:hover {
   cursor: pointer;
-  background-color: #008452;
   opacity: 1;
-}
-.slider-moving-mb .wrap-dot {
-  position: absolute;
-  bottom: 10px;
-  font-size: 6px;
-  left: 46%;
 }
 
 .left-col-element {
@@ -153,7 +136,7 @@
 }
 .food:hover > .wrap-text,
 .litter:hover > .wrap-text {
-  transform: scale(1.5);
+  transform: scale(1.2);
   opacity: 1;
 }
 
@@ -175,7 +158,7 @@
 .litter:not(:hover) > .wrap-text,
 .clothes:not(:hover) > .wrap-text,
 .food:not(:hover) > .wrap-text {
-  transform: scale(0);
+  transform: scale(0.9);
   opacity: 0;
   transition: 0.75s;
 }
