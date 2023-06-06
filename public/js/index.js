@@ -39,3 +39,26 @@ async function renderFoods() {
   console.log(foods);
 }
 renderFoods();
+
+// Swiper
+// PC
+let swiperPc = new Swiper(".mySwiper-PC", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+// Mobile
+let swiperPC = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  keyboard: {
+    enabled: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
