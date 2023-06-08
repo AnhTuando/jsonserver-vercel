@@ -9,6 +9,9 @@
   --background-color: #22ac78;
 }
 /* General */
+.number-font {
+  font-family:"roboto";
+}
 .green-bg {
   background: var(--background-color);
 }

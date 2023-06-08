@@ -85,7 +85,9 @@
                 <div
                   class="mobile-logo d-flex justify-content-center align-items-center"
                 >
-                  <img src="./img/TheCatLogo.png" class="img-fluid" alt="" />
+                  <a href="./index.html">
+                    <img src="./img/TheCatLogo.png" class="img-fluid" alt="" />
+                  </a>
                 </div>
               </div>
               <div
@@ -177,7 +179,9 @@
         <div class="container">
           <div class="row">
             <div class="col-2">
-              <img class="logo" src="./img/TheCatLogo.png" alt="" />
+              <a href="./index.html">
+                <img class="logo" src="./img/TheCatLogo.png" alt="" />
+              </a>
             </div>
             <div
               class="col-8 d-flex justify-content-between align-items-center"
@@ -297,16 +301,22 @@
                     class="payment-selection d-flex fw-bold text-soft-bl gap-2"
                   >
                     <div class="online-pay">
-                      <label>Online</label>
-                      <input class="online" type="radio" />
+                      <label
+                        ><span>Online</span>
+                        <input class="online" type="radio" name="method" />
+                      </label>
                     </div>
                     <div class="cash-pay">
-                      <label>Tiền Mặt</label>
-                      <input class="cash" type="radio" />
+                      <label
+                        ><span>Tiền mặt</span>
+                        <input class="cash" type="radio" name="method" />
+                      </label>
                     </div>
                   </div>
                 </div>
-                <div class="online-payment-box d-flex justify-content-around">
+                <div
+                  class="online-payment-box d-flex justify-content-around d-none"
+                >
                   <div class="momo">
                     <img src="./img/momo.png" class="img-fluid" alt="Momo" />
                   </div>
@@ -472,6 +482,6 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/checkout.js"></script>
+    <script type="module" src="./js/checkout.js"></script>
   </body>
 </html>

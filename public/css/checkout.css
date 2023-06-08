@@ -61,3 +61,8 @@
 .checkout .customer-info-box input:focus {
   outline: 1px solid var(--font-green-color);
 }
+
+.opacity-1 {
+  opacity: 1;
+  transition: 1s;
+}
