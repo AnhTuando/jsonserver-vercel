@@ -24,17 +24,3 @@ filterMoblieBtn.onclick = function () {
 filterMoblieCloseBtn.onclick = function () {
   filterMobile.classList.add("d-none");
 };
-
-// scroll filter pc
-let contentBoxParent = document.querySelector(".pc-content");
-let filterBoxChild = document.querySelector(".filter-scroll");
-
-// product item when mouse not hover event:
-let productItems = document.querySelectorAll(".col-9 .product-item");
-let newProductItemsArr = Array.from(productItems);
-newProductItemsArr.map(function (item) {
-  item.addEventListener("mouseleave", function () {
-    item.style.transform = "scale(1)";
-  });
-});
-// PaymentBox Zoom Lens

@@ -12,6 +12,9 @@
 .green-bg {
   background: var(--background-color);
 }
+.green-soft-bg {
+  background-color: rgba(0, 104, 55, 0.959);
+}
 .light-green-bg {
   color: var(--background-color);
 }
@@ -64,19 +67,18 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
 }
 .filter-scroll {
-  height: 800px;
-  overflow: scroll;
-  overflow-x: hidden;
+  height: 100%;
   position: sticky;
   position: -webkit-sticky;
   top: 110px;
   border-radius: 10px; /* Border radius cho "thanh nằm trong" thanh cuộn */
 }
 .filter-mb .filter-box {
-  overflow: scroll;
-  width: 400px;
-  height: 500px;
-  overflow-x: hidden;
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: -16px;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -113,10 +115,22 @@ input[type="range"]::-webkit-slider-thumb {
   font-family: "Roboto";
 }
 
+/* filter title hover */
+.filter-pc-box .title:hover {
+  color: var(--font-green-color);
+  transition: 0.25s;
+  cursor: pointer;
+}
 /* hover product items */
-.col-9 .product-item img {
+.col-lg-9 .product-item img,
+.col-lg-9 .product-item .cart-btn {
   transition: 0.75s;
 }
-.col-9 .product-item:hover img {
+.col-lg-9 .product-item:hover img {
   transform: scale(1.1);
+}
+.col-lg-9 .product-item:hover .cart-btn {
+  background: var(--font-green-color);
+  color: #fff;
+  transition: 0.75s;
 }
