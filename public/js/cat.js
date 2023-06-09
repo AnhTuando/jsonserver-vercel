@@ -61,7 +61,7 @@ async function renderCats() {
                           >${element.name}</span
                         >
                         <span class="name-value fs-5 d-lg-none"
-                          >Mèo Anh Lông Ngắn</span
+                          >${element.name}</span
                         >
                       </div>
                       <div
