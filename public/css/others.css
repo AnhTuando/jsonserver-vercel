@@ -61,3 +61,21 @@
 }
 /* End General */
 /* hover product items */
+.product .container .row .item:hover .cart-btn {
+  background-color: var(--background-color);
+  color: #fff;
+  transition: 0.75s;
+}
+.product .container .row .item:hover img {
+  transform: scale(1);
+  transition: 0.75s;
+}
+.product .container .row .item:not(:hover) img {
+  transform: scale(0.8);
+  transition: 0.75s;
+}
+.product .container .row .item:not(:hover) .cart-btn {
+  background-color: #fff;
+  color: #4e4e4e;
+  transition: 0.75s;
+}
