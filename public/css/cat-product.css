@@ -10,7 +10,7 @@
 }
 /* General */
 .number-font {
-  font-family:"roboto";
+  font-family: "roboto";
 }
 .green-bg {
   background: var(--background-color);
@@ -60,4 +60,11 @@
   font-family: "Roboto";
   font-size: 16;
 }
+
 /* End General */
+.border-gr {
+  border: 2px solid green;
+}
+.border-none {
+  border: none;
+}

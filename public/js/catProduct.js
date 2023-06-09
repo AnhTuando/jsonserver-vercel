@@ -15,46 +15,61 @@ async function getCats() {
   return data;
 }
 async function renderCatDetail() {
-  let productBox = document.querySelector(".product .container .col-12");
+  let productBox = document.querySelector(".product .container .row ");
 
   let datas = await getCats();
   datas.map((element) => {
     if (element.id == currentId) {
       let item1 = document.createElement("div");
-      item1.classList.add("row");
-      item1.classList.add("my-2");
-      item1.innerHTML = ` <div
-                  class="product-img col-12 col-lg-6 d-flex justify-content-center align-items-center "
+      item1.classList.add("col-12");
+      item1.innerHTML = ` <div class="row my-2">
+                <div
+                  class="product-img col-12 col-lg-6 d-flex justify-content-center align-items-center"
                   style="height: 400px"
                 >
-                  <img src="${element.thumbnail}" class="img-fluid h-75" style="image-rendering: pixelated;" alt="" />
+                  <img
+                    src="${element.thumbnail}"
+                    class="img-fluid h-75"
+                    style="image-rendering: pixelated"
+                    alt=""
+                  />
                 </div>
                 <div
-                  class="product-info col-12 col-lg-6 gap-1 d-flex flex-column justify-content-between"
+                  class="product-info col-12 col-lg-6 gap-2 d-flex flex-column justify-content-between"
                 >
-                  <div class="pr-name fs-3 text-gr fw-bold">Mèo ${element.name}</div>
+                  <div class="pr-name fs-3 text-gr fw-bold">
+                    Mèo ${element.name}
+                  </div>
                   <div class="sub-info row">
                     <div class="pr-color col-6">
                       <span class="title text-secondary fw-medium"
                         >Kiểu Màu:</span
                       >
-                      <span class="color-value text-soft-bl">${element.color}</span>
+                      <span class="color-value text-soft-bl"
+                        >${element.color}</span
+                      >
                     </div>
                     <div class="pr-size col-6">
                       <span class="title text-secondary fw-medium">Size:</span>
-                      <span class="size-valuetext-soft-bl">${element.size}</span>
+                      <span class="size-valuetext-soft-bl"
+                        >${element.size}</span
+                      >
                     </div>
                     <div class="pr-fur col-6">
                       <span class="title text-secondary fw-medium"
                         >Kiểu Lông:</span
                       >
-                      <span class="fur-value text-soft-bl">${element.furr}</span>
+                      <span class="fur-value text-soft-bl"
+                        >${element.furr}</span
+                      >
                     </div>
                     <div class="pr-fur-loss col-6">
                       <span class="title text-secondary fw-medium"
                         >Rụng Lông:</span
                       >
-                      <span class="fur-loss-value text-soft-bl">${element.furrLose}</span>
+                      <span class="fur-loss-value text-soft-bl"
+                        >${element.furrLose}</span
+                      >
                     </div>
                   </div>
                   <div class="discount-box">
@@ -62,29 +77,52 @@ async function renderCatDetail() {
                       Giảm 10% giá phụ kiện khi mua kèm với mèo
                     </div>
                     <div
-                      class="discount-products-box d-flex gap-3"
+                      class="discount-products-box d-flex gap-3 gap-lg-4"
                       style="height: 80px"
                     >
                       <div class="ds-pr-1 h-100">
+                      
                         <img
                           src="./img/accessory.png"
                           class="img-fluid h-100"
-                          alt=""
-                        />
+                          alt=""                         
+                        />                       
                       </div>
-                      <div class="ds-pr-1 h-100">
+                      <div class="ds-pr-2 h-100">
+                      
                         <img
                           src="./img/accessory.png"
                           class="img-fluid h-100"
-                          alt=""
-                        />
+                          alt=""                         
+                        />                       
                       </div>
-                      <div class="ds-pr-1 h-100">
+                      <div class="ds-pr-3 h-100">
+                      
                         <img
                           src="./img/accessory.png"
                           class="img-fluid h-100"
-                          alt=""
-                        />
+                          alt=""                         
+                        />                       
+                      </div>
+                     
+                     
+                      <div
+                        class="show-discount-price d-none d-flex flex-column justify-content-center border border-secondary px-2 rounded-2 "
+                      >
+                        <div
+                          class="old-price text-decoration-line-through text-secondary"
+                        >
+                          <span class="old-value ff-roboto ff-roboto"
+                            >140.000</span
+                          >
+                          <span class="ff-roboto ff-roboto">VND</span>
+                        </div>
+                        <div class="current-price text-danger fw-medium">
+                          <span class="cur-value ff-roboto ff-roboto"
+                            >126.000</span
+                          >
+                          <span class="ff-roboto ff-roboto">VND</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -132,65 +170,136 @@ async function renderCatDetail() {
                       <span>Miễn phí vận chuyển nội thành</span>
                     </div>
                   </div>
-                </div>`;
-      productBox.append(item1);
-      let item2 = document.createElement("div");
-      item1.classList.add("row");
-      item1.classList.add("my-2");
-      item2.innerHTML = `<div class="col-12">
-                  <div class="row certification">
-                    <div class="col-12">
+                </div>
+                <div class="row certification">
+                  <div class="col-12">
+                    <div
+                      class="title d-lg-none text-center mt-2 fw-bold text-soft-bl"
+                    >
+                      Giấy Tờ Kèm Theo
+                    </div>
+                    <div
+                      class="title d-none d-lg-block text-center fs-4 mt-2 fw-bold text-soft-bl"
+                    >
+                      Giấy Tờ Kèm Theo
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <div
+                      class="vaccination-box d-flex flex-column justify-content-center"
+                    >
+                      <img src="./img/cert1.png" class="img-fluid" alt="" />
                       <div
-                        class="title d-lg-none text-center mt-2 fw-bold text-soft-bl"
+                        class="d-none d-lg-block fs-4 fw-medium cert-info text-center text-soft-bl"
                       >
-                        Giấy Tờ Kèm Theo
+                        Sổ tiêm phòng
                       </div>
                       <div
-                        class="title d-none d-lg-block text-center fs-4 mt-2 fw-bold text-soft-bl"
+                        class="d-lg-none cert-info text-center fw-medium text-soft-bl"
                       >
-                        Giấy Tờ Kèm Theo
+                        Sổ tiêm phòng
                       </div>
                     </div>
-                    <div class="col-12 col-lg-6">
-                      <div
-                        class="vaccination-box d-flex flex-column justify-content-center"
-                      >
-                        <img src="./img/cert1.png" class="img-fluid" alt="" />
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <div
+                      class="warranty-box d-flex flex-column justify-content-center"
+                    >
+                      <img src="./img/cert2.png" class="img-fluid" alt="" />
+                      <div class="cert-info text-center text-soft-bl">
                         <div
                           class="d-none d-lg-block fs-4 fw-medium cert-info text-center text-soft-bl"
                         >
-                          Sổ tiêm phòng
+                          Phiếu bảo hành
                         </div>
                         <div
                           class="d-lg-none cert-info text-center fw-medium text-soft-bl"
                         >
-                          Sổ tiêm phòng
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                      <div
-                        class="warranty-box d-flex flex-column justify-content-center"
-                      >
-                        <img src="./img/cert2.png" class="img-fluid" alt="" />
-                        <div class="cert-info text-center text-soft-bl">
-                          <div
-                            class="d-none d-lg-block fs-4 fw-medium cert-info text-center text-soft-bl"
-                          >
-                            Phiếu bảo hành
-                          </div>
-                          <div
-                            class="d-lg-none cert-info text-center fw-medium text-soft-bl"
-                          >
-                            Phiếu bảo hành
-                          </div>
+                          Phiếu bảo hành
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>`;
-      productBox.append(item2);
+                </div>
+              </div>`;
+      productBox.append(item1);
+      // Handle Discount Products
+      function Handle() {
+        let discountProduct1 = document.querySelector(".ds-pr-1");
+        let discountProduct2 = document.querySelector(".ds-pr-2");
+        let discountProduct3 = document.querySelector(".ds-pr-3");
+        let showDiscountPrice = document.querySelector(".show-discount-price");
+        discountProduct1.addEventListener("click", function () {
+          discountProduct1.classList.remove("border-none");
+          discountProduct1.classList.toggle("border-gr");
+          showDiscountPrice.classList.toggle("d-none");
+
+          discountProduct2.classList.add("border-none");
+          discountProduct3.classList.add("border-none");
+        });
+        discountProduct2.addEventListener("click", function () {
+          discountProduct2.classList.remove("border-none");
+          discountProduct2.classList.toggle("border-gr");
+          showDiscountPrice.classList.toggle("d-none");
+
+          discountProduct1.classList.add("border-none");
+          discountProduct3.classList.add("border-none");
+        });
+        discountProduct3.addEventListener("click", function () {
+          discountProduct3.classList.remove("border-none");
+          discountProduct3.classList.toggle("border-gr");
+          showDiscountPrice.classList.toggle("d-none");
+
+          discountProduct1.classList.add("border-none");
+          discountProduct2.classList.add("border-none");
+        });
+      }
+      Handle();
+      // Quantity Box Handle
+      function handleQuantityBox() {
+        let plusBtn = document.querySelector(".quantity-box .plus-btn");
+        let quantityNumberBox = document.querySelector(
+          ".quantity-box .show-quantity"
+        );
+        let minusBtn = document.querySelector(".quantity-box .minus-btn");
+        let priceText = document.querySelector(".price-value").textContent;
+        let priceBox = document.querySelector(".price-value");
+        let quantity = parseInt(quantityNumberBox.textContent);
+
+        let priceValue = parseFloat(priceText.replace(/\./g, ""));
+
+        minusBtn.addEventListener("click", function () {
+          if (quantity > 1) {
+            quantity--;
+            quantityNumberBox.innerHTML = `${quantity}`;
+            priceBox.innerHTML = `${(priceValue * quantity).toLocaleString(
+              "vi-VN"
+            )}`;
+          }
+        });
+        plusBtn.addEventListener("click", function () {
+          quantity++;
+          quantityNumberBox.innerHTML = `${quantity}`;
+          priceBox.innerHTML = `${(priceValue * quantity).toLocaleString(
+            "vi-VN"
+          )}`;
+        });
+      }
+      handleQuantityBox();
     }
   });
+  let productObj = {
+    name: "",
+    price: "",
+    quantity: 0,
+    discountPr: true,
+    discountPrName: "",
+    discountPrName: "25.000",
+  };
+  return productObj;
 }
+
 renderCatDetail();
+
+let a = await renderCatDetail();
+console.log(a);
