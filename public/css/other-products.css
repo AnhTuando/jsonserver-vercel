@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Dosis";
+}
+:root {
+  --font-green-color: #008b57;
+  --background-color: #22ac78;
+}
+/* General */
+.number-font {
+  font-family: "roboto";
+}
+.green-bg {
+  background: var(--background-color);
+}
+.light-green-bg {
+  color: var(--background-color);
+}
+.text-gr {
+  color: var(--font-green-color);
+}
+.h-60px {
+  height: 80px;
+}
+.lh-60px {
+  line-height: 80px;
+}
+.wd-250px {
+  width: 250px;
+}
+.filter-bg,
+.sub-nav-bg,
+.footer-bg {
+  background: #008452;
+}
+.fs-14px {
+  font-size: 14px;
+}
+.custom-shadow {
+  box-shadow: 0px 0px 50px #e6e6e6;
+}
+.special-bg {
+  background-color: #dafbfa;
+}
+.text-special {
+  color: #06f299;
+}
+.navigation-2 {
+  position: sticky;
+  top: 0;
+  position: -webkit-sticky;
+  z-index: 1;
+}
+.text-soft-bl {
+  color: #4e4e4e;
+}
+.ff-roboto {
+  font-family: "Roboto";
+}
+/* End General */

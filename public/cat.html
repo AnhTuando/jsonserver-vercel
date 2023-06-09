@@ -17,10 +17,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="./css/product.css" />
+    <link rel="stylesheet" href="./css/cat.css" />
   </head>
   <body>
-    <main class="main">
+    <main class="main position-relative">
       <!-- NAVIGATION 1 -->
       <section class="navigation-1">
         <!-- PC NAVIGATION -->
@@ -227,15 +227,312 @@
         </div>
       </section>
       <!--END NAVIGATION 2 -->
-      <!--PRODUCT -->
-      <section class="product">
+      <!-- CONTENT  -->
+      <!-- mobile content -->
+      <section class="content my-3 d-lg-none">
+        <div class="container">
+          <!-- wrap product and filter -->
+          <div class="row wrap-product-filter d-lg-none">
+            <div class="col-12">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="products-info d-flex gap-2">
+                  <span class="pr-description text-gr fw-bold fs-3"
+                    >Sản Phẩm:</span
+                  ><span class="pr-value fs-3 fw-bold">Mèo</span>
+                </div>
+                <div class="filter">
+                  <div
+                    class="filter-btn bg-gr filter-bg text-light fw-bold fs-3 py-2 px-4 rounded-2"
+                  >
+                    Lọc
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end wrap product and filter -->
+
+          <!--Mobile filter box -->
+          <div class="row filter-mb d-none d-lg-none">
+            <div class="col-12">
+              <div class="filter-box px-3 my-3 green-soft-bg z-1 text-light">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="wrap-close-btn d-flex">
+                      <div
+                        class="filter-mb-close-btn p-2 fs-3 ms-auto"
+                        style="width: fit-content"
+                      >
+                        <i class="bi bi-x-lg"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- color filter -->
+                <div class="row g-2 mb-4">
+                  <div class="title fs-4 fw-bold">Chọn Màu Sắc</div>
+                  <div class="color">
+                    <div class="color-choose d-flex gap-2 fs-5">
+                      <label class="fw-medium">
+                        <input type="checkbox" name="color" id="" />
+                        <span class="color-value">Nhiều màu</span></label
+                      >
+                      <label class="fw-medium">
+                        <input type="checkbox" name="color" id="" />
+                        <span class="color-value">Đơn sắc</span></label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!--end color filter -->
+                <!-- fur filter -->
+                <div class="row g-2 mb-4">
+                  <div class="title fs-4 fw-bold">Chọn Kiểu Lông</div>
+                  <div class="fur">
+                    <div class="fur-choose d-flex gap-2 fs-5">
+                      <label class="fw-medium">
+                        <input type="checkbox" name="fur" id="" />
+                        <span class="fur-value">Ngắn</span></label
+                      >
+                      <label class="fw-medium">
+                        <input type="checkbox" name="fur" id="" />
+                        <span class="fur-value">Dài</span></label
+                      >
+                      <label class="fw-medium">
+                        <input type="checkbox" name="fur" id="" />
+                        <span class="fur-value">Ít</span></label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!--end fur filter -->
+                <!-- size filter -->
+                <div class="row g-2 mb-4">
+                  <div class="title fs-4 fw-bold">Chọn Kiểu Lông</div>
+                  <div class="size">
+                    <div class="size-choose d-flex gap-2 fs-5">
+                      <label class="fw-medium">
+                        <input type="checkbox" name="size" id="" />
+                        <span class="size-value">Nhỏ</span></label
+                      >
+                      <label class="fw-medium">
+                        <input type="checkbox" name="size" id="" />
+                        <span class="size-value">Trung bình</span></label
+                      >
+                      <label class="fw-medium">
+                        <input type="checkbox" name="size" id="" />
+                        <span class="size-value">To</span></label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!--end size filter -->
+                <!-- fur loss filter -->
+                <div class="row g-2 mb-4">
+                  <div class="title fs-4 fw-bold">Chọn Kiểu Lông</div>
+                  <div class="fur-loss">
+                    <div class="fur-loss-choose d-flex gap-2 fs-5">
+                      <label class="fw-medium">
+                        <input type="checkbox" name="fur-loss" id="" />
+                        <span class="fur-loss-value">Nhiều</span></label
+                      >
+                      <label class="fw-medium">
+                        <input type="checkbox" name="fur-loss" id="" />
+                        <span class="fur-loss-value">Ít</span></label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!--end fur loss  filter -->
+                <!-- price filter -->
+                <div class="row g-2 mb-4">
+                  <div class="wrap-show-price d-flex">
+                    <div class="title fw-bold fs-4">Giá</div>
+                    <div
+                      class="ms-3 d-flex align-items-center gap-1 show-price fw-medium fs-6"
+                    >
+                      <span class="show-price-value">3</span>
+                      <span>Triệu</span>
+                    </div>
+                  </div>
+                  <div
+                    class="price-filter-box position-relative"
+                    style="height: 50px"
+                  >
+                    <div
+                      class="start-price position-absolute start-0 bottom-0 fw-medium"
+                    >
+                      1 Triệu
+                    </div>
+                    <div
+                      class="start-price position-absolute end-0 bottom-0 fw-medium"
+                    >
+                      10 Triệu
+                    </div>
+                    <input
+                      type="range"
+                      class="price-filter-input w-100"
+                      value="3"
+                      min="1"
+                      max="10"
+                    />
+                  </div>
+                </div>
+                <!-- price filter -->
+                <div class="wrap-btn d-flex justify-content-center">
+                  <div
+                    class="filter-btn-price fw-bold fs-5 filter-bg d-inline-block rounded-2 text-light py-1 px-3"
+                    style="width: fit-content"
+                  >
+                    Lọc
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Mobile filter box -->
+        </div>
+      </section>
+      <!--end mobile content -->
+      <!-- pc content -->
+      <section class="pc-content">
         <div class="container">
           <div class="row">
-            <div class="col-12"></div>
+            <div
+              class="d-none d-lg-block filter-pc col-3 my-3 p-3 border border-success-subtle filter-scroll bg-light"
+            >
+              <div class="filter-pc-box">
+                <!--PC color filter -->
+                <div class="row g-2 mb-3">
+                  <div class="title fs-5 fw-medium">Chọn Màu Sắc</div>
+                  <div class="color">
+                    <div class="color-choose d-flex gap-2">
+                      <label class="fw-medium">
+                        <input type="checkbox" name="color" id="" />
+                        <span class="color-value">Nhiều màu</span></label
+                      >
+                      <label class="fw-medium">
+                        <input type="checkbox" name="color" id="" />
+                        <span class="color-value">Đơn sắc</span></label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!--end color filter -->
+                <!-- size filter -->
+                <div class="row g-2 mb-3">
+                  <div class="title fs-5 fw-medium">Chọn Kích Cỡ</div>
+                  <div class="color">
+                    <div class="color-choose d-flex gap-2 \">
+                      <label class="fw-medium">
+                        <input type="checkbox" name="size" id="" />
+                        <span class="size-value">Nhỏ</span></label
+                      >
+                      <label class="fw-medium">
+                        <input type="checkbox" name="size" id="" />
+                        <span class="size-value">Trung bình</span></label
+                      >
+                      <label class="fw-medium">
+                        <input type="checkbox" name="size" id="" />
+                        <span class="size-value">To</span></label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!--end size filter -->
+                <!-- fur style filter -->
+                <div class="row g-2 mb-3">
+                  <div class="title fs-5 fw-medium">Chọn Kiểu Lông</div>
+                  <div class="color">
+                    <div class="color-choose d-flex gap-2">
+                      <label class="fw-medium">
+                        <input type="checkbox" name="size" id="" />
+                        <span class="fur-value">Ngắn</span></label
+                      >
+                      <label class="fw-medium">
+                        <input type="checkbox" name="size" id="" />
+                        <span class="fur-value">Dài</span></label
+                      >
+                      <label class="fw-medium">
+                        <input type="checkbox" name="size" id="" />
+                        <span class="fur-value">Ít</span></label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!--end fur style filter -->
+                <!-- fur loss filter -->
+                <div class="row g-2 mb-3">
+                  <div class="title fs-5 fw-medium">Rụng Lông</div>
+                  <div class="color">
+                    <div class="color-choose">
+                      <label class="fw-medium">
+                        <input type="checkbox" name="size" id="" />
+                        <span class="fur-loss-value">Nhiều</span></label
+                      >
+                      <label class="fw-medium">
+                        <input type="checkbox" name="size" id="" />
+                        <span class="fur-loss-value">Ít</span></label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!--end fur loss filter -->
+                <!-- price filter -->
+                <div class="row g-2 mb-2">
+                  <div class="wrap-show-price d-flex fs-5">
+                    <div class="title fw-medium">Giá</div>
+                    <div
+                      class="ms-3 d-flex align-items-center gap-1 show-price fw-bold fs-6"
+                    >
+                      <span class="show-price-value">3</span>
+                      <span>Triệu</span>
+                    </div>
+                  </div>
+                  <div
+                    class="price-filter-box position-relative"
+                    style="height: 50px"
+                  >
+                    <div
+                      class="start-price position-absolute start-0 bottom-0 fw-medium"
+                    >
+                      1 Triệu
+                    </div>
+                    <div
+                      class="start-price position-absolute end-0 bottom-0 fw-medium"
+                    >
+                      10 Triệu
+                    </div>
+                    <input
+                      type="range"
+                      class="price-filter-input w-100"
+                      value="3"
+                      min="1"
+                      max="10"
+                    />
+                  </div>
+                </div>
+                <!--End price filter -->
+                <div class="wrap-btn d-flex justify-content-center">
+                  <div
+                    class="filter-btn-price fw-bold fs-5 filter-bg d-inline-block rounded-2 text-light py-1 px-3"
+                    style="width: fit-content"
+                  >
+                    Lọc
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="products col-12 col-lg-9 my-3">
+              <div class="row">
+                <div class="col-12 text-center fw-bold fs-4">Loading...</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <!--END PRODUCT -->
+      <!--end pc content -->
+      <!--END CONTENT  -->
       <!-- SPECIAL -->
       <section class="special my-5">
         <div
@@ -380,6 +677,9 @@
         </div>
       </section>
       <!--END SPECIAL -->
+      <!-- Pop-Up Product -->
+
+      <!-- End Pop-Up Product -->
       <!-- FOOTER -->
       <footer class="footer footer-bg py-3">
         <div class="container d-block d-lg-none">
@@ -434,9 +734,7 @@
             </div>
           </div>
           <div class="row">
-            <div
-              class="follow-wrap d-flex gap-4 text-light my-3 justify-content-center"
-            >
+            <div class="follow-wrap d-flex gap-4 text-light my-3">
               <div
                 class="span fs-4 fw-bold d-flex justify-content-center align-items-center"
               >
@@ -516,6 +814,6 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="./js/product.js"></script>
+    <script type="module" src="./js/cat.js"></script>
   </body>
 </html>
