@@ -61,12 +61,3 @@
 }
 /* End General */
 /* hover product items */
-.product .container .row a:hover img {
-  transform: scale(1.1);
-  transition: 0.75s;
-}
-.product .container .row a:hover .cart-btn {
-  background: var(--font-green-color);
-  color: #fff;
-  transition: 0.75s;
-}
