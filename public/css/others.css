@@ -71,8 +71,8 @@
   transition: 0.75s;
 }
 .product .container .row .item:not(:hover) img {
-  transform: scale(0.8);
   transition: 0.75s;
+  transform: scale(0.8);
 }
 .product .container .row .item:not(:hover) .cart-btn {
   background-color: #fff;

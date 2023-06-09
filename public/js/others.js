@@ -1,12 +1,13 @@
 // Call Foods API
 async function getFoods() {
-  let res = await fetch("foods");
+  let res = await fetch("http://localhost:3000/foods");
   let data = await res.json();
   return data;
 }
 async function renderFoods() {
   let foods = await getFoods();
   let productBox = document.querySelector(".product .container .row");
+  productBox.innerHTML = ``;
   foods.map((element) => {
     let item = document.createElement("div");
     item.classList.add("col-6");
@@ -15,12 +16,12 @@ async function renderFoods() {
     item.setAttribute("data-product-id", `${element.id}`);
 
     item.innerHTML = `
-      <div class="item p-2 custom-shadow  rounded-2">
+      <div class="item p-2 custom-shadow h-100 rounded-2" >
                 <a
                   href="./other-product.html?${element.id}"
-                  class="text-decoration-none d-flex flex-column gap-3"
+                  class="text-decoration-none d-flex flex-column justify-content-between h-100"
                 >
-                  <div class="wrap-img">
+                  <div class="wrap-img d-flex justify-content-center" >
                     <img
                       src="${element.thumbnail}"
                       class="img-fluid"
@@ -32,23 +33,18 @@ async function renderFoods() {
                       <span class="name-value fs-4 d-none d-lg-block"
                         >${element.name}</span
                       >
-                      <span class="name-value fs-5 d-lg-none"
+                      <span class="name-value d-lg-none"
                         >${element.name}</span
                       >
                     </div>
                     <div class="pr-price-box d-flex justify-content-between">
-                      <div class="price fw-medium d-lg-none">
-                        <span class="ff-roboto text-soft-bl fw-medium"
+                      <div class=" price fw-medium d-flex justify-content-center gap-1 align-items-center">
+                        <span class="ff-roboto text-soft-bl "
                           >${element.price}</span
                         >
-                        <span class="text-soft-bl fw-bold">VND</span>
+                        <span class=" ff-roboto text-soft-bl ">VND</span>
                       </div>
-                      <div class="price fw-medium fs-4 d-none d-lg-block">
-                        <span class="ff-roboto text-soft-bl fw-medium"
-                          >${element.price}</span
-                        >
-                        <span class="text-soft-bl fw-bold">VND</span>
-                      </div>
+                    
                       <div
                         class="cart-btn border border-success py-1 px-2 text-soft-bl"
                         style="border-radius: 50%"

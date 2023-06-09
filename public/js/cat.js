@@ -32,6 +32,7 @@ async function getCats() {
   let data = await res.json();
   return data;
 }
+
 async function renderCats() {
   let cats = await getCats();
   let wrapCatsBox = document.querySelector(".products .row");
