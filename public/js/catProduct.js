@@ -294,7 +294,7 @@ async function renderCatDetail() {
     quantity: 0,
     discountPr: true,
     discountPrName: "",
-    discountPrName: "25.000",
+    discountPrPrice: "25.000",
   };
   return productObj;
 }

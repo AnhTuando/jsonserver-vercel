@@ -26,14 +26,90 @@
   </head>
   <body>
     <main class="main">
-      <!-- NAVIGATION 1 -->
+      <!-- subnav -->
+      <div
+        class="subnav-mobile sub-nav-bg position-fixed d-none d-lg-none z-2 h-100"
+        style="width: 200px"
+      >
+        <div class="row">
+          <div
+            class="sub-nav-close fs-2 fw-bold text-light text-uppercase ps-5 py-2"
+          >
+            <i class="bi bi-x-lg float-end pe-3"></i>
+          </div>
+        </div>
+
+        <div class="row">
+          <div
+            class="sub-nav-link fs-3 fw-medium text-light text-uppercase ps-5 py-2"
+          >
+            <a href="cat.html" class="text-decoration-none text-light">Mèo</a>
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="sub-nav-link fs-3 fw-medium text-light text-uppercase ps-5 py-2"
+          >
+            <a href="others.html?foods" class="text-decoration-none text-light"
+              >Đồ ăn</a
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="sub-nav-link fs-3 fw-medium text-light text-uppercase ps-5 py-2"
+          >
+            <a href="others.html?toys" class="text-decoration-none text-light"
+              >Đồ chơi</a
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="sub-nav-link fs-3 fw-medium text-light text-uppercase ps-5 py-2"
+          >
+            <a href="others.html?litter" class="text-decoration-none text-light"
+              >Cát vệ sinh</a
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="sub-nav-link fs-3 fw-medium text-light text-uppercase ps-5 py-2"
+          >
+            <a
+              href="others.html?clothes"
+              class="text-decoration-none text-light"
+              >Đồ trang trí</a
+            >
+          </div>
+        </div>
+        <div class="row py-3 ps-4 position-fixed bottom-0" style="left: 15px">
+          <div class="col-4">
+            <span class="mail-mobile-box fs-2 text-light">
+              <i class="bi bi-envelope-fill"></i>
+            </span>
+          </div>
+          <div class="col-4">
+            <span class="cart-mobile-box fs-2 text-light">
+              <i class="bi bi-cart4"></i>
+            </span>
+          </div>
+          <div class="col-4">
+            <span class="phone-mobile-box fs-2 text-light">
+              <i class="bi bi-telephone-fill"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!--End subnav -->
       <section class="navigation-1">
         <!-- PC NAVIGATION -->
         <div class="container d-none d-lg-block">
           <div class="row lh-60px h-60px">
             <div class="col-12 d-flex justify-content-around">
               <div class="item">
-                <div class="title fw-bold text-uppercase text-gr fs-4">
+                <div class="title fw-bold text-uppercase text-gr fs-3">
                   Your Cat's Paradise
                 </div>
               </div>
@@ -78,13 +154,12 @@
                 </div>
               </div>
               <div class="col-8">
-                <div
+                <a
+                  href="index.html"
                   class="mobile-logo d-flex justify-content-center align-items-center"
                 >
-                  <a href="./index.html">
-                    <img src="./img/TheCatLogo.png" class="img-fluid" alt="" />
-                  </a>
-                </div>
+                  <img src="./img/TheCatLogo.png" class="img-fluid" alt="" />
+                </a>
               </div>
               <div
                 class="col-2 float-end d-flex justify-content-center align-items-center"
@@ -95,87 +170,14 @@
               </div>
             </div>
           </div>
-          <!-- subnav -->
-          <div
-            class="subnav-mobile wd-250px sub-nav-bg position-absolute d-none z-1"
-          >
-            <div class="row">
-              <div
-                class="sub-nav-close fs-2 fw-bold text-light text-uppercase ps-5 py-2"
-              >
-                <i class="bi bi-x-lg float-end pe-3"></i>
-              </div>
-            </div>
-            <div class="row">
-              <div
-                class="sub-nav-link fs-2 fw-bold text-light text-uppercase ps-5 py-2"
-              >
-                <span>Home</span>
-              </div>
-            </div>
-            <div class="row">
-              <div
-                class="sub-nav-link fs-2 fw-bold text-light text-uppercase ps-5 py-2"
-              >
-                <span>Mèo</span>
-              </div>
-            </div>
-            <div class="row">
-              <div
-                class="sub-nav-link fs-2 fw-bold text-light text-uppercase ps-5 py-2"
-              >
-                <span>Đồ ăn</span>
-              </div>
-            </div>
-            <div class="row">
-              <div
-                class="sub-nav-link fs-2 fw-bold text-light text-uppercase ps-5 py-2"
-              >
-                <span>Đồ chơi</span>
-              </div>
-            </div>
-            <div class="row">
-              <div
-                class="sub-nav-link fs-2 fw-bold text-light text-uppercase ps-5 py-2"
-              >
-                <span>Cát vệ sinh</span>
-              </div>
-            </div>
-            <div class="row">
-              <div
-                class="sub-nav-link fs-2 fw-bold text-light text-uppercase ps-5 py-2"
-              >
-                <span>Đồ trang trí</span>
-              </div>
-            </div>
-            <div class="row py-3 ps-4">
-              <div class="col-4">
-                <span class="mail-mobile-box fs-2 text-light">
-                  <i class="bi bi-envelope-fill"></i>
-                </span>
-              </div>
-              <div class="col-4">
-                <span class="cart-mobile-box fs-2 text-light">
-                  <i class="bi bi-cart4"></i>
-                </span>
-              </div>
-              <div class="col-4">
-                <span class="phone-mobile-box fs-2 text-light">
-                  <i class="bi bi-telephone-fill"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-          <!--End subnav -->
         </div>
       </section>
-      <!--END NAVIGATION 2 -->
       <!-- NAVIGATION 2 -->
       <section class="navigation-2 d-none d-lg-block green-bg">
         <div class="container">
           <div class="row">
             <div class="col-2">
-              <a href="./index.html">
+              <a href="index.html">
                 <img class="logo" src="./img/TheCatLogo.png" alt="" />
               </a>
             </div>
@@ -184,21 +186,21 @@
             >
               <div class="item">
                 <a
-                  href="about.html"
+                  href="cat.html"
                   class="text-light text-decoration-none fw-bold fs-5 d-flex gap-2"
                   ><i class="bi bi-android"></i> MÈO</a
                 >
               </div>
               <div class="item">
                 <a
-                  href="about.html"
+                  href="others.html?foods"
                   class="text-light text-decoration-none fw-bold fs-5 d-flex gap-2"
                   ><i class="bi bi-box-fill"></i> ĐỒ ĂN</a
                 >
               </div>
               <div class="item">
                 <a
-                  href="about.html"
+                  href="others.html?toys"
                   class="text-light text-decoration-none fw-bold fs-5 d-flex gap-2"
                 >
                   <i class="bi bi-balloon-fill"></i> ĐỒ CHƠI</a
@@ -206,14 +208,14 @@
               </div>
               <div class="item">
                 <a
-                  href="about.html"
+                  href="others.html?litter"
                   class="text-light text-decoration-none fw-bold fs-5 d-flex gap-2"
                   ><i class="bi bi-archive-fill"></i> CÁT VỆ SINH</a
                 >
               </div>
               <div class="item">
                 <a
-                  href="about.html"
+                  href="others.html?clothes"
                   class="text-light text-decoration-none fw-bold fs-5 d-flex gap-2"
                 >
                   <i class="bi bi-piggy-bank-fill"></i> ĐỒ TRANG TRÍ</a
