@@ -27,7 +27,7 @@ function getCharacter() {
 }
 // Call Foods API
 async function getFoods() {
-  let res = await fetch("http://localhost:3000/foods");
+  let res = await fetch("foods");
   let data = await res.json();
   return data;
 }
@@ -90,7 +90,7 @@ async function renderFoods() {
 
 // Call Clothes API
 async function getClothes() {
-  let res = await fetch("http://localhost:3000/clothes");
+  let res = await fetch("clothes");
   let data = await res.json();
   return data;
 }
@@ -153,7 +153,7 @@ async function renderClothes() {
 
 // Call Toys API
 async function getToys() {
-  let res = await fetch("http://localhost:3000/toys");
+  let res = await fetch("toys");
   let data = await res.json();
   return data;
 }
@@ -216,7 +216,7 @@ async function renderToys() {
 
 // Call Litter API
 async function getLitter() {
-  let res = await fetch("http://localhost:3000/litter");
+  let res = await fetch("litter");
   let data = await res.json();
   return data;
 }
