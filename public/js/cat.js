@@ -28,7 +28,7 @@ filterMoblieCloseBtn.onclick = function () {
 
 // Call Cats API
 async function getCats() {
-  let res = await fetch("http://localhost:3000/cats");
+  let res = await fetch("cats");
   let data = await res.json();
   return data;
 }
