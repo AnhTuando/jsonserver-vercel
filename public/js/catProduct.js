@@ -24,8 +24,10 @@ function getUrlId() {
   let urlStrId = url.search;
   let numStr = urlStrId.replace(/\D/g, "");
   let postID = parseInt(numStr);
+
   return postID;
 }
+
 let currentId = getUrlId();
 // Call Cats API
 async function getCats() {

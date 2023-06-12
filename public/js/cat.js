@@ -26,13 +26,22 @@ filterMoblieCloseBtn.onclick = function () {
   filterMobile.classList.add("d-none");
 };
 
+function updateKeys(key, value) {
+  const url = new URL(location.href);
+  if (!value) {
+    url.searchParams.delete(key);
+  } else {
+    url.searchParams.set(key, value);
+  }
+  window.history.pushState(null, null, url);
+}
+
 // Call Cats API
 async function getCats() {
   let res = await fetch("cats");
   let data = await res.json();
   return data;
 }
-
 async function renderCats() {
   let cats = await getCats();
   let wrapCatsBox = document.querySelector(".products .row");

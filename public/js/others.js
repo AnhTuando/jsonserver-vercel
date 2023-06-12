@@ -17,14 +17,6 @@ let navigationElements = document.querySelectorAll(
   ".navigation-2 .container .row .col-8 .item"
 );
 
-function getCharacter() {
-  const currentUrl = window.location.href;
-  const url = new URL(currentUrl);
-  let urlStrId = url.search;
-  let character = urlStrId.replace(/\?/g, "");
-
-  return character;
-}
 // Call Foods API
 async function getFoods() {
   let res = await fetch("foods");
@@ -45,7 +37,7 @@ async function renderFoods() {
     item.innerHTML = `
       <div class="item p-2 custom-shadow h-100 rounded-2" >
                 <a
-                  href="./other-product.html?${element.id}"
+                  href="./other-product.html?foods?${element.id}"
                   class="text-decoration-none d-flex flex-column justify-content-between h-100"
                 >
                   <div class="wrap-img d-flex justify-content-center" >
@@ -275,6 +267,14 @@ async function renderLitter() {
      `;
     productBox.append(item);
   });
+}
+function getCharacter() {
+  const currentUrl = window.location.href;
+  const url = new URL(currentUrl);
+  let urlStrId = url.search;
+  let character = urlStrId.replace(/\?/g, "");
+
+  return character;
 }
 
 function showItems() {
