@@ -123,6 +123,37 @@ async function renderFoodDetail() {
                 </div>
               </div>`;
       productBox.append(item1);
+      // Quantity Box Handle
+      function handleQuantityBox() {
+        let plusBtn = document.querySelector(".quantity-box .plus-btn");
+        let quantityNumberBox = document.querySelector(
+          ".quantity-box .show-quantity"
+        );
+        let minusBtn = document.querySelector(".quantity-box .minus-btn");
+        let priceText = document.querySelector(".price-value").textContent;
+        let priceBox = document.querySelector(".price-value");
+        let quantity = parseInt(quantityNumberBox.textContent);
+
+        let priceValue = parseFloat(priceText.replace(/\./g, ""));
+
+        minusBtn.addEventListener("click", function () {
+          if (quantity > 1) {
+            quantity--;
+            quantityNumberBox.innerHTML = `${quantity}`;
+            priceBox.innerHTML = `${(priceValue * quantity).toLocaleString(
+              "vi-VN"
+            )}`;
+          }
+        });
+        plusBtn.addEventListener("click", function () {
+          quantity++;
+          quantityNumberBox.innerHTML = `${quantity}`;
+          priceBox.innerHTML = `${(priceValue * quantity).toLocaleString(
+            "vi-VN"
+          )}`;
+        });
+      }
+      handleQuantityBox();
     }
   });
 }

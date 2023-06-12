@@ -91,14 +91,15 @@ async function renderCatDetail() {
                       >
                     </div>
                   </div>
-                  <div class="discount-box">
+                  <div class="discount-box d-flex flex-column gap-2">
                     <div class="title fw-medium text-gr">
                       Giảm 10% giá phụ kiện khi mua kèm với mèo
                     </div>
                     <div
-                      class="discount-products-box d-flex gap-3 gap-lg-4"
+                      class="discount-products-box d-flex justify-content-between"
                       style="height: 80px"
                     >
+                    <div class="item d-flex">
                       <div class="ds-pr-1 h-100">
                       
                         <img
@@ -124,23 +125,27 @@ async function renderCatDetail() {
                         />                       
                       </div>
                      
+                    </div>
                      
                       <div
-                        class="show-discount-price d-none d-flex flex-column justify-content-center border border-secondary px-2 rounded-2 "
+                        class="show-discount-price d-flex flex-column justify-content-center border border-secondary px-2 rounded-2 "
                       >
                         <div
                           class="old-price text-decoration-line-through text-secondary"
                         >
-                          <span class="old-value ff-roboto ff-roboto"
+                        <span>Giảm cũ:</span>
+                          <span class="old-value  ff-roboto"
+
                             >140.000</span
                           >
-                          <span class="ff-roboto ff-roboto">VND</span>
+                          <span class=" ">VND</span>
                         </div>
-                        <div class="current-price text-danger fw-medium">
-                          <span class="cur-value ff-roboto ff-roboto"
+                        <div class="current-price text-danger ">
+                        <span>Giảm còn:</span>
+                          <span class="cur-value ff-roboto "
                             >126.000</span
                           >
-                          <span class="ff-roboto ff-roboto">VND</span>
+                          <span class=" ">VND</span>
                         </div>
                       </div>
                     </div>
@@ -247,27 +252,23 @@ async function renderCatDetail() {
         let discountProduct1 = document.querySelector(".ds-pr-1");
         let discountProduct2 = document.querySelector(".ds-pr-2");
         let discountProduct3 = document.querySelector(".ds-pr-3");
-        let showDiscountPrice = document.querySelector(".show-discount-price");
-        discountProduct1.addEventListener("click", function () {
-          discountProduct1.classList.remove("border-none");
-          discountProduct1.classList.toggle("border-gr");
-          showDiscountPrice.classList.toggle("d-none");
 
+        discountProduct1.addEventListener("click", function () {
+          discountProduct1.classList.toggle("border-gr");
+          discountProduct1.classList.remove("border-none");
           discountProduct2.classList.add("border-none");
           discountProduct3.classList.add("border-none");
         });
         discountProduct2.addEventListener("click", function () {
-          discountProduct2.classList.remove("border-none");
           discountProduct2.classList.toggle("border-gr");
-          showDiscountPrice.classList.toggle("d-none");
+          discountProduct2.classList.remove("border-none");
 
           discountProduct1.classList.add("border-none");
           discountProduct3.classList.add("border-none");
         });
         discountProduct3.addEventListener("click", function () {
-          discountProduct3.classList.remove("border-none");
           discountProduct3.classList.toggle("border-gr");
-          showDiscountPrice.classList.toggle("d-none");
+          discountProduct3.classList.remove("border-none");
 
           discountProduct1.classList.add("border-none");
           discountProduct2.classList.add("border-none");
@@ -319,6 +320,3 @@ async function renderCatDetail() {
 }
 
 renderCatDetail();
-
-let a = await renderCatDetail();
-console.log(a);
