@@ -66,3 +66,41 @@
   opacity: 1;
   transition: 1s;
 }
+
+.order-box:hover {
+  cursor: pointer;
+}
+.custom-shadow-dropdown {
+  box-shadow: 0px 0px 20px #a7a7a7;
+}
+.cart-item-box .delete-btn {
+  opacity: 0.8;
+}
+.cart-item-box .delete-btn:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.moving-down {
+  animation: moveDown 0.2s ease-in-out;
+}
+.moving-up {
+  animation: moveUp 0.2s ease-in-out;
+}
+@keyframes moveDown {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10%);
+  }
+}

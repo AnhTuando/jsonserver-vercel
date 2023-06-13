@@ -173,7 +173,7 @@ async function renderCatDetail() {
                     </div>
                     <div class="payment d-flex">
                       <a
-                        href="checkout.html"
+                        href="checkout.html?cat=${element.id}"
                         class="pay-btn text-decoration-none p-2 green-bg text-light fw-bold rounded-4"
                       >
                         Mua ngay
@@ -254,12 +254,20 @@ async function renderCatDetail() {
         let discountProduct1 = document.querySelector(".ds-pr-1");
         let discountProduct2 = document.querySelector(".ds-pr-2");
         let discountProduct3 = document.querySelector(".ds-pr-3");
+        let checkDiscount = localStorage.getItem("checkDiscount") || false;
 
         discountProduct1.addEventListener("click", function () {
           discountProduct1.classList.toggle("border-gr");
           discountProduct1.classList.remove("border-none");
           discountProduct2.classList.add("border-none");
           discountProduct3.classList.add("border-none");
+          if (discountProduct1.classList.contains("border-gr")) {
+            checkDiscount = true;
+            localStorage.setItem("discountChecked", checkDiscount);
+          } else {
+            checkDiscount = false;
+            localStorage.setItem("discountChecked", checkDiscount);
+          }
         });
         discountProduct2.addEventListener("click", function () {
           discountProduct2.classList.toggle("border-gr");
@@ -267,6 +275,13 @@ async function renderCatDetail() {
 
           discountProduct1.classList.add("border-none");
           discountProduct3.classList.add("border-none");
+          if (discountProduct2.classList.contains("border-gr")) {
+            checkDiscount = true;
+            localStorage.setItem("discountChecked", checkDiscount);
+          } else {
+            checkDiscount = false;
+            localStorage.setItem("discountChecked", checkDiscount);
+          }
         });
         discountProduct3.addEventListener("click", function () {
           discountProduct3.classList.toggle("border-gr");
@@ -274,6 +289,13 @@ async function renderCatDetail() {
 
           discountProduct1.classList.add("border-none");
           discountProduct2.classList.add("border-none");
+          if (discountProduct3.classList.contains("border-gr")) {
+            checkDiscount = true;
+            localStorage.setItem("discountChecked", checkDiscount);
+          } else {
+            checkDiscount = false;
+            localStorage.setItem("discountChecked", checkDiscount);
+          }
         });
       }
       Handle();
@@ -290,10 +312,11 @@ async function renderCatDetail() {
 
         let priceValue = parseFloat(priceText.replace(/\./g, ""));
 
-        minusBtn.addEventListener("click", function () {
+        minusBtn.addEventListener("click", function handleMinus() {
           if (quantity > 1) {
             quantity--;
             quantityNumberBox.innerHTML = `${quantity}`;
+
             priceBox.innerHTML = `${(priceValue * quantity).toLocaleString(
               "vi-VN"
             )}`;
@@ -302,23 +325,32 @@ async function renderCatDetail() {
         plusBtn.addEventListener("click", function () {
           quantity++;
           quantityNumberBox.innerHTML = `${quantity}`;
+
           priceBox.innerHTML = `${(priceValue * quantity).toLocaleString(
             "vi-VN"
           )}`;
         });
       }
       handleQuantityBox();
+      // Pay-btn-click
+      let priceBox = document.querySelector(".price-value");
+      let countBox = document.querySelector(".quantity-box .show-quantity");
+
+      let payBtn = document.querySelector(".pay-btn");
+      payBtn.addEventListener("click", function () {
+        let productName = document.querySelector(".product-info .pr-name");
+        let price = localStorage.getItem("productPrice") || 0;
+        let count = localStorage.getItem("productCount") || 0;
+        let name = localStorage.getItem("productName") || "cat";
+        count = countBox.innerHTML;
+        price = priceBox.innerText;
+        name = productName.innerText;
+        localStorage.setItem("productPrice", price);
+        localStorage.setItem("productCount", count);
+        localStorage.setItem("productName", name);
+      });
     }
   });
-  let productObj = {
-    name: "",
-    price: "",
-    quantity: 0,
-    discountPr: true,
-    discountPrName: "",
-    discountPrPrice: "25.000",
-  };
-  return productObj;
 }
 
 renderCatDetail();

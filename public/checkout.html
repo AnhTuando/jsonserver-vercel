@@ -25,19 +25,96 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
       <link rel="stylesheet" href="./css/checkout.css" />
     </head>
   </head>
   <body>
     <main class="main">
-      <!-- NAVIGATION 1 -->
+       <!-- subnav -->
+      <div
+        class="subnav-mobile sub-nav-bg position-fixed d-none d-lg-none z-2 h-100"
+        style="width: 200px"
+      >
+        <div class="row">
+          <div
+            class="sub-nav-close fs-2 fw-bold text-light text-uppercase ps-5 py-2"
+          >
+            <i class="bi bi-x-lg float-end pe-3"></i>
+          </div>
+        </div>
+
+        <div class="row">
+          <div
+            class="sub-nav-link fs-3 fw-medium text-light text-uppercase ps-5 py-2"
+          >
+            <a href="cat.html" class="text-decoration-none text-light">Mèo</a>
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="sub-nav-link fs-3 fw-medium text-light text-uppercase ps-5 py-2"
+          >
+            <a href="others.html?foods" class="text-decoration-none text-light"
+              >Đồ ăn</a
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="sub-nav-link fs-3 fw-medium text-light text-uppercase ps-5 py-2"
+          >
+            <a href="others.html?toys" class="text-decoration-none text-light"
+              >Đồ chơi</a
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="sub-nav-link fs-3 fw-medium text-light text-uppercase ps-5 py-2"
+          >
+            <a href="others.html?litter" class="text-decoration-none text-light"
+              >Cát vệ sinh</a
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="sub-nav-link fs-3 fw-medium text-light text-uppercase ps-5 py-2"
+          >
+            <a
+              href="others.html?clothes"
+              class="text-decoration-none text-light"
+              >Đồ trang trí</a
+            >
+          </div>
+        </div>
+        <div class="row py-3 ps-4 position-fixed bottom-0" style="left: 15px">
+          <div class="col-4">
+            <span class="mail-mobile-box fs-2 text-light">
+              <i class="bi bi-envelope-fill"></i>
+            </span>
+          </div>
+          <div class="col-4">
+            <span class="cart-mobile-box fs-2 text-light">
+              <i class="bi bi-cart4"></i>
+            </span>
+          </div>
+          <div class="col-4">
+            <span class="phone-mobile-box fs-2 text-light">
+              <i class="bi bi-telephone-fill"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!--End subnav -->
       <section class="navigation-1">
         <!-- PC NAVIGATION -->
         <div class="container d-none d-lg-block">
           <div class="row lh-60px h-60px">
             <div class="col-12 d-flex justify-content-around">
               <div class="item">
-                <div class="title fw-bold text-uppercase text-gr fs-4">
+                <div class="title fw-bold text-uppercase text-gr fs-3">
                   Your Cat's Paradise
                 </div>
               </div>
@@ -82,13 +159,12 @@
                 </div>
               </div>
               <div class="col-8">
-                <div
+                <a
+                  href="index.html"
                   class="mobile-logo d-flex justify-content-center align-items-center"
                 >
-                  <a href="./index.html">
-                    <img src="./img/TheCatLogo.png" class="img-fluid" alt="" />
-                  </a>
-                </div>
+                  <img src="./img/TheCatLogo.png" class="img-fluid" alt="" />
+                </a>
               </div>
               <div
                 class="col-2 float-end d-flex justify-content-center align-items-center"
@@ -99,87 +175,49 @@
               </div>
             </div>
           </div>
-          <!-- subnav -->
-          <div
-            class="subnav-mobile wd-250px sub-nav-bg position-absolute d-none z-1"
-          >
-            <div class="row">
-              <div
-                class="sub-nav-close fs-2 fw-bold text-light text-uppercase ps-5 py-2"
-              >
-                <i class="bi bi-x-lg float-end pe-3"></i>
-              </div>
-            </div>
-            <div class="row">
-              <div
-                class="sub-nav-link fs-2 fw-bold text-light text-uppercase ps-5 py-2"
-              >
-                <span>Home</span>
-              </div>
-            </div>
-            <div class="row">
-              <div
-                class="sub-nav-link fs-2 fw-bold text-light text-uppercase ps-5 py-2"
-              >
-                <span>Mèo</span>
-              </div>
-            </div>
-            <div class="row">
-              <div
-                class="sub-nav-link fs-2 fw-bold text-light text-uppercase ps-5 py-2"
-              >
-                <span>Đồ ăn</span>
-              </div>
-            </div>
-            <div class="row">
-              <div
-                class="sub-nav-link fs-2 fw-bold text-light text-uppercase ps-5 py-2"
-              >
-                <span>Đồ chơi</span>
-              </div>
-            </div>
-            <div class="row">
-              <div
-                class="sub-nav-link fs-2 fw-bold text-light text-uppercase ps-5 py-2"
-              >
-                <span>Cát vệ sinh</span>
-              </div>
-            </div>
-            <div class="row">
-              <div
-                class="sub-nav-link fs-2 fw-bold text-light text-uppercase ps-5 py-2"
-              >
-                <span>Đồ trang trí</span>
-              </div>
-            </div>
-            <div class="row py-3 ps-4">
-              <div class="col-4">
-                <span class="mail-mobile-box fs-2 text-light">
-                  <i class="bi bi-envelope-fill"></i>
-                </span>
-              </div>
-              <div class="col-4">
-                <span class="cart-mobile-box fs-2 text-light">
-                  <i class="bi bi-cart4"></i>
-                </span>
-              </div>
-              <div class="col-4">
-                <span class="phone-mobile-box fs-2 text-light">
-                  <i class="bi bi-telephone-fill"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-          <!--End subnav -->
         </div>
       </section>
-      <!--END NAVIGATION 2 -->
       <!-- NAVIGATION 2 -->
-      <section class="navigation-2 d-none d-lg-block green-bg">
-        <div class="container">
+      <section class="navigation-2 d-none  d-lg-block green-bg ">
+        <div class="container position-relative">
+          <!-- cart-dropdown -->
+          <div class="position-absolute cart-dropdown-pc d-lg-none rounded-1 bg-light end-0 top-100 custom-shadow-dropdown p-4" style="width: 350px;">
+            <div class="title text-uppercase text-center fs-4 p-2 position-relative"><span>Giỏ Hàng</span>
+            <div class="close-btn-box d-flex justify-content-center fs-3 position-absolute " style="top:5px; right: 10px;">
+              <div class="close-btn" style="width: fit-content;">
+                <i class="bi bi-x-circle"></i>
+              </div>
+            </div></div>
+            <div class="cart-item-box border-top border-bottom border-success-subtle py-2">
+              <div class="default text-center d-none">
+                <div><i class="bi bi-cart2 text-gr fs-1"></i></div><div>Hiện Chưa Có Sản Phẩm Nào</div>
+              </div>
+              <div class="cart-item" >
+                <div class="row" style="height: 80px;">
+                  <div class="col-4 h-100">
+                    <div class="wrap-img h-100"><img src="./img/product-item.png" class="img-fluid h-100" alt=""></div>
+                  </div>
+                  <div class="col-6 h-100 d-flex flex-column justify-content-center">
+                    <div class="item-info d-flex flex-column justify-content-center ">
+                      <div class="item-name text-gr fw-medium">Mèo Anh Lông Ngắn</div>
+                      <div class="item-price"><span class="value ff-roboto">7.000.000</span> <span class="ff-roboto">VND</span> </div>
+                    </div>
+                  </div>
+                  <div class="col-2 d-flex flex-column justify-content-center">
+                    <div class="delete-btn bg-danger text-light p-1 rounded-1  text-center " style="height: fit-content;">Xóa</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sum-price-box">
+              <span class="fw-medium fs-5">Tổng: </span> <span class="sum-value ff-roboto">7.000.000</span> <span class=" ff-roboto">VND</span>
+            </div>
+          </div>
+          <!--end cart-dropdown -->
+
           <div class="row">
             <div class="col-2">
-              <a href="./index.html">
+              <a href="index.html">
                 <img class="logo" src="./img/TheCatLogo.png" alt="" />
               </a>
             </div>
@@ -188,21 +226,21 @@
             >
               <div class="item">
                 <a
-                  href="about.html"
+                  href="cat.html"
                   class="text-light text-decoration-none fw-bold fs-5 d-flex gap-2"
                   ><i class="bi bi-android"></i> MÈO</a
                 >
               </div>
               <div class="item">
                 <a
-                  href="about.html"
+                  href="others.html?foods"
                   class="text-light text-decoration-none fw-bold fs-5 d-flex gap-2"
                   ><i class="bi bi-box-fill"></i> ĐỒ ĂN</a
                 >
               </div>
               <div class="item">
                 <a
-                  href="about.html"
+                  href="others.html?toys"
                   class="text-light text-decoration-none fw-bold fs-5 d-flex gap-2"
                 >
                   <i class="bi bi-balloon-fill"></i> ĐỒ CHƠI</a
@@ -210,14 +248,14 @@
               </div>
               <div class="item">
                 <a
-                  href="about.html"
+                  href="others.html?litter"
                   class="text-light text-decoration-none fw-bold fs-5 d-flex gap-2"
                   ><i class="bi bi-archive-fill"></i> CÁT VỆ SINH</a
                 >
               </div>
               <div class="item">
                 <a
-                  href="about.html"
+                  href="others.html?clothes"
                   class="text-light text-decoration-none fw-bold fs-5 d-flex gap-2"
                 >
                   <i class="bi bi-piggy-bank-fill"></i> ĐỒ TRANG TRÍ</a
@@ -252,46 +290,72 @@
                 <div
                   class="customer-name text-soft-bl d-flex flex-column fw-medium"
                 >
-                  <label>Tên Khách Hàng</label>
+                  <label>
+                    <div class="title">Tên khách hàng</div>
                   <input
                     type="text"
-                    class="border border-success-subtle bg-success-subtle p-1"
+                    class="border border-success-subtle bg-success-subtle p-1 w-100"
                   />
+                  </label>
                 </div>
                 <div
                   class="customer-phone text-soft-bl d-flex flex-column fw-medium"
                 >
-                  <label>Số Điện Thoại</label>
+                  <label>
+                    <div class="title">Số Điện Thoại</div>
                   <input
                     type="text"
-                    class="border border-success-subtle bg-success-subtle p-1"
+                    class="border border-success-subtle bg-success-subtle p-1 w-100"
                   />
+                  </label>
                 </div>
                 <div
                   class="customer-address text-soft-bl d-flex flex-column fw-medium"
                 >
-                  <label>Địa Chỉ Nhận Hàng</label>
+                  <label>
+                    <div class="title">Địa chỉ nhận hàng</div>
                   <input
                     type="text"
-                    class="border border-success-subtle bg-success-subtle p-1"
+                    class="border border-success-subtle bg-success-subtle p-1 w-100"
                   />
+                  </label>
                 </div>
               </div>
               <div class="product-info-box d-flex flex-column gap-3">
-                <div class="product-name text-gr fw-bold fs-5">
-                  <span class="text-gr"> Tên Sản Phẩm:</span>
-                  <span class="name-value text-soft-bl">Mèo Anh Lông Ngắn</span>
+                <div class="main-product">
+                  <div class="product-name text-gr fw-bold fs-5">
+                    <span class="text-gr"> Tên Sản Phẩm:</span>
+                    <span class="name-value text-soft-bl">Mèo Anh Lông Ngắn</span>
+                  </div>
+                  <div class="quantity text-soft-bl  fw-bold fs-5">
+                    <span class="title">Số Lượng:</span>
+                    <span class="quantity-value fw-bold text-soft-bl">1</span>
+                  </div>
+                  <div class="price-box text-soft-bl  fw-bold fs-5">
+                    <span class="title">Tổng Giá:</span>
+                    <span class="price-value ff-roboto fw-bold "
+                      >3.900.000</span
+                    >
+                    <span class="currency fw-bold text-soft-bl">VND</span>
+                  </div>
+
                 </div>
-                <div class="price-box text-gr fw-bold fs-5">
-                  <span class="title">Giá:</span>
-                  <span class="price-value ff-roboto fw-bold text-soft-bl"
-                    >3.900.000</span
-                  >
-                  <span class="currency fw-bold text-soft-bl">VND</span>
+
+
+
+                <div class="discount-box d-none text-gr fw-bold fs-5">
+                  <div class="ds-pr-info">
+
+                    <span class="title">Sản phẩm mua kèm:</span>
+                    <span class="ds-pr-name fw-bold text-soft-bl">Mũ Sừng</span>
+                  </div>
+                <div class="discount-product-price text-soft-bl">
+                  <div class="discount-price"><span>Giá:</span> <span class="cur-value ff-roboto">126.000</span> VND</div>
+                      </div>
                 </div>
-                <div class="quantity text-gr fw-bold fs-5">
-                  <span class="title">Số Lượng:</span>
-                  <span class="quantity-value fw-bold text-soft-bl">1</span>
+                  <div class="summary">
+                  <div class="sum-box"><span class="text-gr fs-5 fw-bold">Tổng số tiền phải thanh toán: </span> <span class="sum-value ff-roboto fw-bold fs-5 text-danger">800000</span> <span class="ff-roboto fw-bold fs-5 text-danger">VND</span></div>
+                  </div>
                 </div>
                 <div class="payment d-flex fs-5 gap-4">
                   <div class="paymet-title text-gr fw-bold">
@@ -315,7 +379,7 @@
                   </div>
                 </div>
                 <div
-                  class="online-payment-box d-flex justify-content-around d-none"
+                  class="online-payment-box d-flex justify-content-around my-2 d-none"
                 >
                   <div class="momo">
                     <img src="./img/momo.png" class="img-fluid" alt="Momo" />
@@ -336,7 +400,7 @@
                   </div>
                 </div>
               </div>
-              <div class="order-box d-flex justify-content-center">
+              <div class="order-box d-flex justify-content-center mt-3">
                 <div
                   class="order-btn fw-bold fs-5 py-2 px-3 rounded-2 text-bg-success"
                   style="width: fit-content"
@@ -477,6 +541,8 @@
       </footer>
       <!--END FOOTER -->
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
