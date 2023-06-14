@@ -248,6 +248,7 @@ async function renderCatDetail() {
                   </div>
                 </div>
               </div>`;
+
       productBox.append(item1);
       // Handle Discount Products
       function Handle() {
@@ -335,19 +336,22 @@ async function renderCatDetail() {
       // Pay-btn-click
       let priceBox = document.querySelector(".price-value");
       let countBox = document.querySelector(".quantity-box .show-quantity");
-
+      let imgBox = document.querySelector(".product-img img");
       let payBtn = document.querySelector(".pay-btn");
       payBtn.addEventListener("click", function () {
         let productName = document.querySelector(".product-info .pr-name");
         let price = localStorage.getItem("productPrice") || 0;
         let count = localStorage.getItem("productCount") || 0;
         let name = localStorage.getItem("productName") || "cat";
+        let imgSource = localStorage.getItem("imgSource") || 0;
         count = countBox.innerHTML;
         price = priceBox.innerText;
         name = productName.innerText;
+        imgSource = imgBox.src;
         localStorage.setItem("productPrice", price);
         localStorage.setItem("productCount", count);
         localStorage.setItem("productName", name);
+        localStorage.setItem("imgSource", imgSource);
       });
     }
   });

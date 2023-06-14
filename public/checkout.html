@@ -30,7 +30,9 @@
     </head>
   </head>
   <body>
-    <main class="main">
+    <main class="main position-relative">
+
+     
        <!-- subnav -->
       <div
         class="subnav-mobile sub-nav-bg position-fixed d-none d-lg-none z-2 h-100"
@@ -181,9 +183,9 @@
       <section class="navigation-2 d-none  d-lg-block green-bg ">
         <div class="container position-relative">
           <!-- cart-dropdown -->
-          <div class="position-absolute cart-dropdown-pc d-lg-none rounded-1 bg-light end-0 top-100 custom-shadow-dropdown p-4" style="width: 350px;">
-            <div class="title text-uppercase text-center fs-4 p-2 position-relative"><span>Giỏ Hàng</span>
-            <div class="close-btn-box d-flex justify-content-center fs-3 position-absolute " style="top:5px; right: 10px;">
+          <div class="position-absolute cart-dropdown-pc d-none d-lg-none rounded-1 bg-light end-0 top-100 custom-shadow-dropdown p-4" style="width: 350px;">
+            <div class="title text-uppercase  fs-4 p-2 position-relative"><span>Giỏ Hàng</span>
+            <div class="close-btn-box d-flex justify-content-center fs-3 position-absolute end-0" style="top:5px; ">
               <div class="close-btn" style="width: fit-content;">
                 <i class="bi bi-x-circle"></i>
               </div>
@@ -192,7 +194,7 @@
               <div class="default text-center d-none">
                 <div><i class="bi bi-cart2 text-gr fs-1"></i></div><div>Hiện Chưa Có Sản Phẩm Nào</div>
               </div>
-              <div class="cart-item" >
+              <div class="cart-item d-none" >
                 <div class="row" style="height: 80px;">
                   <div class="col-4 h-100">
                     <div class="wrap-img h-100"><img src="./img/product-item.png" class="img-fluid h-100" alt=""></div>
@@ -203,14 +205,16 @@
                       <div class="item-price"><span class="value ff-roboto">7.000.000</span> <span class="ff-roboto">VND</span> </div>
                     </div>
                   </div>
-                  <div class="col-2 d-flex flex-column justify-content-center">
-                    <div class="delete-btn bg-danger text-light p-1 rounded-1  text-center " style="height: fit-content;">Xóa</div>
+                  <div class="col-2 d-flex justify-content-center align-items-center">
+                    <div class="show-more-btn-box " style="width: fit-content;">
+                      <div class="show-more-btn p-1 bg-success rounded-1 text-light">Xem</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="sum-price-box">
-              <span class="fw-medium fs-5">Tổng: </span> <span class="sum-value ff-roboto">7.000.000</span> <span class=" ff-roboto">VND</span>
+            <div class="sum-price-box pt-2">
+              <span class="fw-medium fs-5">Tổng: </span> <span class="sum-value ff-roboto text-danger">7.000.000</span> <span class="text-danger ff-roboto">VND</span>
             </div>
           </div>
           <!--end cart-dropdown -->
@@ -274,6 +278,7 @@
         </div>
       </section>
       <!--END NAVIGATION 2 -->
+      <!-- CHECKOUT -->
       <section class="checkout my-4">
         <div class="container">
           <div class="row">
@@ -412,6 +417,58 @@
           </div>
         </div>
       </section>
+      <!-- END CHECKOUT -->
+      <!-- MODAL -->
+       <section class="modal-box d-lg-none z-2 position-fixed h-100 w-100 top-0 bg-black justify-content-center align-items-center" style="--bs-bg-opacity: .5; ">
+        <div class="container bg-light p-3 rounded-1">
+          <div class="item">
+          <div class=" border border-success-subtle position-relative " style="width: fit-content;">
+            <div class="delete-item-btn position-absolute top-0 end-0 text-bg-danger py-1 px-2" style="width: fit-content;" >Xóa</div>
+            <div class="row gy-3 py-3 ">
+              <div class="col-12">
+                <div class="product-item ">
+                  <div class="row " style="height: 100px;">
+
+                    <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+                  <div class="title fw-bold">Sản Phẩm</div>
+                </div>
+                    <div class="col-3 h-100">
+                      <div class="img-wrap h-100 d-flex justify-content-center align-items-center">
+                        <img src="./img/product-item.png" class="img-fluid h-100" alt="">
+                      </div>
+                      </div>
+                      <div class="col-3 d-flex flex-column justify-content-center fw-medium align-items-center">
+                        <div class="item-name text-gr ">Mèo Anh Lông Ngắn</div>
+                        <div class="accessory-name text-gr">Mũ Sừng</div>
+                      </div>
+                      <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+                        <div class="price text-gr fw-medium">
+                        <span class="price-value ff-roboto ">2.000.000</span> <span class="ff-roboto">VND</span>
+                      </div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 d-flex custommer-item ">
+                <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+                  <div class="title fw-bold">Thông Tin Khách Hàng</div>
+                </div>
+                <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+                  <div class="md-customer-name"><span class="tilte fw-medium text-soft-bl">Tên khách hàng:</span class="fw-medium name-value"> Nguyễn Trọng Tân</div>
+                </div>
+                <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+                  <div class="md-customer-phone"><span class="tilte fw-medium text-soft-bl">SĐT: </span class="fw-medium phone-value">0234533678</div>
+                </div>
+                <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+                  <div class="md-customer-address"><span class="tilte fw-medium text-soft-bl">Địa chỉ:</span class="fw-medium address-value">Số 150 Trần Duy Hưng, Trung Hòa, Cầu Giấy, HN</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          </div>
+        </div>
+      </section>
+      <!-- END MODAL -->
       <!-- FOOTER -->
       <footer class="footer footer-bg py-3">
         <div class="container d-block d-lg-none">
