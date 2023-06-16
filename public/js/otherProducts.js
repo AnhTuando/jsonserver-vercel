@@ -2,6 +2,7 @@
 let subNavClose = document.querySelector(".sub-nav-close ");
 let subNav = document.querySelector(".subnav-mobile");
 let subNavMoblieBtn = document.querySelector(".list-mobile-btn");
+
 subNavClose.onclick = function () {
   subNav.classList.add("d-none");
 };
@@ -24,6 +25,10 @@ function getUrlId() {
   let postID = parseInt(numStr);
   return postID;
 }
+let isChecked = false;
+let checkDiscount = localStorage.getItem("discountChecked");
+localStorage.setItem("discountChecked", isChecked);
+
 // Call Foods API
 async function getFoods() {
   let res = await fetch("foods");
@@ -31,6 +36,8 @@ async function getFoods() {
   return data;
 }
 async function renderFoods() {
+  let savedQuantity = 1;
+
   let productBox = document.querySelector(".product .container ");
   let foods = await getFoods();
   let currentId = getUrlId();
@@ -63,16 +70,7 @@ async function renderFoods() {
                     <span class="text-secondary fw-medium">Brand:</span>
                     <span class="brand-value text-soft-bl fw-medium"> ${element.brand}</span>
                   </div>
-                  <div class="discount-box fs-5">
-                    <div class="title">
-                      Giảm
-                      <span class="discount-value fw-medium ff-roboto text-danger"
-                        >25.000</span
-                      >
-                      <span class="text-danger fw-bold">VND</span> khi mua từ 3
-                      sản phẩm trở lên
-                    </div>
-                  </div>
+                 
                   <div class="payment-control d-flex justify-content-between">
                     <div
                       class="quantity-box d-flex gap-4 border p-2 rounded-5 border-success-subtle"
@@ -139,6 +137,7 @@ async function renderFoods() {
           if (quantity > 1) {
             quantity--;
             quantityNumberBox.innerHTML = `${quantity}`;
+            savedQuantity = `${quantity}`;
             priceBox.innerHTML = `${(priceValue * quantity).toLocaleString(
               "vi-VN"
             )}`;
@@ -147,12 +146,34 @@ async function renderFoods() {
         plusBtn.addEventListener("click", function () {
           quantity++;
           quantityNumberBox.innerHTML = `${quantity}`;
+          savedQuantity = `${quantity}`;
           priceBox.innerHTML = `${(priceValue * quantity).toLocaleString(
             "vi-VN"
           )}`;
         });
       }
       handleQuantityBox();
+      // Put product's info into localStorage
+      let payBtn = document.querySelector(".pay-btn");
+      payBtn.addEventListener("click", function () {
+        let imgSource = document.querySelector(".wrap-product-img img");
+        let price = document.querySelector(".price-box .price-value").innerText;
+        let name = document.querySelector(
+          ".product-name .name-value "
+        ).innerText;
+
+        let savedOtherProductObj =
+          localStorage.getItem("savedOtherProductObj") || 0;
+
+        let otherProducObj = {
+          price: price,
+          name: name,
+          quantity: savedQuantity,
+          imgSource: imgSource.src,
+        };
+        savedOtherProductObj = JSON.stringify(otherProducObj);
+        localStorage.setItem("savedOtherProductObj", savedOtherProductObj);
+      });
     }
   });
 }
@@ -164,6 +185,8 @@ async function getToys() {
   return data;
 }
 async function renderToys() {
+  let savedQuantity = 1;
+
   let productBox = document.querySelector(".product .container ");
   let toys = await getToys();
   let currentId = getUrlId();
@@ -196,16 +219,7 @@ async function renderToys() {
                     <span class="text-secondary fw-medium">Brand:</span>
                     <span class="brand-value text-soft-bl fw-medium"> ${element.brand}</span>
                   </div>
-                  <div class="discount-box fs-5">
-                    <div class="title">
-                      Giảm
-                      <span class="discount-value fw-medium ff-roboto text-danger"
-                        >25.000</span
-                      >
-                      <span class="text-danger fw-bold">VND</span> khi mua từ 3
-                      sản phẩm trở lên
-                    </div>
-                  </div>
+                 
                   <div class="payment-control d-flex justify-content-between">
                     <div
                       class="quantity-box d-flex gap-4 border p-2 rounded-5 border-success-subtle"
@@ -272,6 +286,7 @@ async function renderToys() {
           if (quantity > 1) {
             quantity--;
             quantityNumberBox.innerHTML = `${quantity}`;
+            savedQuantity = `${quantity}`;
             priceBox.innerHTML = `${(priceValue * quantity).toLocaleString(
               "vi-VN"
             )}`;
@@ -280,12 +295,35 @@ async function renderToys() {
         plusBtn.addEventListener("click", function () {
           quantity++;
           quantityNumberBox.innerHTML = `${quantity}`;
+          savedQuantity = `${quantity}`;
           priceBox.innerHTML = `${(priceValue * quantity).toLocaleString(
             "vi-VN"
           )}`;
         });
       }
       handleQuantityBox();
+      // Put product's info into localStorage
+      let payBtn = document.querySelector(".pay-btn");
+
+      payBtn.addEventListener("click", function () {
+        let imgSource = document.querySelector(".wrap-product-img img");
+
+        let price = document.querySelector(".price-box .price-value").innerText;
+        let name = document.querySelector(
+          ".product-name .name-value "
+        ).innerText;
+        let savedOtherProductObj =
+          localStorage.getItem("savedOtherProductObj") || 0;
+
+        let otherProducObj = {
+          price: price,
+          name: name,
+          quantity: savedQuantity,
+          imgSource: imgSource.src,
+        };
+        savedOtherProductObj = JSON.stringify(otherProducObj);
+        localStorage.setItem("savedOtherProductObj", savedOtherProductObj);
+      });
     }
   });
 }
@@ -297,6 +335,8 @@ async function getLitter() {
   return data;
 }
 async function renderLitters() {
+  let savedQuantity = 1;
+
   let productBox = document.querySelector(".product .container ");
   let litters = await getLitter();
   let currentId = getUrlId();
@@ -329,16 +369,7 @@ async function renderLitters() {
                     <span class="text-secondary fw-medium">Brand:</span>
                     <span class="brand-value text-soft-bl fw-medium"> ${element.brand}</span>
                   </div>
-                  <div class="discount-box fs-5">
-                    <div class="title">
-                      Giảm
-                      <span class="discount-value fw-medium ff-roboto text-danger"
-                        >25.000</span
-                      >
-                      <span class="text-danger fw-bold">VND</span> khi mua từ 3
-                      sản phẩm trở lên
-                    </div>
-                  </div>
+                 
                   <div class="payment-control d-flex justify-content-between">
                     <div
                       class="quantity-box d-flex gap-4 border p-2 rounded-5 border-success-subtle"
@@ -398,13 +429,14 @@ async function renderLitters() {
         let priceText = document.querySelector(".price-value").textContent;
         let priceBox = document.querySelector(".price-value");
         let quantity = parseInt(quantityNumberBox.textContent);
-
         let priceValue = parseFloat(priceText.replace(/\./g, ""));
 
         minusBtn.addEventListener("click", function () {
           if (quantity > 1) {
             quantity--;
             quantityNumberBox.innerHTML = `${quantity}`;
+            savedQuantity = `${quantity}`;
+
             priceBox.innerHTML = `${(priceValue * quantity).toLocaleString(
               "vi-VN"
             )}`;
@@ -413,12 +445,35 @@ async function renderLitters() {
         plusBtn.addEventListener("click", function () {
           quantity++;
           quantityNumberBox.innerHTML = `${quantity}`;
+          savedQuantity = `${quantity}`;
+
           priceBox.innerHTML = `${(priceValue * quantity).toLocaleString(
             "vi-VN"
           )}`;
         });
       }
       handleQuantityBox();
+      // Put product's info into localStorage
+      let payBtn = document.querySelector(".pay-btn");
+      payBtn.addEventListener("click", function () {
+        let imgSource = document.querySelector(".wrap-product-img img");
+
+        let price = document.querySelector(".price-box .price-value").innerText;
+        let name = document.querySelector(
+          ".product-name .name-value "
+        ).innerText;
+        let savedOtherProductObj =
+          localStorage.getItem("savedOtherProductObj") || 0;
+
+        let otherProducObj = {
+          price: price,
+          name: name,
+          quantity: savedQuantity,
+          imgSource: imgSource.src,
+        };
+        savedOtherProductObj = JSON.stringify(otherProducObj);
+        localStorage.setItem("savedOtherProductObj", savedOtherProductObj);
+      });
     }
   });
 }
@@ -430,6 +485,8 @@ async function getClothes() {
   return data;
 }
 async function renderClothes() {
+  let savedQuantity = 1;
+
   let productBox = document.querySelector(".product .container ");
   let clothes = await getClothes();
   let currentId = getUrlId();
@@ -462,16 +519,7 @@ async function renderClothes() {
                     <span class="text-secondary fw-medium">Brand:</span>
                     <span class="brand-value text-soft-bl fw-medium"> ${element.brand}</span>
                   </div>
-                  <div class="discount-box fs-5">
-                    <div class="title">
-                      Giảm
-                      <span class="discount-value fw-medium ff-roboto text-danger"
-                        >25.000</span
-                      >
-                      <span class="text-danger fw-bold">VND</span> khi mua từ 3
-                      sản phẩm trở lên
-                    </div>
-                  </div>
+                 
                   <div class="payment-control d-flex justify-content-between">
                     <div
                       class="quantity-box d-flex gap-4 border p-2 rounded-5 border-success-subtle"
@@ -538,6 +586,7 @@ async function renderClothes() {
           if (quantity > 1) {
             quantity--;
             quantityNumberBox.innerHTML = `${quantity}`;
+            savedQuantity = `${quantity}`;
             priceBox.innerHTML = `${(priceValue * quantity).toLocaleString(
               "vi-VN"
             )}`;
@@ -546,12 +595,34 @@ async function renderClothes() {
         plusBtn.addEventListener("click", function () {
           quantity++;
           quantityNumberBox.innerHTML = `${quantity}`;
+          savedQuantity = `${quantity}`;
           priceBox.innerHTML = `${(priceValue * quantity).toLocaleString(
             "vi-VN"
           )}`;
         });
       }
       handleQuantityBox();
+      // Put product's info into localStorage
+      let payBtn = document.querySelector(".pay-btn");
+      payBtn.addEventListener("click", function () {
+        let imgSource = document.querySelector(".wrap-product-img img");
+
+        let price = document.querySelector(".price-box .price-value").innerText;
+        let name = document.querySelector(
+          ".product-name .name-value "
+        ).innerText;
+        let savedOtherProductObj =
+          localStorage.getItem("savedOtherProductObj") || 0;
+
+        let otherProducObj = {
+          price: price,
+          name: name,
+          quantity: savedQuantity,
+          imgSource: imgSource.src,
+        };
+        savedOtherProductObj = JSON.stringify(otherProducObj);
+        localStorage.setItem("savedOtherProductObj", savedOtherProductObj);
+      });
     }
   });
 }

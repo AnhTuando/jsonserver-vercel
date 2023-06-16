@@ -340,23 +340,21 @@ async function renderCatDetail() {
       let payBtn = document.querySelector(".pay-btn");
       payBtn.addEventListener("click", function () {
         let productName = document.querySelector(".product-info .pr-name");
-        let price = localStorage.getItem("productPrice") || 0;
         let count = localStorage.getItem("productCount") || 0;
-        let name = localStorage.getItem("productName") || "cat";
-        let imgSource = localStorage.getItem("imgSource") || 0;
         count = countBox.innerHTML;
-        
-        price = priceBox.innerText;
-        name = productName.innerText;
-        imgSource = imgBox.src;
-        
-        localStorage.setItem("productPrice", price);
-        localStorage.setItem("productCount", count);
-        localStorage.setItem("productName", name);
-        localStorage.setItem("imgSource", imgSource);
+        let catOtherProductObj = localStorage.getItem("savedOtherProductObj");
+        let catProducObj = {
+          price: priceBox.innerText,
+          name: productName.innerText,
+          quantity: productName.innerText,
+          imgSource: imgBox.src,
+        };
+        catOtherProductObj = JSON.stringify(catProducObj);
+        localStorage.setItem("savedOtherProductObj", catOtherProductObj);
       });
     }
   });
 }
-
+let data = localStorage.getItem("savedOtherProductObj");
+console.log(data);
 renderCatDetail();

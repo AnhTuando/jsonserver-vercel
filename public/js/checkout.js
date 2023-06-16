@@ -25,19 +25,18 @@ cashBtn.onclick = function () {
 let onlinePayment = document.querySelector(".online-pay");
 let cashPayInput = document.querySelector(".cash-pay input");
 // Get data from localstorage
-let productPrice = localStorage.getItem("productPrice");
-let productQuantity = localStorage.getItem("productCount");
 let discountChecked = localStorage.getItem("discountChecked");
-let productName = localStorage.getItem("productName");
-let imgSource = localStorage.getItem("imgSource");
-
+let catOtherProductObj = JSON.parse(
+  localStorage.getItem("savedOtherProductObj")
+);
 let cartObject = {
-  price: productPrice,
-  quantity: productQuantity,
+  price: catOtherProductObj.price,
+  quantity: catOtherProductObj.quantity,
   discountChecked: discountChecked,
-  productName: productName,
-  imgSource: imgSource,
+  productName: catOtherProductObj.name,
+  imgSource: catOtherProductObj.imgSource,
 };
+console.log(cartObject);
 let checkedDiscountProducts = JSON.parse(
   localStorage.getItem("discountChecked")
 );
@@ -52,6 +51,10 @@ let quantityBox = document.querySelector(".quantity-value ");
 let priceBox = document.querySelector(".price-box .price-value");
 let sumBoxValue = document.querySelector(".sum-box .sum-value");
 let discountBox = document.querySelector(".discount-box");
+if (checkedDiscountProducts == true) {
+  discountBox.classList.remove("d-none");
+}
+console.log(discountBox);
 productNameBox.innerHTML = `${cartObject.productName}`;
 quantityBox.innerHTML = `${cartObject.quantity}`;
 priceBox.innerHTML = `${cartObject.price}`;
@@ -125,7 +128,6 @@ function renderAndHandleCatCart() {
       item.classList.add("mb-3");
       if (inputPayOnline.checked == true) {
         console.log("atm");
-
         item.innerHTML = `  <div class="row border border-end-0 border-success-subtle">
                 <div class="col-12">
                   <div class="row">
@@ -149,14 +151,13 @@ function renderAndHandleCatCart() {
                     </div>
                     <div class="col-6  border-end border-success-subtle">
                       <div class="title text-center fw-bold text-gr border-bottom border-success-subtle mb-2">Sản Phẩm</div>
-                  <div class=" product-item d-flex  justify-content-around align-items-center" style="height: 80px;">
+                  <div class=" product-item mt-3 d-flex  justify-content-around align-items-center" style="height: 80px;">
                     <div class="img-wrap" style="height: 80px;">
                       <img src="${cartObject.imgSource}" class="img-fluid h-100">
                     </div>
                     <div class="wrap-info d-flex flex-column gap-1  ">
   
                       <div class="product-name fw-medium">${cartObject.productName}</div>
-                      <div class="product-discount-attach fw-medium">Mũ Sừng</div>
                       <div class="pr-price">
                         <span class="price-value ff-roboto text-danger">${cartObject.price}</span> <span class="ff-roboto text-danger">VND</span>
                       </div>
@@ -197,14 +198,13 @@ function renderAndHandleCatCart() {
                     </div>
                     <div class="col-6  border-end border-success-subtle">
                       <div class="title text-center fw-bold text-gr border-bottom border-success-subtle mb-2">Sản Phẩm</div>
-                  <div class=" product-item d-flex  justify-content-around align-items-center" style="height: 80px;">
+                  <div class=" product-item mt-3 d-flex  justify-content-around align-items-center" style="height: 80px;">
                     <div class="img-wrap" style="height: 80px;">
                       <img src="${cartObject.imgSource}" class="img-fluid h-100">
                     </div>
                     <div class="wrap-info d-flex flex-column gap-1  ">
   
                       <div class="product-name fw-medium">${cartObject.productName}</div>
-                      <div class="product-discount-attach fw-medium">Mũ Sừng</div>
                       <div class="pr-price">
                         <span class="price-value ff-roboto text-danger">${cartObject.price}</span> <span class="ff-roboto text-danger">VND</span>
                       </div>
