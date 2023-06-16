@@ -348,121 +348,141 @@
       "id": 1,
       "name": "Bàn Cào Móng",
       "thumbnail": "./toys/Bàn Cào Móng.png",
-      "price": "120.000"
+      "price": "120.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 2,
       "name": "Bóng Len",
       "thumbnail": "./toys/Bóng Len.png",
-      "price": "80.000"
+      "price": "80.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 3,
       "name": "Bóng Nhựa",
       "thumbnail": "./toys/Bóng Nhựa.png",
-      "price": "60.000"
+      "price": "60.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 4,
       "name": "Cần Câu",
       "thumbnail": "./toys/Cần Câu.png",
-      "price": "40.000"
+      "price": "40.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 5,
       "name": "Chó Bông",
       "thumbnail": "./toys/Chó Bông.png",
-      "price": "60.000"
+      "price": "60.000",
+      "brand": "Trung Quốc"
     },
     {
       "id": 6,
       "name": "Chuột Cói",
       "thumbnail": "./toys/Chuột Cói.png",
-      "price": "40.000"
+      "price": "40.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 7,
       "name": "Cỏ Mèo BIOLINE",
       "thumbnail": "./toys/Cỏ Mèo BIOLINE.png",
-      "price": "200.000"
+      "price": "200.000",
+      "brand": "Mỹ"
     },
     {
       "id": 8,
       "name": "Cỏ Mèo Dạng Que",
       "thumbnail": "./toys/Cỏ Mèo Dạng Que.png",
-      "price": "100.000"
+      "price": "100.000",
+      "brand": "Mỹ"
     },
     {
       "id": 9,
       "name": "Cỏ Mèo Mint",
       "thumbnail": "./toys/Cỏ Mèo Mint.png",
-      "price": "140.000"
+      "price": "140.000",
+      "brand": "Mỹ"
     },
     {
       "id": 10,
       "name": "Cuộn Bóng Len",
       "thumbnail": "./toys/Cuộn Bóng Len.png",
-      "price": "100.000"
+      "price": "100.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 11,
       "name": "Dây Thừng",
       "thumbnail": "./toys/Dây Thừng.png",
-      "price": "30.000"
+      "price": "30.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 12,
       "name": "Đồ Cào Móng PAWS",
       "thumbnail": "./toys/Đồ Cào Móng PAWS.png",
-      "price": "150.000"
+      "price": "150.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 13,
       "name": "Đồ Chơi Cho Mèo Circle",
       "thumbnail": "./toys/Đồ Chơi Cho Mèo Circle.png",
-      "price": "160.000"
+      "price": "160.000",
+      "brand": "Trung Quốc"
     },
     {
       "id": 14,
       "name": "Gà Nhựa",
       "thumbnail": "./toys/Gà Nhựa.png",
-      "price": "30.000"
+      "price": "30.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 15,
       "name": "Gấu Len Hồng",
       "thumbnail": "./toys/Gấu Len Hồng.png",
-      "price": "50.000"
+      "price": "50.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 16,
       "name": "Hạt Giống Cỏ BIOLINE",
       "thumbnail": "./toys/Hạt Giống Cỏ BIOLINE.png",
-      "price": "90.000"
+      "price": "90.000",
+      "brand": "Mỹ"
     },
     {
       "id": 17,
       "name": "Kì Lân Bông",
       "thumbnail": "./toys/Kì Lân Bông.png",
-      "price": "60.000"
+      "price": "60.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 18,
       "name": "Koala Bông",
       "thumbnail": "./toys/Koala Bông.png",
-      "price": "40.000"
+      "price": "40.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 19,
       "name": "Ốc Sên Bông",
       "thumbnail": "./toys/Ốc Sên Bông.png",
-      "price": "40.000"
+      "price": "40.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 20,
       "name": "Ông Già Noel",
       "thumbnail": "./toys/Ông Già Noel.png",
-      "price": "40.000"
+      "price": "40.000",
+      "brand": "Việt Nam"
     }
   ],
   "clothes": [
@@ -470,121 +490,141 @@
       "id": 1,
       "name": "Áo Dài Cho Mèo",
       "thumbnail": "./clothes/Áo Dài Cho Mèo.png",
-      "price": "150.000"
+      "price": "150.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 2,
       "name": "Áo Dài Xanh",
       "thumbnail": "./clothes/Áo Dài Xanh.png",
-      "price": "160.000"
+      "price": "160.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 3,
       "name": "Áo Hình Cún",
       "thumbnail": "./clothes/Áo Hình Cún.png",
-      "price": "190.000"
+      "price": "190.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 4,
       "name": "Áo Họa Tiết",
       "thumbnail": "./clothes/Áo Họa Tiết.png",
-      "price": "170.000"
+      "price": "170.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 5,
       "name": "Áo Kèm Dây Trắng",
       "thumbnail": "./clothes/Áo Kèm Dây Trắng.png",
-      "price": "150.000"
+      "price": "150.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 6,
       "name": "Áo Mũ Cho Mèo",
       "thumbnail": "./clothes/Áo Mũ Cho Mèo.png",
-      "price": "200.000"
+      "price": "200.000",
+      "brand": "Trung Quốc"
     },
     {
       "id": 7,
       "name": "Áo Yếm Đen",
       "thumbnail": "./clothes/Áo Yếm Đen.png",
-      "price": "220.000"
+      "price": "220.000",
+      "brand": "Trung Quốc"
     },
     {
       "id": 8,
       "name": "Áo Yếm Vàng",
       "thumbnail": "./clothes/Áo Yếm Vàng.png",
-      "price": "210.000"
+      "price": "210.000",
+      "brand": "Trung Quốc"
     },
     {
       "id": 9,
       "name": "Mũ Cá",
       "thumbnail": "./clothes/Mũ Cá.png",
-      "price": "120.000"
+      "price": "120.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 10,
       "name": "Mũ Hoa",
       "thumbnail": "./clothes/Mũ Hoa.png",
-      "price": "100.000"
+      "price": "100.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 11,
       "name": "Mũ Hồng",
       "thumbnail": "./clothes/Mũ Hồng.png",
-      "price": "140.000"
+      "price": "140.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 12,
       "name": "Mũ Icon",
       "thumbnail": "./clothes/Mũ Icon.png",
-      "price": "140.000"
+      "price": "140.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 13,
       "name": "Mũ Sừng",
       "thumbnail": "./clothes/Mũ Sừng.png",
-      "price": "140.000"
+      "price": "140.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 14,
       "name": "Váy Smile",
       "thumbnail": "./clothes/Váy Smile.png",
-      "price": "170.000"
+      "price": "170.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 15,
       "name": "Váy Vàng",
       "thumbnail": "./clothes/Váy Vàng.png",
-      "price": "160.000"
+      "price": "160.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 16,
       "name": "Vòng Cổ Caro",
       "thumbnail": "./clothes/Vòng Cổ Caro.png",
-      "price": "100.000"
+      "price": "100.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 17,
       "name": "Vòng Cổ Có Dây Dắt",
       "thumbnail": "./clothes/Vòng Cổ Có Dây Dắt.png",
-      "price": "100.000"
+      "price": "100.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 18,
       "name": "Vòng Cổ Dây Xám",
       "thumbnail": "./clothes/Vòng Cổ Dây Xám.png",
-      "price": "100.000"
+      "price": "100.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 19,
       "name": "Yếm Có Dây Dắt Vàng",
       "thumbnail": "./clothes/Yếm Có Dây Dắt Vàng.png",
-      "price": "110.000"
+      "price": "110.000",
+      "brand": "Việt Nam"
     },
     {
       "id": 20,
       "name": "Yếm Có Dây Dắt Xám",
       "thumbnail": "./clothes/Yếm Có Dây Dắt Xám.png",
-      "price": "110.000"
+      "price": "110.000",
+      "brand": "Việt Nam"
     }
   ],
   "litter": [
@@ -592,121 +632,141 @@
       "id": 1,
       "name": "Bột Khử Mùi Bioline",
       "thumbnail": "./litters/Bột Khử Mùi Bioline.png",
-      "price": "70.000"
+      "price": "70.000",
+      "brand": "Nhật Bản"
     },
     {
       "id": 2,
       "name": "Bột Khử Mùi Trixie",
       "thumbnail": "./litters/Bột Khử Mùi Trixie.png",
-      "price": "70.000"
+      "price": "70.000",
+      "brand": "Nhật Bản"
     },
     {
       "id": 3,
       "name": "Cát Vệ Sinh 4 in 1",
       "thumbnail": "./litters/Cát Vệ Sinh 4 in 1.png",
-      "price": "150.000"
+      "price": "150.000",
+      "brand": "Trung Quốc"
     },
     {
       "id": 4,
       "name": "Cát Vệ Sinh Đất Sét",
       "thumbnail": "./litters/Cát Vệ Sinh Đất Sét.png",
-      "price": "110.000"
+      "price": "110.000",
+      "brand": "Nhật Bản"
     },
     {
       "id": 5,
       "name": "Cát Vệ Sinh Đậu Nành MIAO",
       "thumbnail": "./litters/Cát Vệ Sinh Đậu Nành MIAO.png",
-      "price": "120.000"
+      "price": "120.000",
+      "brand": "Nhật Bản"
     },
     {
       "id": 6,
       "name": "Cát Vệ Sinh FELINE",
       "thumbnail": "./litters/Cát Vệ Sinh FELINE.png",
-      "price": "120.000"
+      "price": "120.000",
+      "brand": "Nhật Bản"
     },
     {
       "id": 7,
       "name": "Cát Vệ Sinh Gỗ Thông",
       "thumbnail": "./litters/Cát Vệ Sinh Gỗ Thông.png",
-      "price": "140.000"
+      "price": "140.000",
+      "brand": "Nhật Bản"
     },
     {
       "id": 8,
       "name": "Cát Vệ Sinh Hồng IRIS",
       "thumbnail": "./litters/Cát Vệ Sinh Hồng IRIS.png",
-      "price": "170.000"
+      "price": "170.000",
+      "brand": "Nhật Bản"
     },
     {
       "id": 9,
       "name": "Cát Vệ Sinh Hữu Cơ Betonnit",
       "thumbnail": "./litters/Cát Vệ Sinh Hữu Cơ Betonnit.png",
-      "price": "140.000"
+      "price": "140.000",
+      "brand": "Nhật Bản"
     },
     {
       "id": 10,
       "name": "Cát Vệ Sinh Hữu Cơ CATBESTS",
       "thumbnail": "./litters/Cát Vệ Sinh Hữu Cơ CATBESTS.png",
-      "price": "160.000"
+      "price": "160.000",
+      "brand": "Nhật Bản"
     },
     {
       "id": 11,
       "name": "Cát Vệ Sinh KATZ",
       "thumbnail": "./litters/Cát Vệ Sinh KATZ.png",
-      "price": "180.000"
+      "price": "180.000",
+      "brand": "Nhật Bản"
     },
     {
       "id": 12,
       "name": "Cát Vệ Sinh KFAG",
       "thumbnail": "./litters/Cát Vệ Sinh KFAG.png",
-      "price": "170.000"
+      "price": "170.000",
+      "brand": "Nhật Bản"
     },
     {
       "id": 13,
       "name": "Cát Vệ Sinh ME-O",
       "thumbnail": "./litters/Cát Vệ Sinh ME-O.png",
-      "price": "170.000"
+      "price": "170.000",
+      "brand": "Thái Lan"
     },
     {
       "id": 14,
       "name": "Cát Vệ Sinh Thấm Hút Khử Mùi",
       "thumbnail": "./litters/Cát Vệ Sinh Thấm Hút Khử Mùi.png",
-      "price": "190.000"
+      "price": "190.000",
+      "brand": "Nhật Bản"
     },
     {
       "id": 15,
       "name": "Cát Vệ Sinh Than Hoạt TÍnh",
       "thumbnail": "./litters/Cát Vệ Sinh Than Hoạt Tính.png",
-      "price": "220.000"
+      "price": "220.000",
+      "brand": "Nhật Bản"
     },
     {
       "id": 16,
       "name": "Cát Vệ Sinh Thủy Tinh",
       "thumbnail": "./litters/Cát Vệ Sinh Thủy Tinh.png",
-      "price": "200.000"
+      "price": "200.000",
+      "brand": "Nhật Bản"
     },
     {
       "id": 17,
       "name": "Cát Vệ Sinh Trà Xanh",
       "thumbnail": "./litters/Cát Vệ Sinh Trà Xanh.png",
-      "price": "190.000"
+      "price": "190.000",
+      "brand": "Nhật Bản"
     },
     {
       "id": 18,
       "name": "Cát Vệ Sinh Vàng IRIS",
       "thumbnail": "./litters/Cát Vệ Sinh Vàng IRIS.png",
-      "price": "190.000"
+      "price": "190.000",
+      "brand": "Nhật Bản"
     },
     {
       "id": 19,
       "name": "Cát Vệ Sinh Xanh IRIS",
       "thumbnail": "./litters/Cát Vệ Sinh Xanh IRIS.png",
-      "price": "190.000"
+      "price": "190.000",
+      "brand": "Nhật Bản"
     },
     {
       "id": 20,
       "name": "Xịt Vệ Sinh",
       "thumbnail": "./litters/Xịt Vệ Sinh.png",
-      "price": "100.000"
+      "price": "100.000",
+      "brand": "Trung Quốc"
     }
   ]
 }

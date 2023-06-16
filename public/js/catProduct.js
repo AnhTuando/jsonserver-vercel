@@ -345,9 +345,11 @@ async function renderCatDetail() {
         let name = localStorage.getItem("productName") || "cat";
         let imgSource = localStorage.getItem("imgSource") || 0;
         count = countBox.innerHTML;
+        
         price = priceBox.innerText;
         name = productName.innerText;
         imgSource = imgBox.src;
+        
         localStorage.setItem("productPrice", price);
         localStorage.setItem("productCount", count);
         localStorage.setItem("productName", name);

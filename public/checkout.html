@@ -191,30 +191,10 @@
               </div>
             </div></div>
             <div class="cart-item-box border-top border-bottom border-success-subtle py-2">
-              <div class="default text-center d-none">
+              <div class="default text-center d-lg-block">
                 <div><i class="bi bi-cart2 text-gr fs-1"></i></div><div>Hiện Chưa Có Sản Phẩm Nào</div>
               </div>
-              <div class="cart-item d-none" >
-                <div class="row" style="height: 80px;">
-                  <div class="col-4 h-100">
-                    <div class="wrap-img h-100"><img src="./img/product-item.png" class="img-fluid h-100" alt=""></div>
-                  </div>
-                  <div class="col-6 h-100 d-flex flex-column justify-content-center">
-                    <div class="item-info d-flex flex-column justify-content-center ">
-                      <div class="item-name text-gr fw-medium">Mèo Anh Lông Ngắn</div>
-                      <div class="item-price"><span class="value ff-roboto">7.000.000</span> <span class="ff-roboto">VND</span> </div>
-                    </div>
-                  </div>
-                  <div class="col-2 d-flex justify-content-center align-items-center">
-                    <div class="show-more-btn-box " style="width: fit-content;">
-                      <div class="show-more-btn p-1 bg-success rounded-1 text-light">Xem</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="sum-price-box pt-2">
-              <span class="fw-medium fs-5">Tổng: </span> <span class="sum-value ff-roboto text-danger">7.000.000</span> <span class="text-danger ff-roboto">VND</span>
+              
             </div>
           </div>
           <!--end cart-dropdown -->
@@ -326,18 +306,18 @@
                   </label>
                 </div>
               </div>
-              <div class="product-info-box d-flex flex-column gap-3">
+              <div class="product-info-box d-flex flex-column flex-lg-row justify-content-between gap-3">
                 <div class="main-product">
                   <div class="product-name text-gr fw-bold fs-5">
                     <span class="text-gr"> Tên Sản Phẩm:</span>
                     <span class="name-value text-soft-bl">Mèo Anh Lông Ngắn</span>
                   </div>
                   <div class="quantity text-soft-bl  fw-bold fs-5">
-                    <span class="title">Số Lượng:</span>
+                    <span class="title text-gr">Số Lượng:</span>
                     <span class="quantity-value fw-bold text-soft-bl">1</span>
                   </div>
                   <div class="price-box text-soft-bl  fw-bold fs-5">
-                    <span class="title">Tổng Giá:</span>
+                    <span class="title text-gr">Giá:</span>
                     <span class="price-value ff-roboto fw-bold "
                       >3.900.000</span
                     >
@@ -355,7 +335,7 @@
                     <span class="ds-pr-name fw-bold text-soft-bl">Mũ Sừng</span>
                   </div>
                 <div class="discount-product-price text-soft-bl">
-                  <div class="discount-price"><span>Giá:</span> <span class="cur-value ff-roboto">126.000</span> VND</div>
+                  <div class="discount-price"><span class=" text-gr">Giá:</span> <span class="cur-value ff-roboto">126.000</span> VND</div>
                       </div>
                 </div>
                   <div class="summary">
@@ -384,25 +364,34 @@
                   </div>
                 </div>
                 <div
-                  class="online-payment-box d-flex justify-content-around my-2 d-none"
+                  class="online-payment-box my-2 d-none"
                 >
-                  <div class="momo">
-                    <img src="./img/momo.png" class="img-fluid" alt="Momo" />
+                
+                 <div class="row w-100 gap-3 justify-content-around">
+                  <div class="col-12 col-lg-5">
+
+                    <div class="choose-bank  w-100">
+                      <label > 
+                        <span class="fw-medium me-2">Ngân hàng</span>
+                        <select>
+                          <option value="BIDV">BIDV</option>
+                          <option value="ACB">ACB</option>
+                          <option value="Agribank">Agribank</option>
+                            <!-- Thêm các tùy chọn khác nếu cần -->
+                          </select>
+                      </label>
+                    </div>
                   </div>
-                  <div class="zalopay">
-                    <img
-                      src="./img/zalopay.png"
-                      class="img-fluid"
-                      alt="ZaloPay"
-                    />
+                  <div class="col-12 col-lg-5">
+
+                    <div class="code-box d-flex w-100" >
+                        <div class="fw-medium">Số Tài Khoản</div>
+                        <input type="number" class="mx-3 no-spinner px-2">
+                     </div>
                   </div>
-                  <div class="atm">
-                    <img
-                      src="./img/atm.png"
-                      class="img-fluid"
-                      alt="Thẻ Ngân Hàng"
-                    />
-                  </div>
+                 </div>
+                 
+                 
                 </div>
               </div>
               <div class="order-box d-flex justify-content-center mt-3">
@@ -419,55 +408,67 @@
       </section>
       <!-- END CHECKOUT -->
       <!-- MODAL -->
-       <section class="modal-box d-lg-none z-2 position-fixed h-100 w-100 top-0 bg-black justify-content-center align-items-center" style="--bs-bg-opacity: .5; ">
-        <div class="container bg-light p-3 rounded-1">
-          <div class="item">
-          <div class=" border border-success-subtle position-relative " style="width: fit-content;">
-            <div class="delete-item-btn position-absolute top-0 end-0 text-bg-danger py-1 px-2" style="width: fit-content;" >Xóa</div>
-            <div class="row gy-3 py-3 ">
-              <div class="col-12">
-                <div class="product-item ">
-                  <div class="row " style="height: 100px;">
-
-                    <div class="col-3 d-flex flex-column justify-content-center align-items-center">
-                  <div class="title fw-bold">Sản Phẩm</div>
-                </div>
-                    <div class="col-3 h-100">
-                      <div class="img-wrap h-100 d-flex justify-content-center align-items-center">
-                        <img src="./img/product-item.png" class="img-fluid h-100" alt="">
-                      </div>
-                      </div>
-                      <div class="col-3 d-flex flex-column justify-content-center fw-medium align-items-center">
-                        <div class="item-name text-gr ">Mèo Anh Lông Ngắn</div>
-                        <div class="accessory-name text-gr">Mũ Sừng</div>
-                      </div>
-                      <div class="col-3 d-flex flex-column justify-content-center align-items-center">
-                        <div class="price text-gr fw-medium">
-                        <span class="price-value ff-roboto ">2.000.000</span> <span class="ff-roboto">VND</span>
-                      </div></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 d-flex custommer-item ">
-                <div class="col-3 d-flex flex-column justify-content-center align-items-center">
-                  <div class="title fw-bold">Thông Tin Khách Hàng</div>
-                </div>
-                <div class="col-3 d-flex flex-column justify-content-center align-items-center">
-                  <div class="md-customer-name"><span class="tilte fw-medium text-soft-bl">Tên khách hàng:</span class="fw-medium name-value"> Nguyễn Trọng Tân</div>
-                </div>
-                <div class="col-3 d-flex flex-column justify-content-center align-items-center">
-                  <div class="md-customer-phone"><span class="tilte fw-medium text-soft-bl">SĐT: </span class="fw-medium phone-value">0234533678</div>
-                </div>
-                <div class="col-3 d-flex flex-column justify-content-center align-items-center">
-                  <div class="md-customer-address"><span class="tilte fw-medium text-soft-bl">Địa chỉ:</span class="fw-medium address-value">Số 150 Trần Duy Hưng, Trung Hòa, Cầu Giấy, HN</div>
-                </div>
-              </div>
-            </div>
-
+       <section class="modal-box d-none z-2 position-fixed h-100 w-100 top-0 bg-black justify-content-center align-items-center" style="--bs-bg-opacity: .5; ">
+        <div class="container overflow-auto d-flex flex-column justify-content-center align-items-center bg-light p-4 rounded-1">
+          <div class="title text-center fs-3 fw-medium">Giỏ Hàng</div>
+          <div class="none-item d-none">
+            <div class="text-center"><i class="bi bi-cart2 text-gr fs-1"></i></div>
+            <div class="text-center">Hiện Chưa Có Sản Phẩm Nào</div>
           </div>
+          <div class="row w-100 items position-relative">
+            <div class="col-12 parent mb-3 d-none" >
+              <div class="row border border-end-0 border-success-subtle">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-5 border-end border-success-subtle">
+                      <div class=" title text-center fw-bold text-gr  border-bottom border-success-subtle mb-2">Khách Hàng</div>
+                  <div class="customer-info w-100 d-flex flex-column gap-1 justify-content-center">
+                    <div class="cus-name fw-medium" >Nguyễn Trọng Tân</div>
+                    <div class="cus-phone " >0123456789
+                    </div>
+                    <div class="cus-address fw-medium">12, Nguyễn Du, Đống Đa, Hà Nội</div>
+                    <div class="payment-box fw-medium ">
+                      <div class="on-pay d-none">
+                        <span>Thanh Toán: </span><span class="payment">
+                           <span class="bank-value">ACB</span> <span class="">-</span> <span class="bank-code">12434234234</span></span>
+                      </div>
+                      <div class="cash-pay">
+                        <span>Thanh Toán: </span><span class="payment">Tiền Mặt</span>
+
+                      </div>
+                      </div>
+                  </div>
+                    </div>
+                    <div class="col-7  border-end border-success-subtle">
+                      <div class="title text-center fw-bold text-gr border-bottom border-success-subtle mb-2">Sản Phẩm</div>
+                  <div class=" product-item d-flex  justify-content-around align-items-center" style="height: 80px;">
+                    <div class="img-wrap" style="height: 80px;">
+                      <img src="./img/product-item.png" class="img-fluid h-100">
+                    </div>
+                    <div class="wrap-info d-flex flex-column gap-1  ">
+
+                      <div class="product-name fw-medium">Mèo Anh Lông Ngắn</div>
+                      <div class="product-discount-attach fw-medium">Mũ Sừng</div>
+                      <div class="pr-price">
+                        <span class="price-value ff-roboto text-danger">5.000.000</span> <span class="ff-roboto text-danger">VND</span>
+                      </div>
+                     
+                    </div>
+                  </div>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+                  <div class="delete-btn d-flex justify-content-center align-items-center position-absolute end-0" style="width: fit-content;"><span class=" fw-bold">Xóa bỏ</span></div>
+              </div>
+          </div>
+            
+
           </div>
         </div>
       </section>
+     
       <!-- END MODAL -->
       <!-- FOOTER -->
       <footer class="footer footer-bg py-3">
