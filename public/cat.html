@@ -21,10 +21,9 @@
   </head>
   <body>
     <main class="main position-relative">
-      <!-- subnav -->
+     <!-- subnav -->
       <div
-        class="subnav-mobile sub-nav-bg position-fixed d-none d-lg-none z-2 h-100"
-        style="width: 200px"
+        class="subnav-mobile wd-200px sub-nav-bg position-fixed d-none d-lg-none z-2 h-100"
       >
         <div class="row">
           <div
@@ -142,24 +141,28 @@
           <div class="container">
             <div class="row">
               <div
-                class="col-2 d-flex justify-content-center align-items-center"
+                class="col-3 d-flex justify-content-center align-items-center"
               >
                 <div class="list-mobile-btn fs-1 text-light fw-bold">
                   <i class="bi bi-list"></i>
                 </div>
               </div>
-              <div class="col-8">
-                <a
-                  href="index.html"
+              <div class="col-6">
+                <div
                   class="mobile-logo d-flex justify-content-center align-items-center"
                 >
-                  <img src="./img/TheCatLogo.png" class="img-fluid" alt="" />
-                </a>
+                  <a href="./index.html">
+                    <img src="./img/TheCatLogo.png" class="img-fluid" alt="" />
+                  </a>
+                </div>
               </div>
               <div
-                class="col-2 float-end d-flex justify-content-center align-items-center"
+                class="col-3 float-end d-flex justify-content-around align-items-center"
               >
-                <div class="cart-mobile-btn fs-1 text-light fw-bold">
+                <div class="search-mb fs-3 text-light fw-bold">
+                  <i class="bi bi-search"></i>
+                </div>
+                <div class="cart-mobile-btn fs-3 text-light fw-bold">
                   <i class="bi bi-cart4"></i>
                 </div>
               </div>
@@ -172,7 +175,7 @@
         <div class="container">
           <div class="row">
             <div class="col-2">
-              <a href="index.html">
+              <a href="./index.html">
                 <img class="logo" src="./img/TheCatLogo.png" alt="" />
               </a>
             </div>
@@ -229,6 +232,77 @@
         </div>
       </section>
       <!--END NAVIGATION 2 -->
+      <!-- Search Box -->
+      <div
+        class="wrap-search-box-modal d-none position-fixed top-0 z-3 p-2 p-lg-4 end-0 h-100 w-100 bg-light"
+        style="--bs-bg-opacity: 0.9"
+      >
+        <div
+          class="close-search-modal fs-3 text-gr position-absolute"
+          style="right: 20px"
+        >
+          <i class="bi bi-x-lg"></i>
+        </div>
+        <div class="container mt-5">
+          <div class="row">
+            <div
+              class="col-12 wrap-elements d-flex justify-content-center align-items-center w-100"
+            >
+              <div
+                class="search-input d-flex w-75 position-relative"
+                style="height: 40px"
+              >
+                <input
+                  type="text"
+                  placeholder="Tìm kiếm"
+                  class="search-input p-2 w-100 fs-4 fw-medium border-bottom border-success bg-transparent"
+                  style="border: none"
+                />
+                <div
+                  class="clear-btn position-absolute text-gr fs-4"
+                  style="right: 10px; line-height: 40px"
+                >
+                  <i class="bi bi-x bi-x-lg fs-5"></i>
+                  <span> Xóa</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-12 d-flex justify-content-center render-items-box">
+              <div
+                class="wrap-items-box d-flex flex-column align-items-center rounded-2 gap-3 w-75"
+              >
+                <div class="item d-none">
+                  <a href="./cat-product.html" class="text-decoration-none">
+                    <div class="row d-flex justify-content-center py-2">
+                      <div class="col-6 img-wrap" style="height: 120px">
+                        <img
+                          src="./img/product-item.png"
+                          class="img-fluid h-100"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="col-6 wrap-info d-flex flex-column justify-content-center gap-2"
+                      >
+                        <div class="pr-name fs-5 fw-bold text-gr">
+                          Mèo Anh Lông Ngắn
+                        </div>
+                        <div class="pr-price fs-5 text-soft-bl">
+                          <span class="price-value ff-roboto">3.000.000</span>
+                          <span class="ff-roboto">VND</span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End Search Box -->
       <!-- CONTENT  -->
       <!-- mobile content -->
       <section class="content my-3 d-lg-none">

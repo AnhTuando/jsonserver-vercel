@@ -80,6 +80,9 @@
   cursor: pointer;
   opacity: 1;
 }
+.special-bg {
+  background-color: #dafbfa;
+}
 .moving-down {
   animation: moveDown 0.2s ease-in-out;
 }

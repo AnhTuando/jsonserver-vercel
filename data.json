@@ -2,7 +2,7 @@
   "cats": [
     {
       "id": 1,
-      "name": "Abyssinian",
+      "name": "Mèo Abyssinian",
       "thumbnail": "./cats/Abyssinian.png",
       "color": "Đơn sắc",
       "size": "Nhỏ",
@@ -12,7 +12,7 @@
     },
     {
       "id": 2,
-      "name": "Anh Lông Dài",
+      "name": "Mèo Anh Lông Dài",
       "thumbnail": "./cats/Anh Lông Dài.png",
       "color": "Nhiều màu",
       "size": "To",
@@ -22,7 +22,7 @@
     },
     {
       "id": 3,
-      "name": "Anh Lông Ngắn",
+      "name": "Mèo Anh Lông Ngắn",
       "thumbnail": "./cats/Anh Lông Ngắn.png",
       "color": "Đơn sắc",
       "size": "Trung bình",
@@ -32,7 +32,7 @@
     },
     {
       "id": 4,
-      "name": "Ba Tư",
+      "name": "Mèo Ba Tư",
       "thumbnail": "./cats/Ba Tư.png",
       "color": "Đơn sắc",
       "size": "Trung bình",
@@ -42,7 +42,7 @@
     },
     {
       "id": 5,
-      "name": "Bengal",
+      "name": "Mèo Bengal",
       "thumbnail": "./cats/Bengal.png",
       "color": "Nhiều màu",
       "size": "Nhỏ",
@@ -52,7 +52,7 @@
     },
     {
       "id": 6,
-      "name": "Birman",
+      "name": "Mèo Birman",
       "thumbnail": "./cats/Birman.png",
       "color": "Nhiều màu",
       "size": "Nhỏ",
@@ -62,7 +62,7 @@
     },
     {
       "id": 7,
-      "name": "Fold",
+      "name": "Mèo Fold",
       "thumbnail": "./cats/Fold.png",
       "color": "Nhiều màu",
       "size": "Nhỏ",
@@ -72,7 +72,7 @@
     },
     {
       "id": 8,
-      "name": "Khao Manee",
+      "name": "Mèo Khao Manee",
       "thumbnail": "./cats/Khao Manee.png",
       "color": "Đơn sắc",
       "size": "Nhỏ",
@@ -82,7 +82,7 @@
     },
     {
       "id": 9,
-      "name": "Maine Coon",
+      "name": "Mèo Maine Coon",
       "thumbnail": "./cats/Maine Coon.png",
       "color": "Nhiều màu",
       "size": "Nhỏ",
@@ -92,7 +92,7 @@
     },
     {
       "id": 10,
-      "name": "Munchkin",
+      "name": "Mèo Munchkin",
       "thumbnail": "./cats/Munchkin.png",
       "color": "Nhiều màu",
       "size": "Nhỏ",
@@ -102,7 +102,7 @@
     },
     {
       "id": 11,
-      "name": "Mỹ Lông Ngắn",
+      "name": "Mèo Mỹ Lông Ngắn",
       "thumbnail": "./cats/Mỹ Lông Ngắn.png",
       "color": "Nhiều màu",
       "size": "Trung Bình",
@@ -112,7 +112,7 @@
     },
     {
       "id": 12,
-      "name": "Ragdoll",
+      "name": "Mèo Ragdoll",
       "thumbnail": "./cats/Ragdoll.png",
       "color": "Đơn sắc",
       "size": "Trung Bình",
@@ -122,7 +122,7 @@
     },
     {
       "id": 13,
-      "name": "Rừng Na Uy",
+      "name": "Mèo Rừng Na Uy",
       "thumbnail": "./cats/Rừng Na Uy.png",
       "color": "Nhiều màu",
       "size": "To",
@@ -132,7 +132,7 @@
     },
     {
       "id": 14,
-      "name": "Russian Blue",
+      "name": "Mèo Russian Blue",
       "thumbnail": "./cats/Russian Blue.png",
       "color": "Đơn sắc",
       "size": "Nhỏ",
@@ -142,7 +142,7 @@
     },
     {
       "id": 15,
-      "name": "Savannah",
+      "name": "Mèo Savannah",
       "thumbnail": "./cats/Savannah.png",
       "color": "Nhiều màu",
       "size": "Nhỏ",
@@ -152,7 +152,7 @@
     },
     {
       "id": 16,
-      "name": "Siberian",
+      "name": "Mèo Siberian",
       "thumbnail": "./cats/Siberian.png",
       "color": "Nhiều màu",
       "size": "To",
@@ -162,7 +162,7 @@
     },
     {
       "id": 17,
-      "name": "Somanli",
+      "name": "Mèo Somanli",
       "thumbnail": "./cats/Somanli.png",
       "color": "Đơn sắc",
       "size": "Trung Bình",
@@ -172,7 +172,7 @@
     },
     {
       "id": 18,
-      "name": "Sphynx",
+      "name": "Mèo Sphynx",
       "thumbnail": "./cats/Sphynx.png",
       "color": "Đơn sắc",
       "size": "Trung Bình",
@@ -182,7 +182,7 @@
     },
     {
       "id": 19,
-      "name": "Turkish",
+      "name": "Mèo Turkish",
       "thumbnail": "./cats/Turkish.png",
       "color": "Đơn sắc",
       "size": "Nhỏ",
@@ -192,7 +192,7 @@
     },
     {
       "id": 20,
-      "name": "Tuxedo",
+      "name": "Mèo Tuxedo",
       "thumbnail": "./cats/Tuxedo.png",
       "color": "Nhiều màu",
       "size": "Trung bình",
