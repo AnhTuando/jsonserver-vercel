@@ -179,7 +179,12 @@ input[type="range"]::-webkit-slider-thumb {
 .price-value {
   font-family: "Roboto";
 }
-
+.green-soft-bg {
+  background: #00613c;
+}
+.filter-bg {
+  background: var(--background-color);
+}
 /* filter title hover */
 .filter-pc-box .title:hover {
   color: var(--font-green-color);
@@ -198,4 +203,28 @@ input[type="range"]::-webkit-slider-thumb {
   background: var(--font-green-color);
   color: #fff;
   transition: 0.75s;
+}
+@keyframes movingRight {
+  0% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.filter-mb .filter-box {
+  animation: movingRight 0.2s ease-in-out;
+}
+.wrap-search-box-modal {
+  animation: opacity 0.2s ease-in-out;
 }

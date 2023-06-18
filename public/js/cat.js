@@ -17,9 +17,9 @@ let navigationElements = document.querySelectorAll(
   ".navigation-2 .container .row .col-8 .item"
 );
 let filterMobile = document.querySelector(".filter-mb");
-let filterMoblieBtn = document.querySelector(".filter-btn");
+let showFilterMb = document.querySelector(".show-filter-mb");
 let filterMoblieCloseBtn = document.querySelector(".filter-mb-close-btn");
-filterMoblieBtn.onclick = function () {
+showFilterMb.onclick = function () {
   filterMobile.classList.toggle("d-none");
 };
 filterMoblieCloseBtn.onclick = function () {
@@ -37,6 +37,8 @@ function updateKeys(key, value) {
 }
 
 // Call Cats API
+let wrapCatsBox = document.querySelector(".products .row");
+
 async function getCats() {
   let res = await fetch("cats");
   let data = await res.json();
@@ -44,7 +46,6 @@ async function getCats() {
 }
 async function renderCats() {
   let cats = await getCats();
-  let wrapCatsBox = document.querySelector(".products .row");
   wrapCatsBox.innerHTML = ``;
   cats.map(function (element) {
     let catProductItems = document.createElement("div");
@@ -374,3 +375,2137 @@ function handleSearchBox() {
   });
 }
 handleSearchBox();
+
+// filter handle mobile
+async function filterMobileHandle() {
+  let catDatas = await getCats();
+  let filterMobileBox = document.querySelector(".filter-mb .filter-box");
+  // color filter
+  let colorChoose = filterMobileBox.querySelector(".color-choose");
+  let mixColorInput = colorChoose.querySelector(".mix-color input");
+  let singleColorInput = colorChoose.querySelector(".single-color input");
+  mixColorInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.color == mixColorInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  singleColorInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.color == singleColorInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  // furr style filter
+  let furChoose = filterMobileBox.querySelector(".fur-choose");
+
+  let shortFurrInput = furChoose.querySelector(".short input");
+  let longFurrInput = furChoose.querySelector(".long input");
+  let lessFurrInput = furChoose.querySelector(".less input");
+  shortFurrInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.furr == shortFurrInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  longFurrInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.furr == longFurrInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  lessFurrInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.furr == lessFurrInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  // size filter
+  let sizeChoose = filterMobileBox.querySelector(".size-choose");
+  let smallInput = sizeChoose.querySelector(".small input");
+  let mediumInput = sizeChoose.querySelector(".medium input");
+  let bigFurrInput = sizeChoose.querySelector(".big input");
+  smallInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.size == smallInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  mediumInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.size == mediumInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  bigFurrInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.size == bigFurrInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  // fur loss filter
+  let furlossChoose = filterMobileBox.querySelector(".fur-loss-choose");
+  let hairyInput = furlossChoose.querySelector(".hairy input");
+  let lessInput = furlossChoose.querySelector(".less input");
+  hairyInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.furrLose == hairyInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  lessInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.furrLose == lessInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  // price filter
+  let priceChoose = filterMobileBox.querySelector(".price-filter-box");
+  let inputRange = priceChoose.querySelector("input");
+  let pricefilterMb = filterMobile.querySelector(".filter-btn-price");
+
+  let showCustomerPriceChoose =
+    filterMobileBox.querySelector(".show-price-value");
+  inputRange.addEventListener("input", function () {
+    showCustomerPriceChoose.innerHTML = `${inputRange.value}`;
+    let inputValue = inputRange.value;
+    pricefilterMb.addEventListener("click", function () {
+      wrapCatsBox.innerHTML = "";
+      catDatas.map((element) => {
+        // case < 1000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) == 1000000 &&
+          parseInt(inputValue) == 1
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+        // case < 2000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) <= 2000000 &&
+          parseInt(inputValue) == 2
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+        // case < 3000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) <= 3000000 &&
+          parseInt(inputValue) == 3
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+        // case < 4000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) <= 4000000 &&
+          parseInt(inputValue) == 4
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+        // case < 5000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) <= 5000000 &&
+          parseInt(inputValue) == 5
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+        // case < 6000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) <= 6000000 &&
+          parseInt(inputValue) == 6
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+        // case < 7000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) <= 7000000 &&
+          parseInt(inputValue) == 7
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+        // case < 8000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) <= 8000000 &&
+          parseInt(inputValue) == 8
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+        // case < 9000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) <= 9000000 &&
+          parseInt(inputValue) == 9
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+        // case < 10000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) <= 10000000 &&
+          parseInt(inputValue) == 10
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+      });
+    });
+  });
+}
+// filter handle pc
+async function filterPCHandle() {
+  let catDatas = await getCats();
+  let filterPcBox = document.querySelector(".filter-pc .filter-pc-box");
+  // color filter
+  let colorChoose = filterPcBox.querySelector(".color-choose");
+  let mixColorInput = colorChoose.querySelector(".mix-color input");
+  let singleColorInput = colorChoose.querySelector(".single-color input");
+  mixColorInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.color == mixColorInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  singleColorInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.color == singleColorInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  // furr style filter
+  let furChoose = filterPcBox.querySelector(".fur-style-choose");
+  let shortFurrInput = furChoose.querySelector(".short input");
+  let longFurrInput = furChoose.querySelector(".long input");
+  let lessFurrInput = furChoose.querySelector(".less input");
+  shortFurrInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.furr == shortFurrInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  longFurrInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.furr == longFurrInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  lessFurrInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.furr == lessFurrInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  // size filter
+  let sizeChoose = filterPcBox.querySelector(".size-choose");
+  let smallInput = sizeChoose.querySelector(".small input");
+  let mediumInput = sizeChoose.querySelector(".medium input");
+  let bigFurrInput = sizeChoose.querySelector(".big input");
+  smallInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.size == smallInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  mediumInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.size == mediumInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  bigFurrInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.size == bigFurrInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  // fur loss filter
+  let furlossChoose = filterPcBox.querySelector(".fur-loss-choose");
+  let hairyInput = furlossChoose.querySelector(".hairy input");
+  let lessInput = furlossChoose.querySelector(".less input");
+  hairyInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.furrLose == hairyInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  lessInput.addEventListener("click", function () {
+    wrapCatsBox.innerHTML = "";
+    catDatas.map((element) => {
+      if (element.furrLose == lessInput.value) {
+        let catProductItems = document.createElement("div");
+        catProductItems.classList.add("col-6");
+        catProductItems.classList.add("col-lg-4");
+        catProductItems.classList.add("mb-4");
+        catProductItems.setAttribute("data-product-id", `${element.id}`);
+        catProductItems.innerHTML = `<a
+                    href="./cat-product.html?${element.id}"
+                    class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                  >
+                    <div
+                      class="item d-flex flex-column gap-2 position-relative"
+                    >
+                      <div class="pr-img">
+                        <img
+                          src="${element.thumbnail}"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div class="product-name fw-medium text-soft-bl">
+                        <span class="name-value fs-4 d-none d-lg-block"
+                          >${element.name}</span
+                        >
+                        <span class="name-value fs-5 d-lg-none"
+                          >${element.name}</span
+                        >
+                      </div>
+                      <div
+                        class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                      >
+                        <div class="price-wrap">
+                          <span class="price-value fw-bold">${element.price}</span>
+                          <span class="price-value fw-bold">VND</span>
+                        </div>
+                        <div
+                          class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                          style="border-radius: 50%"
+                        >
+                          <i class="bi bi-cart4 fs-6"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>`;
+        wrapCatsBox.append(catProductItems);
+      }
+    });
+  });
+  // price filter
+  let priceFilterBox = filterPcBox.querySelector(".price-filter-wrap");
+  let inputRange = priceFilterBox.querySelector("input");
+  let pricefilterMb = priceFilterBox.querySelector(".filter-btn-price");
+  let showCustomerPriceChoose = filterPcBox.querySelector(".show-price-value");
+  console.log(showCustomerPriceChoose);
+  inputRange.addEventListener("input", function () {
+    showCustomerPriceChoose.innerHTML = `${inputRange.value}`;
+    let inputValue = inputRange.value;
+    pricefilterMb.addEventListener("click", function () {
+      wrapCatsBox.innerHTML = "";
+      catDatas.map((element) => {
+        // case < 1000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) == 1000000 &&
+          parseInt(inputValue) == 1
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+        // case < 2000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) <= 2000000 &&
+          parseInt(inputValue) == 2
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+        // case < 3000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) <= 3000000 &&
+          parseInt(inputValue) == 3
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+        // case < 4000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) <= 4000000 &&
+          parseInt(inputValue) == 4
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+        // case < 5000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) <= 5000000 &&
+          parseInt(inputValue) == 5
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+        // case < 6000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) <= 6000000 &&
+          parseInt(inputValue) == 6
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+        // case < 7000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) <= 7000000 &&
+          parseInt(inputValue) == 7
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+        // case < 8000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) <= 8000000 &&
+          parseInt(inputValue) == 8
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+        // case < 9000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) <= 9000000 &&
+          parseInt(inputValue) == 9
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+        // case < 10000000
+        if (
+          parseFloat(element.price.replace(/\./g, "")) <= 10000000 &&
+          parseInt(inputValue) == 10
+        ) {
+          let catProductItems = document.createElement("div");
+          catProductItems.classList.add("col-6");
+          catProductItems.classList.add("col-lg-4");
+          catProductItems.classList.add("mb-4");
+          catProductItems.setAttribute("data-product-id", `${element.id}`);
+          catProductItems.innerHTML = `<a
+                      href="./cat-product.html?${element.id}"
+                      class="product-item text-decoration-none rounded-2 custom-shadow d-flex p-3"
+                    >
+                      <div
+                        class="item d-flex flex-column gap-2 position-relative"
+                      >
+                        <div class="pr-img">
+                          <img
+                            src="${element.thumbnail}"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="product-name fw-medium text-soft-bl">
+                          <span class="name-value fs-4 d-none d-lg-block"
+                            >${element.name}</span
+                          >
+                          <span class="name-value fs-5 d-lg-none"
+                            >${element.name}</span
+                          >
+                        </div>
+                        <div
+                          class="product-price d-flex justify-content-between fw-medium text-soft-bl"
+                        >
+                          <div class="price-wrap">
+                            <span class="price-value fw-bold">${element.price}</span>
+                            <span class="price-value fw-bold">VND</span>
+                          </div>
+                          <div
+                            class="cart-btn border border-success text-center text-gr py-1 px-2 position-absolute end-0 bottom-0"
+                            style="border-radius: 50%"
+                          >
+                            <i class="bi bi-cart4 fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>`;
+          wrapCatsBox.append(catProductItems);
+        }
+      });
+    });
+  });
+}
+filterPCHandle();
+filterMobileHandle();
+// inputChecked
+// mobile
+function handleInputMbChecked() {
+  let filterMobileBoxInputs = Array.from(
+    document.querySelectorAll('.filter-mb .filter-box input[type="radio"]')
+  );
+  filterMobileBoxInputs.map((element) => {
+    element.addEventListener("click", function () {
+      filterMobileBoxInputs.forEach((otherInput) => {
+        if (otherInput !== element) {
+          otherInput.checked = false;
+        }
+      });
+    });
+  });
+}
+handleInputMbChecked();
+// pc
+function handleInputPCChecked() {
+  let filterPCBoxInputs = Array.from(
+    document.querySelectorAll('.filter-pc .filter-pc-box input[type="radio"]')
+  );
+  filterPCBoxInputs.map((element) => {
+    element.addEventListener("click", function () {
+      filterPCBoxInputs.forEach((otherInput) => {
+        if (otherInput !== element) {
+          otherInput.checked = false;
+        }
+      });
+    });
+  });
+}
+handleInputPCChecked();

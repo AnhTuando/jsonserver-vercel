@@ -21,7 +21,7 @@
   </head>
   <body>
     <main class="main position-relative">
-     <!-- subnav -->
+      <!-- subnav -->
       <div
         class="subnav-mobile wd-200px sub-nav-bg position-fixed d-none d-lg-none z-2 h-100"
       >
@@ -316,7 +316,7 @@
                     >Sản Phẩm:</span
                   ><span class="pr-value fs-3 fw-bold">Mèo</span>
                 </div>
-                <div class="filter">
+                <div class="show-filter-mb">
                   <div
                     class="filter-btn bg-gr filter-bg text-light fw-bold fs-3 py-2 px-4 rounded-2"
                   >
@@ -345,16 +345,26 @@
                   </div>
                 </div>
                 <!-- color filter -->
-                <div class="row g-2 mb-4">
+                <div class="row g-2 mb-5">
                   <div class="title fs-4 fw-bold">Chọn Màu Sắc</div>
                   <div class="color">
                     <div class="color-choose d-flex gap-2 fs-5">
-                      <label class="fw-medium">
-                        <input type="checkbox" name="color" id="" />
+                      <label class="fw-medium mix-color">
+                        <input
+                          type="radio"
+                          value="Nhiều màu"
+                          name="color"
+                          id=""
+                        />
                         <span class="color-value">Nhiều màu</span></label
                       >
-                      <label class="fw-medium">
-                        <input type="checkbox" name="color" id="" />
+                      <label class="fw-medium single-color">
+                        <input
+                          type="radio"
+                          name="color"
+                          value="Đơn sắc"
+                          id=""
+                        />
                         <span class="color-value">Đơn sắc</span></label
                       >
                     </div>
@@ -362,20 +372,20 @@
                 </div>
                 <!--end color filter -->
                 <!-- fur filter -->
-                <div class="row g-2 mb-4">
+                <div class="row g-2 mb-5">
                   <div class="title fs-4 fw-bold">Chọn Kiểu Lông</div>
                   <div class="fur">
                     <div class="fur-choose d-flex gap-2 fs-5">
-                      <label class="fw-medium">
-                        <input type="checkbox" name="fur" id="" />
+                      <label class="fw-medium short">
+                        <input type="radio" value="Ngắn" name="fur" id="" />
                         <span class="fur-value">Ngắn</span></label
                       >
-                      <label class="fw-medium">
-                        <input type="checkbox" name="fur" id="" />
+                      <label class="fw-medium long">
+                        <input type="radio" value="Dài" name="fur" id="" />
                         <span class="fur-value">Dài</span></label
                       >
-                      <label class="fw-medium">
-                        <input type="checkbox" name="fur" id="" />
+                      <label class="fw-medium less">
+                        <input type="radio" value="Ít" name="fur" id="" />
                         <span class="fur-value">Ít</span></label
                       >
                     </div>
@@ -383,20 +393,25 @@
                 </div>
                 <!--end fur filter -->
                 <!-- size filter -->
-                <div class="row g-2 mb-4">
-                  <div class="title fs-4 fw-bold">Chọn Kiểu Lông</div>
+                <div class="row g-2 mb-5">
+                  <div class="title fs-4 fw-bold">Chọn Kích Cỡ</div>
                   <div class="size">
                     <div class="size-choose d-flex gap-2 fs-5">
-                      <label class="fw-medium">
-                        <input type="checkbox" name="size" id="" />
+                      <label class="fw-medium small">
+                        <input type="radio" value="Nhỏ" name="size" id="" />
                         <span class="size-value">Nhỏ</span></label
                       >
-                      <label class="fw-medium">
-                        <input type="checkbox" name="size" id="" />
+                      <label class="fw-medium medium">
+                        <input
+                          type="radio"
+                          value="Trung bình"
+                          name="size"
+                          id=""
+                        />
                         <span class="size-value">Trung bình</span></label
                       >
-                      <label class="fw-medium">
-                        <input type="checkbox" name="size" id="" />
+                      <label class="fw-medium big">
+                        <input type="radio" value="To" name="size" id="" />
                         <span class="size-value">To</span></label
                       >
                     </div>
@@ -404,16 +419,21 @@
                 </div>
                 <!--end size filter -->
                 <!-- fur loss filter -->
-                <div class="row g-2 mb-4">
-                  <div class="title fs-4 fw-bold">Chọn Kiểu Lông</div>
+                <div class="row g-2 mb-5">
+                  <div class="title fs-4 fw-bold">Rụng Lông</div>
                   <div class="fur-loss">
                     <div class="fur-loss-choose d-flex gap-2 fs-5">
-                      <label class="fw-medium">
-                        <input type="checkbox" name="fur-loss" id="" />
+                      <label class="fw-medium hairy">
+                        <input
+                          type="radio"
+                          value="Nhiều"
+                          name="fur-loss"
+                          id=""
+                        />
                         <span class="fur-loss-value">Nhiều</span></label
                       >
-                      <label class="fw-medium">
-                        <input type="checkbox" name="fur-loss" id="" />
+                      <label class="fw-medium less">
+                        <input type="radio" value="Ít" name="fur-loss" id="" />
                         <span class="fur-loss-value">Ít</span></label
                       >
                     </div>
@@ -421,13 +441,14 @@
                 </div>
                 <!--end fur loss  filter -->
                 <!-- price filter -->
-                <div class="row g-2 mb-4">
+                <div class="row g-2 mb-5">
                   <div class="wrap-show-price d-flex">
                     <div class="title fw-bold fs-4">Giá</div>
                     <div
                       class="ms-3 d-flex align-items-center gap-1 show-price fw-medium fs-6"
                     >
-                      <span class="show-price-value">3</span>
+                      <span>~</span>
+                      <span class="show-price-value text-warning">10</span>
                       <span>Triệu</span>
                     </div>
                   </div>
@@ -448,21 +469,21 @@
                     <input
                       type="range"
                       class="price-filter-input w-100"
-                      value="3"
+                      value="10"
                       min="1"
                       max="10"
                     />
                   </div>
-                </div>
-                <!-- price filter -->
-                <div class="wrap-btn d-flex justify-content-center">
-                  <div
-                    class="filter-btn-price fw-bold fs-5 filter-bg d-inline-block rounded-2 text-light py-1 px-3"
-                    style="width: fit-content"
-                  >
-                    Lọc
+                  <div class="wrap-btn d-flex justify-content-center">
+                    <div
+                      class="filter-btn-price fw-bold fs-5 filter-bg d-inline-block rounded-2 text-light py-1 px-3"
+                      style="width: fit-content"
+                    >
+                      Lọc giá
+                    </div>
                   </div>
                 </div>
+                <!-- price filter -->
               </div>
             </div>
           </div>
@@ -483,12 +504,22 @@
                   <div class="title fs-5 fw-medium">Chọn Màu Sắc</div>
                   <div class="color">
                     <div class="color-choose d-flex gap-2">
-                      <label class="fw-medium">
-                        <input type="checkbox" name="color" id="" />
+                      <label class="fw-medium mix-color">
+                        <input
+                          type="radio"
+                          value="Nhiều màu"
+                          name="color"
+                          id=""
+                        />
                         <span class="color-value">Nhiều màu</span></label
                       >
-                      <label class="fw-medium">
-                        <input type="checkbox" name="color" id="" />
+                      <label class="fw-medium single-color">
+                        <input
+                          type="radio"
+                          value="Đơn sắc"
+                          name="color"
+                          id=""
+                        />
                         <span class="color-value">Đơn sắc</span></label
                       >
                     </div>
@@ -498,18 +529,23 @@
                 <!-- size filter -->
                 <div class="row g-2 mb-3">
                   <div class="title fs-5 fw-medium">Chọn Kích Cỡ</div>
-                  <div class="color">
-                    <div class="color-choose d-flex gap-2 \">
-                      <label class="fw-medium">
-                        <input type="checkbox" name="size" id="" />
+                  <div class="size">
+                    <div class="size-choose d-flex gap-2">
+                      <label class="fw-medium small">
+                        <input type="radio" value="Nhỏ" name="size" id="" />
                         <span class="size-value">Nhỏ</span></label
                       >
-                      <label class="fw-medium">
-                        <input type="checkbox" name="size" id="" />
+                      <label class="fw-medium medium">
+                        <input
+                          type="radio"
+                          value="Trung bình"
+                          name="size"
+                          id=""
+                        />
                         <span class="size-value">Trung bình</span></label
                       >
-                      <label class="fw-medium">
-                        <input type="checkbox" name="size" id="" />
+                      <label class="fw-medium big">
+                        <input type="radio" value="To" name="size" id="" />
                         <span class="size-value">To</span></label
                       >
                     </div>
@@ -519,18 +555,18 @@
                 <!-- fur style filter -->
                 <div class="row g-2 mb-3">
                   <div class="title fs-5 fw-medium">Chọn Kiểu Lông</div>
-                  <div class="color">
-                    <div class="color-choose d-flex gap-2">
-                      <label class="fw-medium">
-                        <input type="checkbox" name="size" id="" />
+                  <div class="fur-style">
+                    <div class="fur-style-choose d-flex gap-2">
+                      <label class="fw-medium short">
+                        <input type="radio" value="Ngắn" name="size" id="" />
                         <span class="fur-value">Ngắn</span></label
                       >
-                      <label class="fw-medium">
-                        <input type="checkbox" name="size" id="" />
+                      <label class="fw-medium long">
+                        <input type="radio" value="Dài" name="size" id="" />
                         <span class="fur-value">Dài</span></label
                       >
-                      <label class="fw-medium">
-                        <input type="checkbox" name="size" id="" />
+                      <label class="fw-medium less">
+                        <input type="radio" value="Ít" name="size" id="" />
                         <span class="fur-value">Ít</span></label
                       >
                     </div>
@@ -540,14 +576,14 @@
                 <!-- fur loss filter -->
                 <div class="row g-2 mb-3">
                   <div class="title fs-5 fw-medium">Rụng Lông</div>
-                  <div class="color">
-                    <div class="color-choose">
-                      <label class="fw-medium">
-                        <input type="checkbox" name="size" id="" />
+                  <div class="fur-loss">
+                    <div class="fur-loss-choose">
+                      <label class="fw-medium hairy">
+                        <input type="radio" value="Nhiều" name="size" id="" />
                         <span class="fur-loss-value">Nhiều</span></label
                       >
-                      <label class="fw-medium">
-                        <input type="checkbox" name="size" id="" />
+                      <label class="fw-medium less">
+                        <input type="radio" value="Ít" name="size" id="" />
                         <span class="fur-loss-value">Ít</span></label
                       >
                     </div>
@@ -555,7 +591,7 @@
                 </div>
                 <!--end fur loss filter -->
                 <!-- price filter -->
-                <div class="row g-2 mb-2">
+                <div class="row price-filter-wrap g-2 mb-2">
                   <div class="wrap-show-price d-flex fs-5">
                     <div class="title fw-medium">Giá</div>
                     <div
@@ -587,16 +623,16 @@
                       max="10"
                     />
                   </div>
-                </div>
-                <!--End price filter -->
-                <div class="wrap-btn d-flex justify-content-center">
-                  <div
-                    class="filter-btn-price fw-bold fs-5 filter-bg d-inline-block rounded-2 text-light py-1 px-3"
-                    style="width: fit-content"
-                  >
-                    Lọc
+                  <div class="wrap-btn d-flex justify-content-center">
+                    <div
+                      class="filter-btn-price fw-bold fs-5 filter-bg d-inline-block rounded-2 text-light py-1 px-3"
+                      style="width: fit-content"
+                    >
+                      Lọc giá
+                    </div>
                   </div>
                 </div>
+                <!--End price filter -->
               </div>
             </div>
             <div class="products col-12 col-lg-9 my-3">

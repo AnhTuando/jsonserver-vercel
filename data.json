@@ -18,7 +18,7 @@
       "size": "To",
       "furr": "Dài",
       "furrLose": "Nhiều",
-      "price": "4.500.000"
+      "price": "4.000.000"
     },
     {
       "id": 3,
@@ -105,7 +105,7 @@
       "name": "Mèo Mỹ Lông Ngắn",
       "thumbnail": "./cats/Mỹ Lông Ngắn.png",
       "color": "Nhiều màu",
-      "size": "Trung Bình",
+      "size": "Trung bình",
       "furr": "Ngắn",
       "furrLose": "Nhiều",
       "price": "9.500.000"
@@ -115,7 +115,7 @@
       "name": "Mèo Ragdoll",
       "thumbnail": "./cats/Ragdoll.png",
       "color": "Đơn sắc",
-      "size": "Trung Bình",
+      "size": "Trung bình",
       "furr": "Dài",
       "furrLose": "Nhiều",
       "price": "7.500.000"
@@ -138,7 +138,7 @@
       "size": "Nhỏ",
       "furr": "Ngắn",
       "furrLose": "Ít",
-      "price": "9.000.000"
+      "price": "2.000.000"
     },
     {
       "id": 15,
@@ -148,7 +148,7 @@
       "size": "Nhỏ",
       "furr": "Ngắn",
       "furrLose": "Ít",
-      "price": "4.000.000"
+      "price": "1.000.000"
     },
     {
       "id": 16,
@@ -165,7 +165,7 @@
       "name": "Mèo Somanli",
       "thumbnail": "./cats/Somanli.png",
       "color": "Đơn sắc",
-      "size": "Trung Bình",
+      "size": "Trung bình",
       "furr": "Ngắn",
       "furrLose": "Ít",
       "price": "8.000.000"
@@ -188,7 +188,7 @@
       "size": "Nhỏ",
       "furr": "Ít",
       "furrLose": "Ít",
-      "price": "8.000.000"
+      "price": "3.000.000"
     },
     {
       "id": 20,
