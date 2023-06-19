@@ -131,3 +131,18 @@ input.no-spinner {
   background-color: rgb(252, 48, 48);
   transition: 0.25s;
 }
+
+.content-soft-bg {
+  background: #22ac771e;
+}
+.subtotal-items-wrap input:focus-visible {
+  outline: none;
+}
+.check-cart .wrap-cart-items .clear-cart-item-btn {
+  opacity: 0.8;
+}
+.check-cart .wrap-cart-items .clear-cart-item-btn:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.25s;
+}

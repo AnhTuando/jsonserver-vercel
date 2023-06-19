@@ -35,329 +35,291 @@ async function getCats() {
   let data = await res.json();
   return data;
 }
-async function renderCatDetail() {
+async function HanldeMain() {
   let productBox = document.querySelector(".product .container .row ");
-
-  let datas = await getCats();
-  datas.map((element) => {
-    if (element.id == currentId) {
-      let item1 = document.createElement("div");
-      item1.classList.add("col-12");
-      item1.innerHTML = ` <div class="row my-2">
-                <div
-                  class="product-img col-12 col-lg-6 d-flex justify-content-center align-items-center"
-                  style="height: 400px"
-                >
-                  <img
-                    src="${element.thumbnail}"
-                    class="img-fluid h-75"
-                    style="image-rendering: pixelated"
-                    alt=""
-                  />
-                </div>
-                <div
-                  class="product-info col-12 col-lg-6 gap-2 d-flex flex-column justify-content-between"
-                >
-                  <div class="pr-name fs-3 text-gr fw-bold">
-                    Mèo ${element.name}
-                  </div>
-                  <div class="sub-info row">
-                    <div class="pr-color col-6">
-                      <span class="title text-secondary fw-medium"
-                        >Kiểu Màu:</span
-                      >
-                      <span class="color-value text-soft-bl"
-                        >${element.color}</span
-                      >
-                    </div>
-                    <div class="pr-size col-6">
-                      <span class="title text-secondary fw-medium">Size:</span>
-                      <span class="size-valuetext-soft-bl"
-                        >${element.size}</span
-                      >
-                    </div>
-                    <div class="pr-fur col-6">
-                      <span class="title text-secondary fw-medium"
-                        >Kiểu Lông:</span
-                      >
-                      <span class="fur-value text-soft-bl"
-                        >${element.furr}</span
-                      >
-                    </div>
-                    <div class="pr-fur-loss col-6">
-                      <span class="title text-secondary fw-medium"
-                        >Rụng Lông:</span
-                      >
-                      <span class="fur-loss-value text-soft-bl"
-                        >${element.furrLose}</span
-                      >
-                    </div>
-                  </div>
-                  <div class="discount-box d-flex flex-column gap-2">
-                    <div class="title fw-medium text-gr">
-                      Giảm 10% giá phụ kiện khi mua kèm với mèo
-                    </div>
-                    <div
-                      class="discount-products-box d-flex justify-content-between"
-                      style="height: 80px"
-                    >
-                    <div class="item d-flex">
-                      <div class="ds-pr-1 h-100">
-                      
-                        <img
-                          src="./img/accessory.png"
-                          class="img-fluid h-100"
-                          alt=""                         
-                        />                       
-                      </div>
-                      <div class="ds-pr-2 h-100">
-                      
-                        <img
-                          src="./img/accessory.png"
-                          class="img-fluid h-100"
-                          alt=""                         
-                        />                       
-                      </div>
-                      <div class="ds-pr-3 h-100">
-                      
-                        <img
-                          src="./img/accessory.png"
-                          class="img-fluid h-100"
-                          alt=""                         
-                        />                       
-                      </div>
-                     
-                    </div>
-                     
-                      <div
-                        class="show-discount-price d-flex flex-column justify-content-center border border-secondary px-2 rounded-2 "
-                      >
-                        <div
-                          class="old-price text-decoration-line-through text-secondary"
-                        >
-                        <span>Giảm cũ:</span>
-                          <span class="old-value  ff-roboto"
-
-                            >140.000</span
-                          >
-                          <span class=" ">VND</span>
-                        </div>
-                        <div class="current-price text-danger ">
-                        <span>Giảm còn:</span>
-                          <span class="cur-value ff-roboto "
-                            >126.000</span
-                          >
-                          <span class=" ">VND</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="payment-control d-flex justify-content-between">
-                    <div
-                      class="quantity-box d-flex gap-4 border p-2 rounded-5 border-success-subtle"
-                    >
-                      <div class="minus-btn px-1">
-                        <i class="bi bi-dash"></i>
-                      </div>
-                      <div class="show-quantity">1</div>
-                      <div class="plus-btn px-2">
-                        <i class="bi bi-plus"></i>
-                      </div>
-                    </div>
-                    <div class="price-box p-2">
-                      <span class="title fw-medium text-soft-bl">Giá:</span>
-                      <span class="price-value number-font text-gr"
-                        >${element.price}</span
-                      >
-                      <span class="text-gr fw-medium">VND</span>
-                    </div>
-                    <div class="payment d-flex">
-                      <a
-                        href="checkout.html?cat=${element.id}"
-                        class="pay-btn text-decoration-none p-2 green-bg text-light fw-bold rounded-4"
-                      >
-                        Mua ngay
-                      </a>
-                    </div>
+  async function renderCatDetail() {
+    let datas = await getCats();
+    datas.map((element) => {
+      if (element.id == currentId) {
+        let item1 = document.createElement("div");
+        item1.classList.add("col-12");
+        item1.innerHTML = ` <div class="row my-2">
+                  <div
+                    class="product-img col-12 col-lg-6 d-flex justify-content-center align-items-center"
+                    style="height: 400px"
+                  >
+                    <img
+                      src="${element.thumbnail}"
+                      class="img-fluid h-75"
+                      style="image-rendering: pixelated"
+                      alt=""
+                    />
                   </div>
                   <div
-                    class="description bg-success-subtle text-soft-bl p-2 rounded-2"
+                    class="product-info col-12 col-lg-6 gap-2 d-flex flex-column justify-content-between"
                   >
-                    <div class="warranty d-flex gap-2">
-                      <i class="bi bi-award-fill"></i>
-                      <span>Bảo hành trong vòng 1 năm</span>
+                    <div class="pr-name fs-3 text-gr fw-bold">
+                       ${element.name}
                     </div>
-                    <div class="vaccination d-flex gap-2">
-                      <i class="bi bi-prescription2"></i>
-                      <span> Cam kết tiêm chủng đầy đủ</span>
-                    </div>
-                    <div class="delivery d-flex gap-2">
-                      <i class="bi bi-truck"></i>
-                      <span>Miễn phí vận chuyển nội thành</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="row certification">
-                  <div class="col-12">
-                    <div
-                      class="title d-lg-none text-center mt-2 fw-bold text-soft-bl"
-                    >
-                      Giấy Tờ Kèm Theo
-                    </div>
-                    <div
-                      class="title d-none d-lg-block text-center fs-4 mt-2 fw-bold text-soft-bl"
-                    >
-                      Giấy Tờ Kèm Theo
-                    </div>
-                  </div>
-                  <div class="col-12 col-lg-6">
-                    <div
-                      class="vaccination-box d-flex flex-column justify-content-center"
-                    >
-                      <img src="./img/cert1.png" class="img-fluid" alt="" />
-                      <div
-                        class="d-none d-lg-block fs-4 fw-medium cert-info text-center text-soft-bl"
-                      >
-                        Sổ tiêm phòng
+                    <div class="sub-info row">
+                      <div class="pr-color col-6">
+                        <span class="title text-secondary fw-medium"
+                          >Kiểu Màu:</span
+                        >
+                        <span class="color-value text-soft-bl"
+                          >${element.color}</span
+                        >
                       </div>
-                      <div
-                        class="d-lg-none cert-info text-center fw-medium text-soft-bl"
-                      >
-                        Sổ tiêm phòng
+                      <div class="pr-size col-6">
+                        <span class="title text-secondary fw-medium">Size:</span>
+                        <span class="size-valuetext-soft-bl"
+                          >${element.size}</span
+                        >
+                      </div>
+                      <div class="pr-fur col-6">
+                        <span class="title text-secondary fw-medium"
+                          >Kiểu Lông:</span
+                        >
+                        <span class="fur-value text-soft-bl"
+                          >${element.furr}</span
+                        >
+                      </div>
+                      <div class="pr-fur-loss col-6">
+                        <span class="title text-secondary fw-medium"
+                          >Rụng Lông:</span
+                        >
+                        <span class="fur-loss-value text-soft-bl"
+                          >${element.furrLose}</span
+                        >
                       </div>
                     </div>
-                  </div>
-                  <div class="col-12 col-lg-6">
+                    <div class="discount-box d-flex flex-column gap-2">
+                      <div class="title fw-medium text-gr">
+                        Giảm 10% giá phụ kiện khi mua kèm với mèo
+                      </div>
+                      <div
+                        class="discount-products-box d-flex justify-content-between"
+                        style="height: 70px"
+                      >
+                      <div class="item d-flex">
+                        <div class="ds-pr-1 h-100">
+                        
+                          <img
+                            src="./img/accessory.png"
+                            class="img-fluid h-100"
+                            alt=""                         
+                          />                       
+                        </div>
+                        <div class="ds-pr-2 h-100">
+                        
+                          <img
+                            src="./img/accessory.png"
+                            class="img-fluid h-100"
+                            alt=""                         
+                          />                       
+                        </div>
+                        <div class="ds-pr-3 h-100">
+                        
+                          <img
+                            src="./img/accessory.png"
+                            class="img-fluid h-100"
+                            alt=""                         
+                          />                       
+                        </div>
+                       
+                      </div>
+                       
+                        <div
+                          class="show-discount-price d-flex flex-column justify-content-center border border-secondary px-2 rounded-2 "
+                        >
+                          <div
+                            class="old-price text-decoration-line-through text-secondary"
+                          >
+                          <span>Giảm cũ:</span>
+                            <span class="old-value  ff-roboto"
+  
+                              >140.000</span
+                            >
+                            <span class=" ">VND</span>
+                          </div>
+                          <div class="current-price text-danger ">
+                          <span>Giảm còn:</span>
+                            <span class="cur-value ff-roboto "
+                              >126.000</span
+                            >
+                            <span class=" ">VND</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="payment-control d-flex justify-content-between">
+                      
+                      <div class="price-box p-2 fs-5">
+                        <span class="title fw-bold text-soft-bl">Giá:</span>
+                        <span class="price-value fw-bold number-font text-gr ff-roboto"
+                          >${element.price}</span
+                        >
+                        <span class="text-gr fw-bold">VND</span>
+                      </div>
+                      <div class="payment d-flex">
+                        <a                      
+                          class="pay-btn d-flex justify-content-center align-items-center text-decoration-none px-4 green-bg text-light fw-bold rounded-4"
+                        >
+                          <span> Thêm vào giỏ hàng <span>
+                        </a>
+                      </div>
+                    </div>
                     <div
-                      class="warranty-box d-flex flex-column justify-content-center"
+                      class="description bg-success-subtle text-soft-bl p-2 rounded-2"
                     >
-                      <img src="./img/cert2.png" class="img-fluid" alt="" />
-                      <div class="cert-info text-center text-soft-bl">
+                      <div class="warranty d-flex gap-2">
+                        <i class="bi bi-award-fill"></i>
+                        <span>Bảo hành trong vòng 1 năm</span>
+                      </div>
+                      <div class="vaccination d-flex gap-2">
+                        <i class="bi bi-prescription2"></i>
+                        <span> Cam kết tiêm chủng đầy đủ</span>
+                      </div>
+                      <div class="delivery d-flex gap-2">
+                        <i class="bi bi-truck"></i>
+                        <span>Miễn phí vận chuyển nội thành</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row certification">
+                    <div class="col-12">
+                      <div
+                        class="title d-lg-none text-center mt-2 fw-bold text-soft-bl"
+                      >
+                        Giấy Tờ Kèm Theo
+                      </div>
+                      <div
+                        class="title d-none d-lg-block text-center fs-4 mt-2 fw-bold text-soft-bl"
+                      >
+                        Giấy Tờ Kèm Theo
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div
+                        class="vaccination-box d-flex flex-column justify-content-center"
+                      >
+                        <img src="./img/cert1.png" class="img-fluid" alt="" />
                         <div
                           class="d-none d-lg-block fs-4 fw-medium cert-info text-center text-soft-bl"
                         >
-                          Phiếu bảo hành
+                          Sổ tiêm phòng
                         </div>
                         <div
                           class="d-lg-none cert-info text-center fw-medium text-soft-bl"
                         >
-                          Phiếu bảo hành
+                          Sổ tiêm phòng
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div
+                        class="warranty-box d-flex flex-column justify-content-center"
+                      >
+                        <img src="./img/cert2.png" class="img-fluid" alt="" />
+                        <div class="cert-info text-center text-soft-bl">
+                          <div
+                            class="d-none d-lg-block fs-4 fw-medium cert-info text-center text-soft-bl"
+                          >
+                            Phiếu bảo hành
+                          </div>
+                          <div
+                            class="d-lg-none cert-info text-center fw-medium text-soft-bl"
+                          >
+                            Phiếu bảo hành
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>`;
+                </div>`;
 
-      productBox.append(item1);
-      // Handle Discount Products
-      function Handle() {
-        let discountProduct1 = document.querySelector(".ds-pr-1");
-        let discountProduct2 = document.querySelector(".ds-pr-2");
-        let discountProduct3 = document.querySelector(".ds-pr-3");
+        productBox.append(item1);
+        // Handle Discount Products
         let checkDiscount = localStorage.getItem("checkDiscount") || false;
+        function HandleDiscountProducts() {
+          let discountProduct1 = document.querySelector(".ds-pr-1");
+          let discountProduct2 = document.querySelector(".ds-pr-2");
+          let discountProduct3 = document.querySelector(".ds-pr-3");
 
-        discountProduct1.addEventListener("click", function () {
-          discountProduct1.classList.toggle("border-gr");
-          discountProduct1.classList.remove("border-none");
-          discountProduct2.classList.add("border-none");
-          discountProduct3.classList.add("border-none");
-          if (discountProduct1.classList.contains("border-gr")) {
-            checkDiscount = true;
-            localStorage.setItem("discountChecked", checkDiscount);
-          } else {
-            checkDiscount = false;
-            localStorage.setItem("discountChecked", checkDiscount);
-          }
-        });
-        discountProduct2.addEventListener("click", function () {
-          discountProduct2.classList.toggle("border-gr");
-          discountProduct2.classList.remove("border-none");
+          discountProduct1.addEventListener("click", function () {
+            discountProduct1.classList.toggle("border-gr");
+            discountProduct1.classList.remove("border-none");
+            discountProduct2.classList.add("border-none");
+            discountProduct3.classList.add("border-none");
+            if (discountProduct1.classList.contains("border-gr")) {
+              checkDiscount = true;
+              localStorage.setItem("discountChecked", checkDiscount);
+            } else {
+              checkDiscount = false;
+              localStorage.setItem("discountChecked", checkDiscount);
+            }
+          });
+          discountProduct2.addEventListener("click", function () {
+            discountProduct2.classList.toggle("border-gr");
+            discountProduct2.classList.remove("border-none");
 
-          discountProduct1.classList.add("border-none");
-          discountProduct3.classList.add("border-none");
-          if (discountProduct2.classList.contains("border-gr")) {
-            checkDiscount = true;
-            localStorage.setItem("discountChecked", checkDiscount);
-          } else {
-            checkDiscount = false;
-            localStorage.setItem("discountChecked", checkDiscount);
-          }
-        });
-        discountProduct3.addEventListener("click", function () {
-          discountProduct3.classList.toggle("border-gr");
-          discountProduct3.classList.remove("border-none");
+            discountProduct1.classList.add("border-none");
+            discountProduct3.classList.add("border-none");
+            if (discountProduct2.classList.contains("border-gr")) {
+              checkDiscount = true;
+              localStorage.setItem("discountChecked", checkDiscount);
+            } else {
+              checkDiscount = false;
+              localStorage.setItem("discountChecked", checkDiscount);
+            }
+          });
+          discountProduct3.addEventListener("click", function () {
+            discountProduct3.classList.toggle("border-gr");
+            discountProduct3.classList.remove("border-none");
 
-          discountProduct1.classList.add("border-none");
-          discountProduct2.classList.add("border-none");
-          if (discountProduct3.classList.contains("border-gr")) {
-            checkDiscount = true;
-            localStorage.setItem("discountChecked", checkDiscount);
-          } else {
-            checkDiscount = false;
-            localStorage.setItem("discountChecked", checkDiscount);
-          }
-        });
-      }
-      Handle();
-      // Quantity Box Handle
-      function handleQuantityBox() {
-        let plusBtn = document.querySelector(".quantity-box .plus-btn");
-        let quantityNumberBox = document.querySelector(
-          ".quantity-box .show-quantity"
-        );
-        let minusBtn = document.querySelector(".quantity-box .minus-btn");
-        let priceText = document.querySelector(".price-value").textContent;
-        let priceBox = document.querySelector(".price-value");
-        let quantity = parseInt(quantityNumberBox.textContent);
+            discountProduct1.classList.add("border-none");
+            discountProduct2.classList.add("border-none");
+            if (discountProduct3.classList.contains("border-gr")) {
+              checkDiscount = true;
+              localStorage.setItem("discountChecked", checkDiscount);
+            } else {
+              checkDiscount = false;
+              localStorage.setItem("discountChecked", checkDiscount);
+            }
+          });
+        }
+        HandleDiscountProducts();
 
-        let priceValue = parseFloat(priceText.replace(/\./g, ""));
-
-        minusBtn.addEventListener("click", function handleMinus() {
-          if (quantity > 1) {
-            quantity--;
-            quantityNumberBox.innerHTML = `${quantity}`;
-
-            priceBox.innerHTML = `${(priceValue * quantity).toLocaleString(
-              "vi-VN"
-            )}`;
-          }
-        });
-        plusBtn.addEventListener("click", function () {
-          quantity++;
-          quantityNumberBox.innerHTML = `${quantity}`;
-
-          priceBox.innerHTML = `${(priceValue * quantity).toLocaleString(
-            "vi-VN"
-          )}`;
+        // pull data into local storage
+        let addToCartBtn = document.querySelector(".product .payment .pay-btn");
+        let itemArr = JSON.parse(localStorage.getItem("myArray")) || [];
+        addToCartBtn.addEventListener("click", function () {
+          let productNameValue =
+            document.querySelector(".product .pr-name").innerText;
+          let productPriceValue = document.querySelector(
+            ".product .price-box .price-value"
+          ).innerText;
+          let productImgSourceValue = document.querySelector(
+            ".product .product-img img"
+          ).src;
+          let newItems = {
+            id: Date.now(),
+            productName: productNameValue,
+            productPrice: productPriceValue,
+            productImgSource: productImgSourceValue,
+            checkDiscount: checkDiscount,
+          };
+          itemArr.push(newItems);
+          localStorage.setItem("myArray", JSON.stringify(itemArr));
+          toastr.success("Đã thêm vào giỏ hàng của bạn !!!");
+          // localStorage.removeItem("myArray");
         });
       }
-      handleQuantityBox();
-      // Pay-btn-click
-      let priceBox = document.querySelector(".price-value");
-      let countBox = document.querySelector(".quantity-box .show-quantity");
-      let imgBox = document.querySelector(".product-img img");
-      let payBtn = document.querySelector(".pay-btn");
-      payBtn.addEventListener("click", function () {
-        let productName = document.querySelector(".product-info .pr-name");
-        let count = localStorage.getItem("productCount") || 0;
-        count = countBox.innerHTML;
-        let catOtherProductObj = localStorage.getItem("savedOtherProductObj");
-        let catProducObj = {
-          price: priceBox.innerText,
-          name: productName.innerText,
-          quantity: productName.innerText,
-          imgSource: imgBox.src,
-        };
-        catOtherProductObj = JSON.stringify(catProducObj);
-        localStorage.setItem("savedOtherProductObj", catOtherProductObj);
-      });
-    }
-  });
+    });
+  }
+  renderCatDetail();
 }
-let data = localStorage.getItem("savedOtherProductObj");
-console.log(data);
-renderCatDetail();
+HanldeMain();
 
 // searchBox Handle
 function handleSearchBox() {

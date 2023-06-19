@@ -93,7 +93,7 @@ async function renderFoods() {
                         href="checkout.html"
                         class="pay-btn text-decoration-none d-flex align-items-center px-2 px-lg-3 green-bg text-light fw-bold rounded-4"
                       >
-                        Mua ngay
+                        Thêm vào giỏ hàng
                       </a>
                     </div>
                   </div>
@@ -242,7 +242,7 @@ async function renderToys() {
                         href="checkout.html"
                         class="pay-btn text-decoration-none d-flex align-items-center px-2 px-lg-3 green-bg text-light fw-bold rounded-4"
                       >
-                        Mua ngay
+                        Thêm vào giỏ hàng
                       </a>
                     </div>
                   </div>

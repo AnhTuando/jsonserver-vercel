@@ -25,15 +25,16 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+      />
       <link rel="stylesheet" href="./css/checkout.css" />
     </head>
   </head>
   <body>
     <main class="main position-relative">
-
-     
-       <!-- subnav -->
+      <!-- subnav -->
       <div
         class="subnav-mobile sub-nav-bg position-fixed d-none d-lg-none z-2 h-100"
         style="width: 200px"
@@ -180,21 +181,31 @@
         </div>
       </section>
       <!-- NAVIGATION 2 -->
-      <section class="navigation-2 d-none  d-lg-block green-bg ">
+      <section class="navigation-2 d-none d-lg-block green-bg">
         <div class="container position-relative">
           <!-- cart-dropdown -->
-          <div class="position-absolute cart-dropdown-pc d-none d-lg-none rounded-1 bg-light end-0 top-100 custom-shadow-dropdown p-4" style="width: 350px;">
-            <div class="title text-uppercase  fs-4 p-2 position-relative"><span>Giỏ Hàng</span>
-            <div class="close-btn-box d-flex justify-content-center fs-3 position-absolute end-0" style="top:5px; ">
-              <div class="close-btn" style="width: fit-content;">
-                <i class="bi bi-x-circle"></i>
+          <div
+            class="position-absolute cart-dropdown-pc d-none d-lg-none rounded-1 bg-light end-0 top-100 custom-shadow-dropdown p-4"
+            style="width: 350px"
+          >
+            <div class="title text-uppercase fs-4 p-2 position-relative">
+              <span>Giỏ Hàng</span>
+              <div
+                class="close-btn-box d-flex justify-content-center fs-3 position-absolute end-0"
+                style="top: 5px"
+              >
+                <div class="close-btn" style="width: fit-content">
+                  <i class="bi bi-x-circle"></i>
+                </div>
               </div>
-            </div></div>
-            <div class="cart-item-box border-top border-bottom border-success-subtle py-2">
+            </div>
+            <div
+              class="cart-item-box border-top border-bottom border-success-subtle py-2"
+            >
               <div class="default text-center d-lg-block">
-                <div><i class="bi bi-cart2 text-gr fs-1"></i></div><div>Hiện Chưa Có Sản Phẩm Nào</div>
+                <div><i class="bi bi-cart2 text-gr fs-1"></i></div>
+                <div>Hiện Chưa Có Sản Phẩm Nào</div>
               </div>
-              
             </div>
           </div>
           <!--end cart-dropdown -->
@@ -247,7 +258,6 @@
               </div>
             </div>
             <div class="col-2 d-flex justify-content-around align-items-center">
-              
               <div class="cart-box fs-4 text-light">
                 <i class="bi bi-cart4"></i>
               </div>
@@ -256,218 +266,371 @@
         </div>
       </section>
       <!--END NAVIGATION 2 -->
-      <!-- CHECKOUT -->
-      <section class="checkout my-4">
+      <!-- CONTENT -->
+      <section class="content mb-4 content-soft-bg">
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <div class="checkout-title text-center fw-bold text-gr fs-3">
-                THANH TOÁN
+              <div class="title fs-4 text-gr fw-bold d-lg-none text-center">
+                Giỏ Hàng
+              </div>
+              <div
+                class="title fs-1 text-gr fw-bold d-none d-lg-block text-center"
+              >
+                Giỏ Hàng
               </div>
             </div>
-            <div class="col-12 d-flex flex-column gap-4">
-              <div class="customer-info-box d-flex flex-column gap-2">
-                <div class="customer-title fw-bold text-gr fs-5">
-                  Thông Tin Khách Hàng
+            <!-- check cart -->
+            <div class="col-12 check-cart bg-light p-4 rounded-2 mb-2">
+              <div class="row">
+                <div class="col-12 col-lg-6">
+                  <div class="title text-gr fw-medium">SẢN PHẨM</div>
+                  <div class="wrap-cart-items">
+                    <div class="item d-none">
+                      <div
+                        class="d-flex w-100 py-3 justify-content-between position-relative my-3 border-bottom border-secondary-subtle"
+                      >
+                        <div
+                          class="clear-cart-item-btn position-absolute fs-14px text-bg-danger py-1 px-2"
+                          style="right: 10px; bottom: 10px"
+                        >
+                          <span>Xóa</span>
+                        </div>
+                        <div class="cart-item d-flex gap-3">
+                          <div class="img-wrap" style="height: 100px">
+                            <img
+                              src="./img/product-item.png"
+                              class="img-fluid h-100"
+                              alt=""
+                            />
+                          </div>
+                          <div
+                            class="item-info-wrap fs-14px d-flex flex-column justify-content-center"
+                          >
+                            <div class="name fw-medium text-soft-bl">
+                              Mèo Anh Lông Ngắn
+                            </div>
+                            <div class="price-box">
+                              <span class="pr-value ff-roboto text-secondary"
+                                >5.000.000</span
+                              >
+                              <span class="ff-roboto text-secondary">VND</span>
+                            </div>
+                            <div class="attach-pr">
+                              <div class="text-soft-bl fw-medium">Mũ Sừng</div>
+                              <div class="attach-price-box">
+                                <span
+                                  class="attach-price-value ff-roboto text-secondary"
+                                  >126.000
+                                </span>
+                                <span class="ff-roboto text-secondary"
+                                  >VND</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="quantity-and-subtotal fs-14px d-flex flex-column gap-2"
+                        >
+                          <div
+                            class="quantity-wrap w-100 d-flex justify-content-between px-1 border border-success-subtle rounded-5"
+                          >
+                            <div class="minus-btn fs-5">
+                              <i class="bi bi-dash"></i>
+                            </div>
+                            <div
+                              class="quantity-number d-flex justify-content-between align-items-center"
+                            >
+                              <span class="quantity-value">1</span>
+                            </div>
+                            <div class="plus-btn">
+                              <i class="bi bi-plus fs-5"></i>
+                            </div>
+                          </div>
+                          <div class="total">
+                            <div class="total-wrap">
+                              <span class="total-value ff-roboto"
+                                >5.000.000</span
+                              >
+                              <span class="ff-roboto">VND</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div
-                  class="customer-name text-soft-bl d-flex flex-column fw-medium"
-                >
-                  <label>
-                    <div class="title">Tên khách hàng</div>
-                  <input
-                    type="text"
-                    class="border border-success-subtle bg-success-subtle p-1 w-100"
-                  />
-                  </label>
-                </div>
-                <div
-                  class="customer-phone text-soft-bl d-flex flex-column fw-medium"
-                >
-                  <label>
-                    <div class="title">Số Điện Thoại</div>
-                  <input
-                    type="text"
-                    class="border border-success-subtle bg-success-subtle p-1 w-100"
-                  />
-                  </label>
-                </div>
-                <div
-                  class="customer-address text-soft-bl d-flex flex-column fw-medium"
-                >
-                  <label>
-                    <div class="title">Địa chỉ nhận hàng</div>
-                  <input
-                    type="text"
-                    class="border border-success-subtle bg-success-subtle p-1 w-100"
-                  />
-                  </label>
+                <div class="col-12 col-lg-6">
+                  <div class="title text-gr fw-medium">THANH TOÁN</div>
+                  <div
+                    class="subtotal-items-wrap border border-success-subtle p-3 rounded-1"
+                  >
+                    <div class="customer-info d-flex flex-column gap-2">
+                      <div class="customer-name fw-medium w-100">
+                        <label class="w-100">
+                          <div>Tên khách hàng</div>
+                          <input
+                            type="text"
+                            class="w-100 border border-secondary-subtle px-2"
+                        /></label>
+                      </div>
+                      <div class="customer-phone fw-medium">
+                        <label class="w-100">
+                          <div>Số điện thoại</div>
+                          <input
+                            type="text"
+                            class="w-100 border border-secondary-subtle px-2"
+                        /></label>
+                      </div>
+                      <div class="customer-address fw-medium">
+                        <label class="w-100">
+                          <div>Địa chỉ</div>
+
+                          <input
+                            type="text"
+                            class="w-100 border border-secondary-subtle px-2"
+                        /></label>
+                      </div>
+                      <div class="subtotal-price fw-bold my-2">
+                        <span class="text-soft-bl">Tổng:</span>
+                        <span class="subtotal-price-value ff-roboto text-gr"
+                          >5.000.000</span
+                        >
+                        <span class="ff-roboto text-gr">VND</span>
+                      </div>
+                      <div class="payment-wrap d-flex justify-content-center">
+                        <div
+                          class="pay-btn green-bg text-light fw-bold py-1 px-2 rounded-2"
+                          style="width: fit-content"
+                        >
+                          Thanh Toán
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="product-info-box d-flex flex-column flex-lg-row justify-content-between gap-3">
-                <div class="main-product">
-                  <div class="product-name text-gr fw-bold fs-5">
-                    <span class="text-gr"> Tên Sản Phẩm:</span>
-                    <span class="name-value text-soft-bl">Mèo Anh Lông Ngắn</span> 
-                  </div>
-                  <div class="quantity text-soft-bl  fw-bold fs-5">
-                    <span class="title text-gr">Số Lượng:</span>
-                    <span class="quantity-value fw-bold text-soft-bl">1</span>
-                  </div>
-                  <div class="price-box text-soft-bl  fw-bold fs-5">
-                    <span class="title text-gr">Giá:</span>
-                    <span class="price-value ff-roboto fw-bold "
-                      >3.900.000</span
-                    >
-                    <span class="currency fw-bold text-soft-bl">VND</span>
-                  </div>
-
-                </div>
-
-
-
-                <div class="discount-box d-none text-gr fw-bold fs-5">
-                  <div class="ds-pr-info">
-
-                    <span class="title">Sản phẩm mua kèm:</span>
-                    <span class="ds-pr-name fw-bold text-soft-bl">Mũ Sừng</span>
-                  </div>
-                <div class="discount-product-price text-soft-bl">
-                  <div class="discount-price"><span class=" text-gr">Giá:</span> <span class="cur-value ff-roboto">126.000</span> VND</div>
-                      </div>
-                </div>
-                  <div class="summary">
-                  <div class="sum-box"><span class="text-gr fs-5 fw-bold">Tổng số tiền phải thanh toán: </span> <span class="sum-value ff-roboto fw-bold fs-5 text-danger">800000</span> <span class="ff-roboto fw-bold fs-5 text-danger">VND</span></div>
-                  </div>
-                </div>
-                <div class="payment d-flex fs-5 gap-4">
-                  <div class="paymet-title text-gr fw-bold">
-                    Phương Thức Thanh Toán
+            </div>
+            <!-- done deal -->
+            <div class="col-12 done-deal mb-4">
+              <div class="row mb-1">
+                <div class="col-12">
+                  <div class="title fs-4 text-gr fw-bold d-lg-none text-center">
+                    Đơn Mua
                   </div>
                   <div
-                    class="payment-selection d-flex fw-bold text-soft-bl gap-2"
+                    class="title fs-1 text-gr fw-bold d-none d-lg-block text-center"
                   >
-                    <div class="online-pay">
-                      <label
-                        ><span>Online</span>
-                        <input class="online" type="radio" name="method" />
-                      </label>
-                    </div>
-                    <div class="cash-pay">
-                      <label
-                        ><span>Tiền mặt</span>
-                        <input class="cash" type="radio" name="method" />
-                      </label>
-                    </div>
+                    Đơn Mua
                   </div>
-                </div>
-                <div
-                  class="online-payment-box my-2 d-none"
-                >
-                
-                 <div class="row w-100 gap-3 justify-content-around">
-                  <div class="col-12 col-lg-5">
-
-                    <div class="choose-bank  w-100">
-                      <label > 
-                        <span class="fw-medium me-2">Ngân hàng</span>
-                        <select>
-                          <option value="BIDV">BIDV</option>
-                          <option value="ACB">ACB</option>
-                          <option value="Agribank">Agribank</option>
-                            <!-- Thêm các tùy chọn khác nếu cần -->
-                          </select>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-12 col-lg-5">
-
-                    <div class="code-box d-flex w-100" >
-                        <div class="fw-medium">Số Tài Khoản</div>
-                        <input type="number" class="mx-3 no-spinner px-2">
-                     </div>
-                  </div>
-                 </div>
-                 
-                 
                 </div>
               </div>
-              <div class="order-box d-flex justify-content-center mt-3">
-                <div
-                  class="order-btn fw-bold fs-5 py-2 px-3 rounded-2 text-bg-success"
-                  style="width: fit-content"
-                >
-                  Đặt Hàng
+              <div class="row wrap-done-deal-item bg-light p-4 rounded-2">
+                <div class="col-12">
+                  <div class="row mb-4">
+                    <div class="col-8">
+                      <div class="title title text-gr fw-medium text-uppercase">
+                        Sản Phẩm
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="title title text-gr fw-medium text-uppercase">
+                        Trạng thái
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wrap-items-done-deal">
+                  <div class="item-done-deal my-3">
+                    <div class="row">
+                      <div class="col-8">
+                        <div class="item-infor d-flex">
+                          <div
+                            class="img-wrap"
+                            style="height: 100px; width: fit-content"
+                          >
+                            <img
+                              src="./img/product-item.png"
+                              class="img-fluid h-100"
+                              alt=""
+                            />
+                          </div>
+                          <div
+                            class="item-description d-flex flex-column justify-content-center align-items-center fs-14px"
+                          >
+                            <div class="item-name fw-medium">
+                              Mèo Anh Lông Ngắn
+                            </div>
+                            <div class="price-box">
+                              <span class="pr-value ff-roboto text-secondary"
+                                >5.000.000</span
+                              >
+                              <span class="ff-roboto text-secondary">VND</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-4 d-flex">
+                        <div
+                          class="status-box-value d-flex align-items-center fw-bold"
+                        >
+                          Chờ Lấy Hàng
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- END CHECKOUT -->
-      <!-- MODAL -->
-       <section class="modal-box d-none z-2 position-fixed h-100 w-100 top-0 bg-black justify-content-center align-items-center" style="--bs-bg-opacity: .5; ">
-        <div class="container overflow-auto d-flex flex-column justify-content-center align-items-center bg-light p-4 rounded-1">
-          <div class="title text-center fs-3 fw-medium">Giỏ Hàng</div>
-          <div class="none-item d-none">
-            <div class="text-center"><i class="bi bi-cart2 text-gr fs-1"></i></div>
-            <div class="text-center">Hiện Chưa Có Sản Phẩm Nào</div>
-          </div>
-          <div class="row w-100 items position-relative">
-            <div class="col-12 parent mb-3 d-none" >
-              <div class="row border border-end-0 border-success-subtle">
-                <div class="col-12">
-                  <div class="row">
-                    <div class="col-5 border-end border-success-subtle">
-                      <div class=" title text-center fw-bold text-gr  border-bottom border-success-subtle mb-2">Khách Hàng</div>
-                  <div class="customer-info w-100 d-flex flex-column gap-1 justify-content-center">
-                    <div class="cus-name fw-medium" >Nguyễn Trọng Tân</div>
-                    <div class="cus-phone " >0123456789
-                    </div>
-                    <div class="cus-address fw-medium">12, Nguyễn Du, Đống Đa, Hà Nội</div>
-                    <div class="payment-box fw-medium ">
-                      <div class="on-pay d-none">
-                        <span>Thanh Toán: </span><span class="payment">
-                           <span class="bank-value">ACB</span> <span class="">-</span> <span class="bank-code">12434234234</span></span>
-                      </div>
-                      <div class="cash-pay">
-                        <span>Thanh Toán: </span><span class="payment">Tiền Mặt</span>
-
-                      </div>
-                      </div>
-                  </div>
-                    </div>
-                    <div class="col-7  border-end border-success-subtle">
-                      <div class="title text-center fw-bold text-gr border-bottom border-success-subtle mb-2">Sản Phẩm</div>
-                  <div class=" product-item d-flex  justify-content-around align-items-center" style="height: 80px;">
-                    <div class="img-wrap" style="height: 80px;">
-                      <img src="./img/product-item.png" class="img-fluid h-100">
-                    </div>
-                    <div class="wrap-info d-flex flex-column gap-1  ">
-
-                      <div class="product-name fw-medium">Mèo Anh Lông Ngắn</div>
-                      <div class="product-discount-attach fw-medium">Mũ Sừng</div>
-                      <div class="pr-price">
-                        <span class="price-value ff-roboto text-danger">5.000.000</span> <span class="ff-roboto text-danger">VND</span>
-                      </div>
-                     
-                    </div>
-                  </div>
-                    </div>
-                  </div>
-                  
-                  
+      <!-- END CONTENT -->
+      <!-- SPECIAL -->
+      <section class="special my-5">
+        <div
+          class="title text-center fw-bold fs-4 text-gr my-2 d-block d-lg-none"
+        >
+          Ưu Đãi Tại <span class="text-special">THECAT</span>
+        </div>
+        <div
+          class="title text-center fw-bold fs-1 text-gr my-2 d-none d-lg-block"
+        >
+          Ưu Đãi Tại <span class="text-special">THECAT</span>
+        </div>
+        <div class="container d-block d-lg-none">
+          <div class="row my-4">
+            <div class="col-6">
+              <div class="special-item special-bg p-4 rounded-2">
+                <div
+                  class="sp-img d-flex justify-content-center"
+                  style="height: 100px"
+                >
+                  <img
+                    src="./img/delivery-truck.png"
+                    class="img-fluid"
+                    alt=""
+                  />
                 </div>
-                  <div class="delete-btn d-flex justify-content-center align-items-center position-absolute end-0" style="width: fit-content;"><span class=" fw-bold">Xóa bỏ</span></div>
+                <div class="sp-info text-center fw-bold fs-6 text-soft-bl my-2">
+                  Miễn phí vận chuyển nội thành
+                </div>
               </div>
+            </div>
+            <div class="col-6">
+              <div class="special-item special-bg p-4 rounded-2">
+                <div
+                  class="sp-img d-flex justify-content-center"
+                  style="height: 100px"
+                >
+                  <img src="./img/needle.png" class="img-fluid" alt="" />
+                </div>
+                <div class="sp-info text-center fw-bold fs-6 text-soft-bl my-2">
+                  Chứng nhận tiêm chủng đầy đủ
+                </div>
+              </div>
+            </div>
           </div>
-            
-
+          <div class="row my-4">
+            <div class="col-6">
+              <div class="special-item special-bg p-4 rounded-2">
+                <div
+                  class="sp-img d-flex justify-content-center"
+                  style="height: 100px"
+                >
+                  <img src="./img/confirm.png" class="img-fluid" alt="" />
+                </div>
+                <div class="sp-info text-center fw-bold fs-6 text-soft-bl my-2">
+                  Bảo đảm chất lượng sản phẩm
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="special-item special-bg p-4 rounded-2">
+                <div
+                  class="sp-img d-flex justify-content-center"
+                  style="height: 100px"
+                >
+                  <img src="./img/catHead.png" class="img-fluid" alt="" />
+                </div>
+                <div class="sp-info text-center fw-bold fs-6 text-soft-bl my-2">
+                  Hoàn tiền, bảo hành trong 1 năm
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container d-none d-lg-block">
+          <div class="row">
+            <div class="col-3">
+              <div class="special-item p-4 special-bg">
+                <div
+                  class="sp-img d-flex justify-content-center"
+                  style="height: 140px"
+                >
+                  <img
+                    src="./img/delivery-truck.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="sp-info text-center fw-medium fs-4 text-soft-bl my-2 px-4"
+                >
+                  Miễn phí vận chuyển nội thành
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="special-item p-4 special-bg">
+                <div
+                  class="sp-img d-flex justify-content-center"
+                  style="height: 140px"
+                >
+                  <img src="./img/confirm.png" class="img-fluid" alt="" />
+                </div>
+                <div
+                  class="sp-info text-center fw-medium fs-4 text-soft-bl my-2 px-4"
+                >
+                  Bảo đảm chất lượng sản phẩm
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="special-item p-4 special-bg">
+                <div
+                  class="sp-img d-flex justify-content-center"
+                  style="height: 140px"
+                >
+                  <img src="./img/needle.png" class="img-fluid" alt="" />
+                </div>
+                <div
+                  class="sp-info text-center fw-medium fs-4 text-soft-bl my-2 px-4"
+                >
+                  Chứng nhận tiêm chủng đầy đủ
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="special-item p-4 special-bg">
+                <div
+                  class="sp-img d-flex justify-content-center"
+                  style="height: 140px"
+                >
+                  <img src="./img/catHead.png" class="img-fluid" alt="" />
+                </div>
+                <div
+                  class="sp-info text-center fw-medium fs-4 text-soft-bl my-2 px-4"
+                >
+                  Hoàn tiền, bảo hành trong 1 năm
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-     
-      <!-- END MODAL -->
+      <!--END SPECIAL -->
       <!-- FOOTER -->
       <footer class="footer footer-bg py-3">
         <div class="container d-block d-lg-none">
@@ -598,7 +761,12 @@
       <!--END FOOTER -->
     </main>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"
+      integrity="sha512-lbwH47l/tPXJYG9AcFNoJaTMhGvYWhVM9YI43CT+uteTRRaiLCui8snIgyAN8XWgNjNhCqlAUdzZptso6OCoFQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

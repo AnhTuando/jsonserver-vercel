@@ -125,3 +125,8 @@
 .border-none {
   border: none;
 }
+.product .payment .pay-btn:hover {
+  cursor: pointer;
+  background: rgb(255, 52, 52);
+  transition: 0.3s;
+}
