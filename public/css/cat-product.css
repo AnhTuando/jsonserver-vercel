@@ -118,6 +118,17 @@
   background-color: #00613c;
   cursor: pointer;
 }
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.wrap-search-box-modal {
+  animation: opacity 0.2s ease-in-out;
+}
 /* End General */
 .border-gr {
   border: 2px solid green;
@@ -130,3 +141,5 @@
   background: rgb(255, 52, 52);
   transition: 0.3s;
 }
+
+
