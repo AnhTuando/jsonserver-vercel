@@ -90,20 +90,26 @@
             >
           </div>
         </div>
-        <div class="row py-3 ps-4 position-fixed bottom-0" style="left: 15px">
+        <div
+          class="row py-3 ps-4 d-flex flex-column gap-3 position-fixed bottom-0 w-100 fs-14px"
+          style="left: 15px"
+        >
           <div class="col-4">
-            <span class="mail-mobile-box fs-2 text-light">
+            <span class="mail-mobile-box text-light text-center">
               <i class="bi bi-envelope-fill"></i>
+              <span>thecat@gmail.com</span>
             </span>
           </div>
           <div class="col-4">
-            <span class="cart-mobile-box fs-2 text-light">
-              <i class="bi bi-cart4"></i>
+            <span class="address-mobile-box text-light text-center">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span> Số 150 Trần Duy Hưng, Trung Hòa, Cầu Giấy, HN</span>
             </span>
           </div>
           <div class="col-4">
-            <span class="phone-mobile-box fs-2 text-light">
+            <span class="phone-mobile-box text-light text-center">
               <i class="bi bi-telephone-fill"></i>
+              <span> 0987523525 - 0234533678</span>
             </span>
           </div>
         </div>
@@ -160,13 +166,12 @@
                 </div>
               </div>
               <div class="col-6">
-                <div
+                <a
+                  href="./index.html"
                   class="mobile-logo d-flex justify-content-center align-items-center"
                 >
-                  <a href="./index.html">
-                    <img src="./img/TheCatLogo.png" class="img-fluid" alt="" />
-                  </a>
-                </div>
+                  <img src="./img/TheCatLogo.png" class="img-fluid" alt="" />
+                </a>
               </div>
               <div
                 class="col-3 float-end d-flex justify-content-around align-items-center"
@@ -488,7 +493,7 @@
           </div>
           <div class="row">
             <div class="title my-3 fs-4 text-special fw-bold">LIÊN HỆ</div>
-            <div class="contact text-light fs-5 fw-medium">
+            <div class="contact text-light fs-6 fw-medium">
               <div class="phone">
                 <i class="bi bi-telephone-fill"></i
                 ><span class="px-3">0987523525 - 0234533678</span>
@@ -506,32 +511,18 @@
             </div>
           </div>
           <div class="row">
-            <div class="title my-3 fs-4 text-special fw-bold">THANH TOÁN</div>
-            <div class="payment text-light d-flex justify-content-around my-3">
-              <div class="wrap-zalo">
-                <img src="./img/momo.png" alt="" />
-              </div>
-              <div class="wrap-momo">
-                <img src="./img/zalopay.png" alt="" />
-              </div>
-              <div class="wrap-atm">
-                <img src="./img/atm.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div
-              class="follow-wrap d-flex gap-4 text-light my-3 justify-content-center"
-            >
-              <div
-                class="span fs-4 fw-bold d-flex justify-content-center align-items-center"
-              >
-                <span>Follow Us:</span>
-              </div>
-              <div class="fb-box fs-2"><i class="bi bi-facebook"></i></div>
-              <div class="yt-box fs-2"><i class="bi bi-youtube"></i></div>
-              <div class="ig-box fs-2"><i class="bi bi-instagram"></i></div>
-            </div>
+            <div class="title my-3 fs-4 text-special fw-bold">BẢN ĐỒ</div>
+            <p>
+              <iframe
+                class="img-fluid"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.5656930393943!2d105.79597497517582!3d21.01003958063461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aca6e2094ac3%3A0x5cdddc52f7c4779c!2zMTUwIMSQLiBUcuG6p24gRHV5IEjGsG5nLCBUcnVuZyBIb8OgLCBD4bqndSBHaeG6pXksIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1687276707265!5m2!1svi!2s"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </p>
           </div>
         </div>
         <div class="container d-none d-lg-block">
@@ -547,9 +538,11 @@
               </div>
             </div>
             <div class="col-4">
-              <div class="title my-3 fs-4 text-special fw-bold">LIÊN HỆ</div>
+              <div class="title my-3 fs-4 text-special fw-bold text-center">
+                LIÊN HỆ
+              </div>
               <div
-                class="contact d-flex flex-column gap-3 text-light fs-5 fw-medium"
+                class="contact d-flex flex-column gap-3 text-light fs-6 fw-medium"
               >
                 <div class="phone">
                   <i class="bi bi-telephone-fill"></i
@@ -569,28 +562,20 @@
             </div>
 
             <div class="col-4">
-              <div class="title my-3 fs-4 text-special fw-bold">THANH TOÁN</div>
-              <div class="payment text-light d-flex">
-                <div class="wrap-zalo me-3">
-                  <img src="./img/momo.png" alt="" />
-                </div>
-                <div class="wrap-momo me-3">
-                  <img src="./img/zalopay.png" alt="" />
-                </div>
-                <div class="wrap-atm me-3">
-                  <img src="./img/atm.png" alt="" />
-                </div>
+              <div class="title my-3 fs-4 text-special fw-bold text-center">
+                BẢN ĐỒ
               </div>
-              <div class="follow-wrap d-flex gap-4 text-light">
-                <div
-                  class="span fs-4 fw-bold d-flex justify-content-center align-items-center"
-                >
-                  <span>Follow Us:</span>
-                </div>
-                <div class="fb-box fs-2"><i class="bi bi-facebook"></i></div>
-                <div class="yt-box fs-2"><i class="bi bi-youtube"></i></div>
-                <div class="ig-box fs-2"><i class="bi bi-instagram"></i></div>
-              </div>
+              <p>
+                <iframe
+                  class="img-fluid"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.5656930393943!2d105.79597497517582!3d21.01003958063461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aca6e2094ac3%3A0x5cdddc52f7c4779c!2zMTUwIMSQLiBUcuG6p24gRHV5IEjGsG5nLCBUcnVuZyBIb8OgLCBD4bqndSBHaeG6pXksIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1687276707265!5m2!1svi!2s"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </p>
             </div>
           </div>
         </div>
