@@ -146,3 +146,19 @@ input.no-spinner {
   opacity: 1;
   transition: 0.25s;
 }
+.check-cart .update-cart-btn {
+  opacity: 0.8;
+}
+.check-cart .update-cart-btn:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.25s;
+}
+.content .payment-wrap .pay-btn {
+  opacity: 0.8;
+}
+.content .payment-wrap .pay-btn:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.25s;
+}

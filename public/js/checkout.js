@@ -1,9 +1,28 @@
+// subnav
+let subNavClose = document.querySelector(".sub-nav-close ");
+let subNav = document.querySelector(".subnav-mobile");
+let subNavMoblieBtn = document.querySelector(".list-mobile-btn");
+subNavClose.onclick = function () {
+  subNav.classList.add("d-none");
+};
+subNavMoblieBtn.onclick = function () {
+  subNav.classList.toggle("d-none");
+};
+
+let item = document.querySelectorAll(
+  ".navigation-2 .container .row .col-8 .item"
+);
+
+let navigationElements = document.querySelectorAll(
+  ".navigation-2 .container .row .col-8 .item"
+);
+
 // localStorage.removeItem("myArray");
 let localStorageData = localStorage.getItem("myArray");
+
 let localStorageArrayData = localStorageData
   ? JSON.parse(localStorageData)
   : [];
-console.log(localStorageArrayData);
 function renderAndHandleCartItems() {
   // render cart item
   let productContentWrap = document.querySelector(".content");
@@ -157,9 +176,13 @@ function renderAndHandleCartItems() {
   function handleQuantityWithDiscountProducts() {
     let itemsArr = Array.from(wrapCartItems.querySelectorAll(".item"));
     itemsArr.map((element) => {
+      console.log(element);
       let showQuantityBox = element.querySelector(".quantity-value");
-      let subTotalBox = element.querySelector(".total-value");
+      let subTotalBox = element.querySelector(
+        ".quantity-and-subtotal .total .total-value"
+      );
 
+      console.log(showQuantityBox);
       let subTotalBoxValue = parseFloat(
         subTotalBox.innerText.replace(/\./g, "")
       );
@@ -226,5 +249,126 @@ function renderAndHandleCartItems() {
     });
   }
   handleDeleteItem();
+  // update cart-item
+  function updateCartItem() {
+    let paymentBox = document.querySelector(".subtotal-items-wrap");
+    let updateCartBtn = paymentBox.querySelector(".update-cart-btn");
+    let showTotalValue = paymentBox.querySelector(".subtotal-price-value");
+    updateCartBtn.addEventListener("click", function () {
+      let itemsPriceArr = Array.from(
+        document.querySelectorAll(
+          ".content .wrap-cart-items .item .total-value"
+        )
+      );
+      let totalValue = itemsPriceArr.reduce(function (total, element) {
+        return total + parseFloat(element.innerText.replace(/\./g, ""));
+      }, 0);
+      showTotalValue.innerHTML = `${totalValue.toLocaleString("vi-VN")}`;
+    });
+  }
+  updateCartItem();
+  //   payment form handle
+  function paymentFormHandle() {
+    // cusomer info
+    let totalBox = document.querySelector(".content .subtotal-items-wrap ");
+    let customerNameInput = totalBox.querySelector(".customer-name input");
+    let customerPhoneInput = totalBox.querySelector(".customer-phone input");
+    let customerAddressInput = totalBox.querySelector(
+      ".customer-address input"
+    );
+    let doneDealItemsBox = document.querySelector(".wrap-items-done-deal");
+    let payBtn = totalBox.querySelector(".payment-wrap .pay-btn");
+    let cartItems = localStorageArrayData;
+    let productArr = cartItems.map((element) => {
+      return {
+        productName: element.productName,
+        productImgSource: element.productImgSource,
+      };
+    });
+    // pay-btn click
+    payBtn.addEventListener("click", function () {
+      if (
+        customerNameInput.value == "" ||
+        customerPhoneInput.value == "" ||
+        customerAddressInput.value == ""
+      ) {
+        toastr.error("Hãy điền đầy đủ thông tin !!!");
+      } else {
+        let doneDealArr = localStorage.getItem("doneDealArr");
+        let newItems = {
+          id: Date.now(),
+          customerName: customerNameInput.value,
+          customerPhone: customerPhoneInput.value,
+          customerAddress: customerAddressInput.value,
+          product: productArr,
+        };
+        doneDealArr = newItems;
+
+        localStorage.setItem("customerObject", JSON.stringify(doneDealArr));
+        // reset value input
+        customerNameInput.value = "";
+        customerPhoneInput.value = "";
+        customerAddressInput.value = "";
+
+        doneDealItemsBox.innerHTML = "";
+        productArr.map((element) => {
+          let customerObject = JSON.parse(
+            localStorage.getItem("customerObject")
+          );
+          let itemDoneDeal = document.createElement("div");
+          itemDoneDeal.classList.add(".item-done-deal");
+          itemDoneDeal.innerHTML = `<div class="my-3 border-bottom border-success-subtle py-2">
+                      <div class="row my-2">
+                        <div class="col-8">
+                          <div class="item-infor d-flex">
+                            <div
+                              class="img-wrap"
+                              style="height: 100px; width: fit-content"
+                            >
+                              <img
+                                src=" ${element.productImgSource}"
+                                class="img-fluid h-100"
+                                alt=""
+                              />
+                            </div>
+                            <div
+                              class="item-description d-flex flex-column justify-content-center align-items-center fs-14px"
+                            >
+                              <div class="item-name fw-medium">
+                                ${element.productName}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4 d-flex">
+                          <div
+                            class="status-box-value d-flex align-items-center fw-bold"
+                          >
+                            Chờ Lấy Hàng
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row my-2">
+                        <div
+                          class="customer-info d-flex justify-content-between fs-14px"
+                        >
+                          <div class="customer-name ff-roboto">
+                             ${customerObject.customerName}
+                          </div>
+                          <div class="customer-phone ff-roboto">  ${customerObject.customerPhone}</div>
+                          <div class="customer-address ff-roboto">
+                                                        ${customerObject.customerAddress}
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>`;
+          doneDealItemsBox.append(itemDoneDeal);
+        });
+        toastr.success("Thanh toán thành công !!!");
+      }
+    });
+  }
+  paymentFormHandle();
 }
 renderAndHandleCartItems();

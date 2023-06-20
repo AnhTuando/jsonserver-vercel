@@ -600,3 +600,4 @@ function handleSearchBox() {
   });
 }
 handleSearchBox();
+// localStorage.removeItem("myArray");

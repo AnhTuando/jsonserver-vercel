@@ -284,9 +284,11 @@
             <div class="col-12 check-cart bg-light p-4 rounded-2 mb-2">
               <div class="row">
                 <div class="col-12 col-lg-6">
-                  <div class="title text-gr fw-medium">SẢN PHẨM</div>
+                  <div class="wrap-update-title d-flex justify-content-between">
+                    <div class="title">SẢN PHẨM</div>
+                  </div>
                   <div class="wrap-cart-items">
-                    <div class="item d-none">
+                    <!-- <div class="item d-none">
                       <div
                         class="d-flex w-100 py-3 justify-content-between position-relative my-3 border-bottom border-secondary-subtle"
                       >
@@ -358,7 +360,7 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
                 <div class="col-12 col-lg-6">
@@ -392,12 +394,23 @@
                             class="w-100 border border-secondary-subtle px-2"
                         /></label>
                       </div>
-                      <div class="subtotal-price fw-bold my-2">
-                        <span class="text-soft-bl">Tổng:</span>
-                        <span class="subtotal-price-value ff-roboto text-gr"
-                          >5.000.000</span
-                        >
-                        <span class="ff-roboto text-gr">VND</span>
+                      <div
+                        class="wrap-update-cart-total d-flex justify-content-between"
+                      >
+                        <div class="subtotal-price fw-bold my-2">
+                          <span class="text-soft-bl">Tổng:</span>
+                          <span class="subtotal-price-value ff-roboto text-gr"
+                            >0</span
+                          >
+                          <span class="ff-roboto text-gr">VND</span>
+                        </div>
+                        <div class="update-cart-wrap">
+                          <div
+                            class="update-cart-btn text-bg-warning px-2 py-1 fw-medium rounded-2"
+                          >
+                            Cập nhật giỏ hàng
+                          </div>
+                        </div>
                       </div>
                       <div class="payment-wrap d-flex justify-content-center">
                         <div
@@ -442,40 +455,49 @@
                   </div>
                 </div>
                 <div class="wrap-items-done-deal">
-                  <div class="item-done-deal my-3">
-                    <div class="row">
-                      <div class="col-8">
-                        <div class="item-infor d-flex">
-                          <div
-                            class="img-wrap"
-                            style="height: 100px; width: fit-content"
-                          >
-                            <img
-                              src="./img/product-item.png"
-                              class="img-fluid h-100"
-                              alt=""
-                            />
-                          </div>
-                          <div
-                            class="item-description d-flex flex-column justify-content-center align-items-center fs-14px"
-                          >
-                            <div class="item-name fw-medium">
-                              Mèo Anh Lông Ngắn
+                  <div class="item-done-deal d-none">
+                    <div class="my-3 border-bottom border-success-subtle py-2">
+                      <div class="row my-2">
+                        <div class="col-8">
+                          <div class="item-infor d-flex">
+                            <div
+                              class="img-wrap"
+                              style="height: 100px; width: fit-content"
+                            >
+                              <img
+                                src="./img/product-item.png"
+                                class="img-fluid h-100"
+                                alt=""
+                              />
                             </div>
-                            <div class="price-box">
-                              <span class="pr-value ff-roboto text-secondary"
-                                >5.000.000</span
-                              >
-                              <span class="ff-roboto text-secondary">VND</span>
+                            <div
+                              class="item-description d-flex flex-column justify-content-center align-items-center fs-14px"
+                            >
+                              <div class="item-name fw-medium">
+                                Mèo Anh Lông Ngắn
+                              </div>
                             </div>
                           </div>
                         </div>
+                        <div class="col-4 d-flex">
+                          <div
+                            class="status-box-value d-flex align-items-center fw-bold"
+                          >
+                            Chờ Lấy Hàng
+                          </div>
+                        </div>
                       </div>
-                      <div class="col-4 d-flex">
+                      <div class="row my-2">
                         <div
-                          class="status-box-value d-flex align-items-center fw-bold"
+                          class="customer-info d-flex justify-content-between fs-14px"
                         >
-                          Chờ Lấy Hàng
+                          <div class="customer-name ff-roboto">
+                            Nguyễn Trọng Tân
+                          </div>
+                          <div class="customer-phone ff-roboto">0123456789</div>
+                          <div class="customer-address ff-roboto">
+                            12,Nguyễn Du, Hà Nội
+                          </div>
                         </div>
                       </div>
                     </div>
