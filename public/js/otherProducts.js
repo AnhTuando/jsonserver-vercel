@@ -17,6 +17,24 @@ let item = document.querySelectorAll(
 let navigationElements = document.querySelectorAll(
   ".navigation-2 .container .row .col-8 .item"
 );
+// show/remove notice box
+let showExclamationMarkPc = document.querySelector(".cart-box span");
+let showExclamationMarkMb = document.querySelector(
+  ".cart-mobile-btn .notice-box-mb"
+);
+function showNotice() {
+  showExclamationMarkPc.classList.remove("d-none");
+  showExclamationMarkMb.classList.remove("d-none");
+}
+function removeNotice() {
+  showExclamationMarkPc.classList.add("d-none");
+  showExclamationMarkMb.classList.add("d-none");
+}
+let moveToCartItemsBtnPc = document.querySelector(".cart-box");
+let moveToCartItemsBtnMb = document.querySelector(".cart-mobile-btn");
+moveToCartItemsBtnPc.addEventListener("click", removeNotice);
+moveToCartItemsBtnMb.addEventListener("click", removeNotice);
+// get id
 function getUrlId() {
   const currentUrl = window.location.href;
   const url = new URL(currentUrl);
@@ -36,8 +54,6 @@ async function getFoods() {
   return data;
 }
 async function renderFoods() {
-  let savedQuantity = 1;
-
   let productBox = document.querySelector(".product .container ");
   let foods = await getFoods();
   let currentId = getUrlId();
@@ -114,6 +130,7 @@ async function renderFoods() {
       // Put product's info into localStorage
       let payBtn = document.querySelector(".pay-btn");
       payBtn.addEventListener("click", function () {
+        showNotice();
         let imgSource = document.querySelector(".wrap-product-img img");
         let price = document.querySelector(".price-box .price-value").innerText;
         let name = document.querySelector(
@@ -146,8 +163,6 @@ async function getToys() {
   return data;
 }
 async function renderToys() {
-  let savedQuantity = 1;
-
   let productBox = document.querySelector(".product .container ");
   let toys = await getToys();
   let currentId = getUrlId();
@@ -224,6 +239,7 @@ async function renderToys() {
       // Put product's info into localStorage
       let payBtn = document.querySelector(".pay-btn");
       payBtn.addEventListener("click", function () {
+        showNotice();
         let imgSource = document.querySelector(".wrap-product-img img");
         let price = document.querySelector(".price-box .price-value").innerText;
         let name = document.querySelector(
@@ -256,8 +272,6 @@ async function getLitter() {
   return data;
 }
 async function renderLitters() {
-  let savedQuantity = 1;
-
   let productBox = document.querySelector(".product .container ");
   let litters = await getLitter();
   let currentId = getUrlId();
@@ -334,6 +348,7 @@ async function renderLitters() {
       // Put product's info into localStorage
       let payBtn = document.querySelector(".pay-btn");
       payBtn.addEventListener("click", function () {
+        showNotice();
         let imgSource = document.querySelector(".wrap-product-img img");
         let price = document.querySelector(".price-box .price-value").innerText;
         let name = document.querySelector(
@@ -366,8 +381,6 @@ async function getClothes() {
   return data;
 }
 async function renderClothes() {
-  let savedQuantity = 1;
-
   let productBox = document.querySelector(".product .container ");
   let clothes = await getClothes();
   let currentId = getUrlId();
@@ -444,6 +457,7 @@ async function renderClothes() {
       // Put product's info into localStorage
       let payBtn = document.querySelector(".pay-btn");
       payBtn.addEventListener("click", function () {
+        showNotice();
         let imgSource = document.querySelector(".wrap-product-img img");
         let price = document.querySelector(".price-box .price-value").innerText;
         let name = document.querySelector(

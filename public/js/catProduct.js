@@ -16,7 +16,23 @@ let item = document.querySelectorAll(
 let navigationElements = document.querySelectorAll(
   ".navigation-2 .container .row .col-8 .item"
 );
-
+// show/remove notice box
+let showExclamationMarkPc = document.querySelector(".cart-box span");
+let showExclamationMarkMb = document.querySelector(
+  ".cart-mobile-btn .notice-box-mb"
+);
+function showNotice() {
+  showExclamationMarkPc.classList.remove("d-none");
+  showExclamationMarkMb.classList.remove("d-none");
+}
+function removeNotice() {
+  showExclamationMarkPc.classList.add("d-none");
+  showExclamationMarkMb.classList.add("d-none");
+}
+let moveToCartItemsBtnPc = document.querySelector(".cart-box");
+let moveToCartItemsBtnMb = document.querySelector(".cart-mobile-btn");
+moveToCartItemsBtnPc.addEventListener("click", removeNotice);
+moveToCartItemsBtnMb.addEventListener("click", removeNotice);
 // Get location
 function getUrlId() {
   const currentUrl = window.location.href;
@@ -294,6 +310,7 @@ async function HanldeMain() {
         let addToCartBtn = document.querySelector(".product .payment .pay-btn");
         let itemArr = JSON.parse(localStorage.getItem("myArray")) || [];
         addToCartBtn.addEventListener("click", function () {
+          showNotice();
           let productNameValue =
             document.querySelector(".product .pr-name").innerText;
           let productPriceValue = document.querySelector(

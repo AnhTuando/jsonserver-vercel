@@ -27,7 +27,7 @@
   line-height: 80px;
 }
 .wd-200px {
-  width: 200px;
+  width: 230px;
 }
 .sub-nav-bg,
 .footer-bg {
@@ -115,7 +115,6 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: #00613c;
   cursor: pointer;
-  
 }
 @keyframes opacity {
   0% {
