@@ -1,3 +1,17 @@
+// section title fill
+function sectionTitleFill() {
+  let sectionTitleArr = Array.from(
+    document.querySelectorAll(".navigation-2 .col-8 .item a span")
+  );
+  sectionTitleArr.map((element) => {
+    if (element.innerText == "MÈO") {
+      let parentElement = element.closest("a");
+      parentElement.querySelector("i").classList.add("text-special");
+      element.classList.add("text-special");
+    }
+  });
+}
+sectionTitleFill();
 let subNavClose = document.querySelector(".sub-nav-close ");
 let subNav = document.querySelector(".subnav-mobile");
 let subNavMoblieBtn = document.querySelector(".list-mobile-btn");
@@ -1963,7 +1977,6 @@ async function filterPCHandle() {
   let inputRange = priceFilterBox.querySelector("input");
   let pricefilterMb = priceFilterBox.querySelector(".filter-btn-price");
   let showCustomerPriceChoose = filterPcBox.querySelector(".show-price-value");
-  console.log(showCustomerPriceChoose);
   inputRange.addEventListener("input", function () {
     showCustomerPriceChoose.innerHTML = `${inputRange.value}`;
     let inputValue = inputRange.value;

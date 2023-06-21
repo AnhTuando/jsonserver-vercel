@@ -43,6 +43,7 @@ function getUrlId() {
   let postID = parseInt(numStr);
   return postID;
 }
+
 let isChecked = false;
 let checkDiscount = localStorage.getItem("discountChecked");
 localStorage.setItem("discountChecked", isChecked);
@@ -489,21 +490,77 @@ function getCharacter() {
   let replaceCharacter = character.replace(/[^\w\s]/gi, "");
   return replaceCharacter.replace(/\d/g, "");
 }
-// Render Items
 
+// section food fill
+function sectionTitleFoodFill() {
+  let sectionTitleArr = Array.from(
+    document.querySelectorAll(".navigation-2 .col-8 .item a span")
+  );
+  sectionTitleArr.map((element) => {
+    if (element.innerText == "ĐỒ ĂN") {
+      let parentElement = element.closest("a");
+      parentElement.querySelector("i").classList.add("text-special");
+      element.classList.add("text-special");
+    }
+  });
+}
+// section litter fill
+function sectionLitterFill() {
+  let sectionTitleArr = Array.from(
+    document.querySelectorAll(".navigation-2 .col-8 .item a span")
+  );
+  sectionTitleArr.map((element) => {
+    if (element.innerText == "CÁT VỆ SINH") {
+      let parentElement = element.closest("a");
+      parentElement.querySelector("i").classList.add("text-special");
+      element.classList.add("text-special");
+    }
+  });
+}
+// section clothes fill
+function sectionClothesFill() {
+  let sectionTitleArr = Array.from(
+    document.querySelectorAll(".navigation-2 .col-8 .item a span")
+  );
+  sectionTitleArr.map((element) => {
+    if (element.innerText == "ĐỒ TRANG TRÍ") {
+      let parentElement = element.closest("a");
+      parentElement.querySelector("i").classList.add("text-special");
+      element.classList.add("text-special");
+    }
+  });
+}
+// section Toys fill
+function sectionToysFill() {
+  let sectionTitleArr = Array.from(
+    document.querySelectorAll(".navigation-2 .col-8 .item a span")
+  );
+  sectionTitleArr.map((element) => {
+    if (element.innerText == "ĐỒ CHƠI") {
+      let parentElement = element.closest("a");
+      parentElement.querySelector("i").classList.add("text-special");
+      element.classList.add("text-special");
+    }
+  });
+}
+// Render Items
 function showItems() {
   let characterValue = getCharacter();
 
   if (characterValue == "toys") {
+    sectionToysFill();
     renderToys();
   }
   if (characterValue == "foods") {
+    sectionTitleFoodFill();
     renderFoods();
   }
   if (characterValue == "litter") {
+    sectionLitterFill();
     renderLitters();
   }
   if (characterValue == "clothes") {
+    sectionClothesFill();
     renderClothes();
   }
 }

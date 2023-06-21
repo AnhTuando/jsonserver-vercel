@@ -1,3 +1,18 @@
+// section title fill
+function sectionTitleFill() {
+  let sectionTitleArr = Array.from(
+    document.querySelectorAll(".navigation-2 .col-8 .item a span")
+  );
+  sectionTitleArr.map((element) => {
+    if (element.innerText == "MÈO") {
+      let parentElement = element.closest("a");
+      parentElement.querySelector("i").classList.add("text-special");
+      element.classList.add("text-special");
+    }
+  });
+}
+sectionTitleFill();
+
 // subnav
 let subNavClose = document.querySelector(".sub-nav-close ");
 let subNav = document.querySelector(".subnav-mobile");

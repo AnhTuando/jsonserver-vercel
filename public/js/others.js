@@ -277,19 +277,75 @@ function getCharacter() {
   return character;
 }
 
+// section food fill
+function sectionTitleFoodFill() {
+  let sectionTitleArr = Array.from(
+    document.querySelectorAll(".navigation-2 .col-8 .item a span")
+  );
+  sectionTitleArr.map((element) => {
+    if (element.innerText == "ĐỒ ĂN") {
+      let parentElement = element.closest("a");
+      parentElement.querySelector("i").classList.add("text-special");
+      element.classList.add("text-special");
+    }
+  });
+}
+// section litter fill
+function sectionLitterFill() {
+  let sectionTitleArr = Array.from(
+    document.querySelectorAll(".navigation-2 .col-8 .item a span")
+  );
+  sectionTitleArr.map((element) => {
+    if (element.innerText == "CÁT VỆ SINH") {
+      let parentElement = element.closest("a");
+      parentElement.querySelector("i").classList.add("text-special");
+      element.classList.add("text-special");
+    }
+  });
+}
+// section clothes fill
+function sectionClothesFill() {
+  let sectionTitleArr = Array.from(
+    document.querySelectorAll(".navigation-2 .col-8 .item a span")
+  );
+  sectionTitleArr.map((element) => {
+    if (element.innerText == "ĐỒ TRANG TRÍ") {
+      let parentElement = element.closest("a");
+      parentElement.querySelector("i").classList.add("text-special");
+      element.classList.add("text-special");
+    }
+  });
+}
+// section Toys fill
+function sectionToysFill() {
+  let sectionTitleArr = Array.from(
+    document.querySelectorAll(".navigation-2 .col-8 .item a span")
+  );
+  sectionTitleArr.map((element) => {
+    if (element.innerText == "ĐỒ CHƠI") {
+      let parentElement = element.closest("a");
+      parentElement.querySelector("i").classList.add("text-special");
+      element.classList.add("text-special");
+    }
+  });
+}
 function showItems() {
   let characterValue = getCharacter();
 
   if (characterValue == "foods") {
+    sectionTitleFoodFill();
     renderFoods();
   }
   if (characterValue == "clothes") {
+    sectionClothesFill();
     renderClothes();
   }
   if (characterValue == "toys") {
+    sectionToysFill();
     renderToys();
   }
   if (characterValue == "litter") {
+    sectionLitterFill();
     renderLitter();
   }
 }
