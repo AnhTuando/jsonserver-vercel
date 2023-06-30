@@ -350,14 +350,15 @@ function renderAndHandleCartItems() {
                       </div>
                       <div class="row my-2">
                         <div
-                          class="customer-info d-flex justify-content-between fs-14px"
+                          class="customer-info d-flex gap-4 fs-14px"
                         >
                           <div class="customer-name ff-roboto">
+                         <span>Khách hàng: </span>
                              ${customerObject.customerName}
                           </div>
-                          <div class="customer-phone ff-roboto">  ${customerObject.customerPhone}</div>
+                          <div class="customer-phone ff-roboto">  <span>SĐT: </span>  ${customerObject.customerPhone}</div>
                           <div class="customer-address ff-roboto">
-                                                        ${customerObject.customerAddress}
+                                         <span>Địa Chỉ: </span>                 ${customerObject.customerAddress}
 
                           </div>
                         </div>
